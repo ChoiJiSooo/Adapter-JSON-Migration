@@ -1,0 +1,4 @@
+- DATABASE 를 기동 합니다. runHsqlDB.cmd
+
+- context root path 는 '/' 로 하여야 합니다.
+	xplatform 에서 '/' 로 넘기게 되어 있습니다. 차후 개발시 path에 맞춰 변경 하여야 함.

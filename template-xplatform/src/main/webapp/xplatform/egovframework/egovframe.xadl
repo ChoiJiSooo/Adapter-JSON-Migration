@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ADL version="1.0">
+  <TypeDefinition url="default_typedef.xml"/>
+  <GlobalVariables url="globalvars.xml"/>
+  <Application id="egovframe" codepage="utf-8" language="Korean" themeid="" loginformurl="" loginformstyle="" windowopeneffect="" windowcloseeffect="" version="" tracemode="" licenseurl="http://localhost:8080/xplatform/egovframework/XPLATFORM_Client_License.XML" engineurl="http://localhost:8080/xplatform/Engine" engineversion="9.1">
+    <Layout>
+      <MainFrame id="mainframe" title="maintitle" defaultfont="" resizable="true" showtitlebar="true" showstatusbar="true" position="absolute 0 0 800 800">
+        <ChildFrame id="childframe" formurl="Base::BoardList.xfdl" showtitlebar="false" showstatusbar="false" openeffect="" closeeffect=""/>
+      </MainFrame>
+    </Layout>
+  </Application>
+  <Script type="xscript4.0"><![CDATA[
+
+/*******************************************************************************
+ * 작성자 : AA
+ * 공통 Modal Dialog를 실행 한다.
+ * parameter 
+			 1.objForm : 호출하는 form (this로 넘기면 됨, 필수)
+			 2. strId  : Dialog ID 
+             3. strURL : Form URL
+             4. nTop   : Form TOP Position
+             5. nLeft  : Form Left Position
+             6. nWidth : Form Width
+             7. nHeight: Form Height
+             8. bShowTitle : Form Title 을 표시 할지 여부
+             9. strAlign: Dialog 의 위치 - '-1' : 모니터의 중앙
+                                          - 'Bottom Left' : Click 된 마우스 위치의 좌측 하단 정렬
+                                          - 'Top Left' : Click 된 마우스 위치의 좌측 상단 정렬
+                                          - 'Bottom Right' : Click 된 마우스 위치의 우측 하단 정렬
+                                          - 'Top Right' : Click 된 마우스 위치의 우측 상단 정렬
+                                           - 'offset' : Click 된 마우스 위치에서 nTop,nLeft만큼 들여쓰기.
+                                           - 'absolute' : 입력된 좌표를 Screen 좌표로 인식.(손영기)
+                                           - '0' : 사용자 임의 정렬
+            10. strArgument: Dialog 로 전달될 Argument - {strMessage1:'E'}
+            11. isModeless: 10번째 true 면 Dialog 를 Modeless로 띄운다.
+            12. isLayered: 11번째 true 면 Dialog 를 Layered로 띄운다.
+ * return true/false - 적합 / 부적합 
+ ******************************************************************************/
+function gf_Dialog(objForm, strId, strURL, nTop, nLeft, nWidth, nHeight, bShowTitle, strAlign, strArgument, isModeless, isLayered, bAutoSize)
+{
+	trace("Start gf_Dialog strURL == " + strURL);
+	var newChild = null;
+	var objParentFrame = objForm.getOwnerFrame();
+	
+	var nRight = 0;
+	var nBottom = 0;
+	
+	if (strAlign == "Bottom Left") {
+		nLeft = system.cursorx;
+		nBottom = system.cursory - 5;
+		nTop = nBottom - nHeight;
+		nRight = nLeft + nWidth;
+	}
+	else if (strAlign == "Top Left") {
+		nTop = system.cursory - 5;
+		nLeft = system.cursorx;
+		nBottom = nTop + nHeight;
+		nRight = nLeft + nWidth;
+	}
+	else if (strAlign == "Bottom Right") {
+		nRight = system.cursorx;
+		nBottom = system.cursory - 5;
+		nTop = nBottom - nHeight;
+		nLeft = nRight - nWidth;
+	}
+	else if (strAlign == "Top Right") {
+		nTop = system.cursory - 5;
+		nRight = system.cursorx;
+		nBottom = nTop + nHeight;
+		nLeft = nRight - nWidth;
+	}
+	else if (strAlign == "-1") {
+		
+		var strScreenRes = system.getScreenResolution(1);
+		var nCenterX = new Number(strScreenRes.split(" ")[0]);
+		var nCenterY = new Number(strScreenRes.split(" ")[1]);
+		
+		var nMarginX = 0;
+		var nMoniterIndex = system.getMonitorIndex(system.cursorx, system.cursory);
+		if (nMoniterIndex == 2) {
+			var strMarginRes = system.getScreenResolution(2);
+			nMarginX = new Number(strMarginRes.split(" ")[0]);
+		}
+		nTop = Math.round(mainframe.position.height / 2) - Math.round(nHeight / 2) + mainframe.position.top;
+		nLeft = Math.round(mainframe.position.width / 2) - Math.round(nWidth / 2) + mainframe.position.left;
+		nBottom = nTop + nHeight;
+		nRight = nLeft + nWidth;
+	}
+	else if (strAlign == "offset") {
+		nTop += system.cursory;
+		nLeft += system.cursorx;
+		nBottom = nTop + nHeight;
+		nRight = nLeft + nWidth;
+	}
+	else if (strAlign == "absolute")
+	{
+		nBottom = nTop + nHeight;
+		nRight = nLeft + nWidth;
+	}
+	else {
+		nTop += mainframe.position.top;
+		nLeft += mainframe.position.left;
+		nBottom = nTop + nHeight;
+		nRight = nLeft + nWidth;
+	}
+	
+	// 화면 밖으로 벗어나는 Dialog 방지 - Sonyk
+	var nMonitor = system.getMonitorIndex((nLeft+nRight)/2,(nTop+nBottom)/2);
+	var rectScreen = system.getScreenRect(nMonitor);
+	if(nBottom > rectScreen.bottom)
+	{
+		nTop = rectScreen.bottom - (nBottom - nTop);
+		nBottom = rectScreen.bottom;
+	}
+	if(nTop < rectScreen.top)
+	{
+		nBottom = rectScreen.top + (nBottom - nTop);
+		nTop = rectScreen.top;
+	}
+	if(nRight > rectScreen.right)
+	{
+		nLeft = rectScreen.right - (nRight - nLeft);
+		nRight = rectScreen.right;
+	}
+	if(nLeft < rectScreen.left)
+	{
+		nRight = rectScreen.left + (nRight - nLeft);
+		nLeft = rectScreen.left;
+	}
+	// 여기까지 - Sonyk
+	
+	newChild = new ChildFrame;
+	newChild.init(strId, nLeft, nTop, nRight, nBottom, strURL);
+
+	if (isLayered == true) {
+		//newChild.style.bordertype="round 10 10";
+		newChild.layered = true;
+	}
+	else {
+		newChild.layered = false;
+	}
+	
+	newChild.style.border.width = "0";
+	newChild.showstatusbar = false;
+	
+	if (bAutoSize == false) newChild.autosize = false;
+	else newChild.autosize = true;
+
+	if (!bShowTitle) newChild.showtitlebar = false;
+	if (isModeless == true)
+	{
+		return newChild.showModeless(objParentFrame, strArgument);
+	}
+	else
+	{	
+		var rtn;
+		//if(gf_Dialog.arguments.length == 9)
+			rtn = newChild.showModal(objParentFrame, strArgument);
+		//else
+		//	rtn = newChild.showModal(objParentFrame);
+		// this.removeChild(newChild.name);
+		// newChild.destroy();
+		// newChild = null;
+
+	trace("End gf_Dialog showModal strURL == " + strURL);
+		return rtn;
+	}
+}
+
+function gfn_CommonShow(strKind, strID, strTitle, nWidth, nHeight, nLeft, nTop, bLayered)
+{
+	if(nLeft==null) nLeft = 0;
+	if(nTop==null) nTop = 114;
+	if(bLayered==null) bLayered = true;
+	
+	nWidth = nWidth+20;
+	nHeight = nHeight+50;
+	
+	var objChildFrame = new ChildFrame("ChildFrame_"+strID, nLeft, nTop, nLeft+nWidth, nTop+nHeight, "Base::"+strKind+".xfdl");
+	objChildFrame.formURL = strID;
+	objChildFrame.formText = strTitle;
+	objChildFrame.nWidth = nWidth;
+	objChildFrame.nHeight = nHeight;
+ 	objChildFrame.showtitlebar = false;
+ 	objChildFrame.layered = bLayered;
+	objChildFrame.style.background="transparent";
+ 	objChildFrame.style.border="0 none #808080ff";
+ 	
+ 	return objChildFrame;
+}
+
+/*
+	objForm : 호출하는 form (this로 넘기면 됨, 필수)
+	strID : 생성할 Form File 명 (필수)
+	strTitle : Form Title 명 (필수)
+	nWidth : Form Width (필수)
+	nHeight : Form Height (필수)
+	bLayered : ActiveX가 있을경우 false 입력
+	objArgumentList : ChildFrame에 추가될 변수리스트 {변수명:변수값 , 변수명:변수값} 형식으로 입력
+ */
+function gfn_openPOP(objForm, strID, strTitle, nWidth, nHeight, bLayered, objArgumentList)
+{
+	var objChildFrame = gfn_CommonShow("COMM_POP", strID, strTitle, nWidth, nHeight, 0, 0, bLayered);
+	var objOwnerFrame = objForm.getOwnerFrame();
+	objChildFrame.openalign = "center middle";
+	return objChildFrame.showModal(strID, objOwnerFrame, objArgumentList);
+}
+
+function gfn_openPOP2(objForm, strID, strTitle, nWidth, nHeight, bLayered, objArgumentList)
+{
+	if(bLayered==null) bLayered = true;
+	
+	var objOwnerFrame = objForm.getOwnerFrame();
+
+	var objChildFrame = new ChildFrame(strID, 0, 0, nWidth, nHeight, "Base::"+strID+".xfdl");
+	objChildFrame.showtitlebar = false;
+	objChildFrame.layered = true;
+	objChildFrame.style.background="transparent";
+	objChildFrame.style.border="0 none #808080ff";
+	objChildFrame.border = "0 none #808080ff";
+	objChildFrame.openalign = "center middle";
+	return objChildFrame.showModal(strID, objOwnerFrame, objArgumentList);
+
+}
+]]></Script>
+</ADL>

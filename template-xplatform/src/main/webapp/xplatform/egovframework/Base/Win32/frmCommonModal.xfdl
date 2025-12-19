@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.0">
+  <TypeDefinition url="..\..\default_typedef.xml"/>
+  <Form id="frmCommonModal" classname="frmCommonModal" inheritanceid="" cachelevel="" position="absolute 0 0 675 450" version="" style="background:transparent;border:0 none #808080ff ;" onload="frmCommonModal_onload" scrollbars="none">
+    <Script type="xscript4.0"><![CDATA[
+function frmCommonModal_onload(obj:Form, e:LoadEventInfo)
+{
+	obj.getOwnerFrame().position.width = this.getOwnerFrame().nWidth + 10;
+	obj.getOwnerFrame().position.height = this.getOwnerFrame().nHeight;
+	div_Form.url = "Base::" +this.getOwnerFrame().formURL + ".xfdl";
+	div_TopMenu.st_Title.text = this.getOwnerFrame().formText;
+}
+
+function fn_Close(strRet)
+{
+	close(strRet);
+}
+]]></Script>
+    <Layout>
+      <Div id="div_TopMenu" taborder="4" applystyletype="cascade,keep" position="absolute 5 5 669 444" anchor="all" class="GoPop">
+        <Layout>
+          <Button id="btn_Close" taborder="7" onclick="fn_Close" position="absolute 637 1 657 21" anchor="top right" text="x"/>
+          <Div id="st_Title" taborder="8" applystyletype="cascade,keep" text="화면명" position="absolute 7 -3 188 25" class="PopupTitle" visible="false">
+            <Layout/>
+          </Div>
+        </Layout>
+      </Div>
+      <Div id="div_Form" anchor="all" taborder="5" applystyletype="cascade,keep" scrollbars="none" position="absolute 8 36 665 440" style="border:0 none #808080ff ;">
+        <Layout/>
+      </Div>
+    </Layout>
+    <Objects/>
+  </Form>
+</FDL>

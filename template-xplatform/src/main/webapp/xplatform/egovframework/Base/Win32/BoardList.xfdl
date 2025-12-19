@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.0">
+  <TypeDefinition url="..\..\default_typedef.xml"/>
+  <Form id="BoardList" classname="BoardList" inheritanceid="" cachelevel="" position="absolute 0 0 800 600" version="" titletext="New Form" onload="BoardList_onload">
+    <Layout>
+      <Static id="Static00" text="  리스트 조회" position="absolute 0 0 799 46" style="background:slateblue;color:oldlace;margin:0 0 0 0;shadow:drop 0,0 0 gray;"/>
+      <Grid id="Grid0" taborder="1" position="absolute 9 86 789 350" binddataset="ds_list" oncelldblclick="Grid0_oncelldblclick">
+        <Formats>
+          <Format id="default">
+            <Columns>
+              <Column size="40"/>
+              <Column size="20"/>
+              <Column size="128"/>
+              <Column size="162"/>
+              <Column size="81"/>
+              <Column size="216"/>
+              <Column size="93"/>
+            </Columns>
+            <Rows>
+              <Row size="24" band="head"/>
+              <Row size="24"/>
+            </Rows>
+            <Band id="head">
+              <Cell text="No."/>
+              <Cell col="1"/>
+              <Cell col="2" text="카테고리 ID"/>
+              <Cell col="3" text="카테고리 명"/>
+              <Cell col="4" text="사용여부"/>
+              <Cell col="5" text="Description"/>
+              <Cell col="6" text="등록자"/>
+            </Band>
+            <Band id="body">
+              <Cell text="expr:currow+1"/>
+              <Cell col="1"/>
+              <Cell col="2" text="bind:id"/>
+              <Cell col="3" text="bind:name"/>
+              <Cell col="4" text="bind:useYn"/>
+              <Cell col="5" text="bind:description"/>
+              <Cell col="6" text="bind:regUser"/>
+            </Band>
+          </Format>
+        </Formats>
+      </Grid>
+      <Button id="btn_excel" taborder="2" text="Excel" position="absolute 620 358 697 384" onclick="btn_excel_onclick"/>
+      <Button id="btn_insert" taborder="3" text="등록" position="absolute 711 358 788 384" onclick="btn_insert_onclick"/>
+      <Button id="btn_search" taborder="4" text="조회" position="absolute 711 56 788 82" onclick="btn_search_onclick"/>
+    </Layout>
+    <Objects>
+      <Dataset id="ds_list" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep">
+        <ColumnInfo>
+          <Column id="id" type="STRING" size="256"/>
+          <Column id="name" type="STRING" size="256"/>
+          <Column id="description" type="STRING" size="256"/>
+          <Column id="useYn" type="STRING" size="256"/>
+          <Column id="regUser" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="id">12</Col>
+            <Col id="name">test</Col>
+            <Col id="description">테스트좀..</Col>
+            <Col id="useYn">Y</Col>
+            <Col id="regUser">test</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_voInfo" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep">
+        <ColumnInfo>
+          <Column id="voClass" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+      <Dataset id="ds_param" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep">
+        <ColumnInfo>
+          <Column id="id" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+    </Objects>
+    <Script type="xscript4.0"><![CDATA[include "lib::common.xjs";
+
+
+/**
+	초기화..
+*/
+function BoardList_onload(obj:Form, e:LoadEventInfo)
+{
+	btn_search_onclick();
+}
+
+/**
+	조회.
+*/
+function btn_search_onclick(obj:Button,  e:ClickEventInfo)
+{
+	transaction("list", "svc::/egovSampleList.do", "", "ds_list=ds_output", "", "fnCallback");
+}
+
+function fnCallback(svcid, errcd, errmsg)
+{
+	if ( svcid == "list" )
+	{
+		this.status = "  처리메세지 : " + errmsg;
+	}
+}
+
+/**
+	신규등록하는 팝업창 열기..
+*/
+function btn_insert_onclick(obj:Button,  e:ClickEventInfo)
+{
+	var sRet = gf_Dialog(this, "Insert", "Base::InsertSampleView.xfdl", e.screenY - e.clientY - 224 , 270, 800, 543, false, -1);
+	//var sRet = gfn_openPOP(this, "InsertSampleView", "Insert Item", 800, 543, true,{strParam:""});
+	if (sRet == "undefined")
+	{
+		return;
+	}
+	else
+	{
+		//ed_zzModel.value 		= sRet[0];
+		trace("return pop = : "+sRet);
+		
+		btn_search_onclick();
+	}
+}
+
+
+/**
+	선택한 행을 수정하는 팝업창 열기..
+*/
+function Grid0_oncelldblclick(obj:Grid, e:GridClickEventInfo)
+{
+	var param = ds_list.getColumn(e.row, "id");
+
+	var sRet = gf_Dialog(this, "Update", "Base::UpdateSampleView.xfdl", e.screenY - e.clientY - 224 , 270, 800, 543, false, -1,{param:param});
+	//var sRet = gfn_openPOP(this, "UpdateSampleView", "Update Item", 800, 543, true,{strParam:param});
+
+	if (sRet == "undefined")
+	{
+		return;
+	}
+	else
+	{
+		//ed_zzModel.value 		= sRet[0];
+		trace("return pop = : "+sRet);
+		
+		btn_search_onclick();
+	}
+
+}
+
+/**
+	Excel.
+*/
+function btn_excel_onclick(obj:Button,  e:ClickEventInfo)
+{
+	Grid0.Format = "format0";
+	Grid0.ExportExcelEx("sheet1");
+}
+
+
+function btn_search2_onclick(obj:Button,  e:ClickEventInfo)
+{
+	ds_param.clearData();
+	var row = ds_param.addRow();
+	ds_param.setColumn(row, "id", "SAMPLE-00013");
+	
+	var strSvcid 		= "detail";
+	var strController 	= "egovSampleDetailDS.do";
+	var strVoClass 		= "egovframework.rte.sample.service.SampleVO";
+	var strInputDs 		= "ds_input=ds_param:U";
+	var strOutputDs 	= "";
+	var strParam 		= "";
+	var strFnCallback 	= "fnCallback";
+
+	ds_voInfo.clearData();
+	var row = ds_voInfo.addRow();
+	ds_voInfo.setColumn(row, "voClass", strVoClass);
+
+	fnCmTr(this, strSvcid, strController, strVoClass, strInputDs, strOutputDs, strParam, strFnCallback);
+	
+	return;
+/**	
+	-- 위와 같은 조건으로 fnCmTr()함수를 호출하면 아래와 같이 Transaction()이 수행됩니다.
+	transaction("detail", 
+				"svc::egovSampleDetailDS.do", 
+				"ds_voInfo=ds_voInfo ds_input=ds_param:U" , 
+				strOutputDs, 
+				strParam, 
+				"fnCallback");
+*/	
+}
+
+
+]]></Script>
+  </Form>
+</FDL>
