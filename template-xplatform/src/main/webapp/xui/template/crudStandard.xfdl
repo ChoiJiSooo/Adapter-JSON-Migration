@@ -44,6 +44,8 @@
             </Format>
           </Formats>
         </grd_basic>
+        <Edit id="Edit00" taborder="4" position="absolute 105 10 245 30"/>
+        <Static id="sta_WFSA_LabelP" text="카테고리명" wordwrap="none" class="sta_WFSA_LabelP" position="absolute 17 10 99 30"/>
       </Layout>
     </Layouts>
     <Objects>
@@ -68,8 +70,16 @@
       </Dataset>
       <Dataset id="ds_param" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep">
         <ColumnInfo>
-          <Column id="id" type="STRING" size="256"/>
+          <Column id="searchCondition" type="STRING" size="256"/>
+          <Column id="searchKeyword" type="STRING" size="256"/>
+          <Column id="searchUseYn" type="STRING" size="256"/>
         </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="searchCondition">0</Col>
+            <Col id="searchUseYn">Y</Col>
+          </Row>
+        </Rows>
       </Dataset>
       <Dataset id="DsCheck" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false">
         <ColumnInfo>
@@ -101,6 +111,9 @@
         </Rows>
       </Dataset>
     </Objects>
+    <Bind>
+      <BindItem id="item0" compid="Edit00" propid="value" datasetid="ds_param" columnid="searchKeyword"/>
+    </Bind>
     <Script type="xscript4.0"><![CDATA[/************************************************************************************************
  * 01. 업무구분 : 샘플 
  * 02. 화면 : Sample
@@ -159,13 +172,20 @@ function fn_formInit()
 // search(조회)
 function fn_search(obj:Button,  e:ClickEventInfo)
 {
+
+	ds_param.addRow();
+	ds_param.setColumn(0,"searchCondition", "1");
+	ds_param.setColumn(0,"searchKeyword", "11");
+
+
 	var strSvcid 		= "selectSvc";
 	var strController 	= "egovSampleList.do";
 	//var strVoClass 		= "egovframework.rte.sample.service.SampleVO";
-	var strInputDs 		= "";
+	var strInputDs 		= "ds_input=ds_param";
 	var strOutputDs 	= "ds_list=ds_output";
 	var strParam 		= "a=b";
 	var strFnCallback 	= "fn_callBack";
+	
 	
 	// 트랜젝션 공통함수 호출
 	gfn_transaction(this, 
