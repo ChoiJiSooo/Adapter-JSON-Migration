@@ -1,2 +1,18 @@
-# Adapter-JSON-Migration
+## 프로젝트 개요
+Adapter-JSON-Migration 프로젝트는 기존 데이터 또는 API에서 JSON 형식으로 데이터를 변환하고 마이그레이션하는 기능을 제공합니다.  
 
+---
+
+## 기능
+- 기존 XML 데이터 포맷을 JSON으로 변환
+- 데이터 포맷 마이그레이션 자동화
+- JSON 데이터 검증
+
+---
+
+## 요구 사항 (레거시 환경)
+- **JDK 1.8**  
+- **Apache Tomcat 7.0**  
+- Spring 3.0  
+
+> ⚠️ 주의: 본 프로젝트는 레거시 소스 기반입니다. 최신 JDK/Tomcat/Spring에서는 호환되지 않을 수 있습니다.
