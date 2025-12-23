@@ -2,8 +2,8 @@ package egovframework.rte.cmmn.ria.support;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.inswave.websqaure.uix.HttpWebsquareConvRequest;
 import com.tobesoft.xplatform.data.PlatformData;
-import com.tobesoft.xplatform.tx.HttpPlatformRequest;
 
 /**
  * X-Platform MiAdaptor 구현 클래스
@@ -14,7 +14,7 @@ import com.tobesoft.xplatform.tx.HttpPlatformRequest;
  *
  * <pre>
  * << 개정이력(Modification Information) >>
- *   
+ *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
  *   2010.01.01  홍길동          최초 생성
@@ -23,22 +23,22 @@ import com.tobesoft.xplatform.tx.HttpPlatformRequest;
  */
 
 public class XpfAdaptorMapImpl extends XpfAdaptor {
-	
-	public Object converte4In(HttpPlatformRequest httpPlatformRequest, HttpServletRequest request) {
-		
-		/*
-		 * VariableList 를 맵형식(UdDTO)으로 반환함.
-		 */
-		UdDTO dto = new UdDTO();
 
-		PlatformData pfd = httpPlatformRequest.getData();
-		dto.setVariableListToMap(pfd.getVariableList());
-				
-		return dto;
-	}
+    public Object converte4In(HttpWebsquareConvRequest httpPlatformRequest, HttpServletRequest request) {
 
-	public Class getModelName() {
+        /*
+         * VariableList 를 맵형식(UdDTO)으로 반환함.
+         */
+        UdDTO dto = new UdDTO();
 
-		return (new UdDTO()).getClass();
-	}
+        PlatformData pfd = httpPlatformRequest.getData();
+        dto.setVariableListToMap(pfd.getVariableList());
+
+        return dto;
+    }
+
+    public Class getModelName() {
+
+        return (new UdDTO()).getClass();
+    }
 }
