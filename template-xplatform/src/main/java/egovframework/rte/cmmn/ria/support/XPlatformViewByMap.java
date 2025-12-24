@@ -11,6 +11,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.web.servlet.view.AbstractView;
 
+import com.inswave.websqaure.uix.HttpWebsquareConvRequest;
 import com.inswave.websqaure.uix.HttpWebsquareConvResponse;
 import com.tobesoft.xplatform.data.DataSet;
 import com.tobesoft.xplatform.data.DataSetList;
@@ -113,10 +114,12 @@ public class XPlatformViewByMap extends AbstractView {
             platformData.setDataSetList(miDatasetList);
             platformData.setVariableList(miVariableList);
 
-            HttpWebsquareConvResponse hpfr = new HttpWebsquareConvResponse(response);
-            hpfr.setCharset(PlatformType.DEFAULT_CHAR_SET);
-            hpfr.setData(platformData);
-            hpfr.sendData();
+
+            HttpWebsquareConvRequest wsReq = new HttpWebsquareConvRequest(request);
+            HttpWebsquareConvResponse wsRes = new HttpWebsquareConvResponse(response, wsReq);
+            wsRes.setCharset(PlatformType.DEFAULT_CHAR_SET);
+            wsRes.setData(platformData);
+            wsRes.sendData();
 
         } catch (Exception ex) {
             if (log.isErrorEnabled()) {

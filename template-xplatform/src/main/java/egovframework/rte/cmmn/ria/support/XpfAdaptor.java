@@ -51,7 +51,7 @@ public abstract class XpfAdaptor implements UiAdaptor {
             httpPlatformRequest.receiveData();
 
         } catch (Exception ex) {
-            ex.getStackTrace();
+            ex.printStackTrace();
             throw new Exception("HttpPlatformRequest error");
         }
 
