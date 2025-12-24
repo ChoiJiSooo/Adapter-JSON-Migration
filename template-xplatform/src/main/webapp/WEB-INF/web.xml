@@ -2,6 +2,10 @@
 <web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 	<display-name>egovframe.miplatform.uiadaptor.template</display-name>
 	<filter>
+		<filter-name>corsFilter</filter-name>
+		<filter-class>egovframework.rte.cmmn.ria.support.filter.CORSFilter</filter-class>
+	</filter>
+	<filter>
 		<filter-name>encodingFilter</filter-name>
 		<filter-class>
 			org.springframework.web.filter.CharacterEncodingFilter
@@ -17,6 +21,12 @@
             egovframework.rte.ptl.mvc.filter.HTMLTagFilter
         </filter-class>
     </filter>
+	
+	
+	<filter-mapping>
+		<filter-name>corsFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 	<filter-mapping>
 		<filter-name>encodingFilter</filter-name>
 		<url-pattern>*.do</url-pattern>
@@ -25,6 +35,7 @@
         <filter-name>HTMLTagFilter</filter-name>
         <url-pattern>*.do</url-pattern>
     </filter-mapping>	
+	
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
