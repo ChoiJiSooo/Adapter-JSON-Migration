@@ -1,0 +1,4064 @@
+﻿
+        
+.nexainput.nexaleftalign
+{
+  text-align:left;
+}
+.nexainput.nexarightalign
+{
+  text-align:right;
+}
+.nexainput.nexacenteralign
+{
+  text-align:center;
+}
+
+.nexacontentsbox.nexaleftalign
+{
+  text-align:left;
+}
+.nexacontentsbox.nexarightalign
+{
+  text-align:right;
+}
+.nexacontentsbox.nexacenteralign
+{
+  text-align:center;
+}
+.celltreeline
+{
+  border : 1px dotted #999999;
+}
+.Edit, .MaskEdit, .TextArea, .EditControl, .MaskEditControl, .TextAreaControl
+{
+  cursor:text;
+}
+.Button .nexacontentsbox, .ButtonControl .nexacontentsbox
+{
+  text-align:center;
+}
+
+.FileDownload  .nexacontentsbox, .FileDownloadControl .nexacontentsbox
+{
+  text-align:center;
+}
+
+.IconTextControl .nexacontentsbox, .IconControl .nexacontentsbox
+{
+  text-align:center;
+}
+
+.DatePickerDayItemControl .nexacontentsbox, .DatePickerWeekItemControl .nexacontentsbox, .DatepickerYearItemControl .nexacontentsbox, .TitleBarButtonControl .nexacontentsbox
+{
+  text-align:center;
+}
+
+.MainFrame, .VScrollBarControl, .HScrollBarControl
+{
+  cursor:default;
+}
+
+.Sketch .nexacontentsbox
+{
+   text-align:center;
+}
+
+.nexainput
+{
+  cursor:inherit;
+}
+
+.Form
+{
+	font : normal 13px/normal "Pretendard";
+	color : #333333;
+	background : #ffffff;
+	border : 0px none;
+}
+.MainFrame
+{
+	border : 0px solid #b7b1b2;
+}
+.ChildFrame
+{
+	border : 0px solid #b7b1b2;
+}
+.FrameSet
+{
+	border : 0px solid #b7b1b2;
+}
+.VFrameSet
+{
+	border : 0px solid #b7b1b2;
+}
+.HFrameSet
+{
+	border : 0px solid #b7b1b2;
+}
+.TileFrameSet
+{
+	border : 0px solid #b7b1b2;
+}
+.TitleBarControl
+{
+	background : #2b3753;
+	color : #ffffff;
+}
+.StatusBarControl
+{
+	background : #dddddd;
+}
+.Button
+{
+	border : 1px solid #c8c8c8;
+	background : #ffffff;
+	border-radius : 5px;
+	cursor : pointer;
+	font : normal bold 13px/normal "Pretendard";
+}
+.ButtonControl
+{
+	background : transparent;
+	border : 0px none;
+}
+.Calendar
+{
+	border : 1px solid #dee1e4;
+	background : #ffffff;
+	border-radius : 5px;
+}
+.CalendarControl
+{
+	border : 1px solid #dee1e4;
+	background : #ffffff;
+	border-radius : 5px;
+}
+.Calendar .calendaredit
+{
+	border : 0px none;
+}
+.CalendarControl .calendaredit
+{
+	border : 0px none;
+}
+.Calendar .dropbutton
+{
+	border : 0px none;
+}
+.CalendarControl .dropbutton
+{
+	border : 0px none;
+}
+.Combo
+{
+	border : 1px solid #dee1e4;
+	background : #ffffff;
+	border-radius : 5px;
+}
+.ComboControl
+{
+	border : 1px solid #dee1e4;
+	background : #ffffff;
+	border-radius : 5px;
+}
+.Combo .comboedit
+{
+	border : 0px none;
+}
+.ComboControl .comboedit
+{
+	border : 0px none;
+}
+.Combo .dropbutton
+{
+	background : transparent;
+}
+.ComboControl .dropbutton
+{
+	background : transparent;
+}
+.ListBoxControl.popupCombocombolist.dummy
+{
+	border : 1px solid #dee1e4;
+	background : #ffffff;
+}
+.ListBoxControl.popupComboControlcombolist.dummy
+{
+	border : 1px solid #dee1e4;
+	background : #ffffff;
+}
+.DatePickerControl
+{
+	border : 1px solid #2b3753;
+	background : #ffffff;
+	cursor : pointer;
+}
+.DatePickerControl .head
+{
+	background : #2b3753;
+	color : #ffffff;
+	cursor : pointer;
+	font : bold 13px/normal "Tahoma";
+	letter-spacing : 0px;
+}
+.DatePickerControl .head .nextbutton
+{
+	cursor : pointer;
+}
+.DatePickerControl .head .prevbutton
+{
+	cursor : pointer;
+}
+.DatePickerControl .head .monthspin
+{
+	border : 1px solid #2b3753;
+	background : #2b3753;
+	color : #ffffff;
+}
+.DatePickerControl .head .yearspin
+{
+	border : 1px solid #2b3753;
+	background : #2b3753;
+	color : #ffffff;
+}
+.DatePickerControl .head .monthspin .spinedit
+{
+	border : 1px solid #2b3753;
+	padding : 0px 0px 0px 0px;
+	background : #2b3753;
+	color : #ffffff;
+}
+.DatePickerControl .head .yearspin .spinedit
+{
+	border : 1px solid #2b3753;
+	padding : 0px 0px 0px 0px;
+	background : #2b3753;
+	color : #ffffff;
+}
+.DatePickerControl .head .monthspin .spinupbutton
+{
+	cursor : pointer;
+}
+.DatePickerControl .head .yearspin .spinupbutton
+{
+	cursor : pointer;
+}
+.DatePickerControl .body .weekband
+{
+	background : #2b3753;
+	cursor : pointer;
+}
+.DatePickerControl .body .weekitem
+{
+	color : #ffffff;
+	cursor : pointer;
+	font : bold 12px/normal "Tahoma";
+}
+.DatePickerControl .body .dayitem
+{
+	cursor : pointer;
+}
+.DatePickerControl .body .dayitem .nexacontentsbox
+{
+	text-align : center;
+}
+.Edit
+{
+	border : 1px solid #dee1e4;
+	padding : 0px 10px 1px 10px;
+	background : #ffffff;
+	border-radius : 5px;
+}
+.FileUpload .fileuploaditem .fileuploaditemedit
+{
+	border : 1px solid #dee1e4;
+	padding : 0px 10px 1px 10px;
+	background : #ffffff;
+	border-radius : 5px;
+}
+.EditControl
+{
+	background : transparent;
+	border : 0px none;
+	padding : 0px 10px 1px 10px;
+	border-radius : 3px;
+}
+.Grid
+{
+	border : 2px solid #000000, 1px solid #e6e6e6, 1px solid #e6e6e6, 1px solid #e6e6e6;
+	background : #ffffff;
+}
+.Grid .head .row .cell
+{
+	border : 0px none , 1px solid #e6e6e6, 1px solid #e6e6e6 , 1px solid #e6e6e6;
+	background : #f5f6fa;
+	font : 700 13px/normal "Pretendard";
+}
+.Grid .head .row .cell .nexacontentsbox
+{
+	text-align : center;
+}
+.Grid .head .row .cell.essential
+{
+	border : 0px none , 1px solid #e6e6e6, 1px solid #e6e6e6 , 1px solid #e6e6e6;
+	background : URL("./images/grd_WF_Cell_P.png") no-repeat left top #f5f6fa;
+	font : 700 13px/normal "Pretendard";
+}
+.Grid .head .row .cell.essential .nexacontentsbox
+{
+	text-align : center;
+}
+.Grid .body .row .cell
+{
+	border : 1px solid #e6e6e6;
+}
+.Grid .body .row .cell.CellLink
+{
+	color : #5da3ea;
+}
+.Grid .body .row .cell.CellLink .nexacontentsbox
+{
+	text-decoration : underline;
+}
+.Grid .body .row .cell.CellC .cellimage
+{
+	background : url('./images/img_WF_Create.png') no-repeat center center;
+}
+.Grid .body .row .cell.CellD .cellimage
+{
+	background : url('./images/img_WF_Del.png') no-repeat center center;
+}
+.Grid .body .row .cell.CellU .cellimage
+{
+	background : url('./images/img_WF_Update.png') no-repeat center center;
+}
+.Grid .body .row .cell.CellTxtRed
+{
+	color : #da3030;
+}
+.Grid .body .row .cell.CellTxtBlue
+{
+	color : #5da3ea;
+}
+.Grid .body .row .cell.CellTxtGray
+{
+	color : #777777;
+}
+.Grid .body .row .cell.CellTxtYellow
+{
+	color : #b2a901;
+}
+.Grid .body .row .cell.CellTxtGreen
+{
+	color : #00a651;
+}
+.Grid .body .row .cell.CellTxtOrange
+{
+	color : #f68e56;
+}
+.Grid .summary
+{
+	border : 1px solid #737373, 0px none, 0px none, 0px none;
+}
+.Grid .summary .row .cell
+{
+	font : 700 13px/normal "Pretendard";
+	color : #333333;
+	background : #dcd7d2;
+	border : 1px solid #c8c1c2;
+}
+.Grid .summary .row .cell .nexacontentsbox
+{
+	text-align : right;
+}
+.GridCellControl .celledit
+{
+	border : 1px solid #dee1e4;
+	background : #ffffff;
+}
+.GridCellControl .celltextarea
+{
+	border : 1px solid #dee1e4;
+}
+.GridCellControl .cellcombo
+{
+	border : 1px solid #dee1e4;
+}
+.GridCellControl .cellcombo .comboedit
+{
+	border : 0px none;
+}
+.GridCellControl .cellcalendar .dropbutton
+{
+	border : 0px none;
+}
+.GridCellControl .cellbutton
+{
+	border : 1px solid #737373;
+	background : #737373;
+	border-radius : 5px;
+	color : #ffffff;
+}
+.GridCellControl .celltreeitem .treeitemtext
+{
+	color : #333333;
+}
+.GridCellControl .celltreeline
+{
+	border : 1px dotted #909090;
+}
+.GroupBox .groupboxcontents
+{
+	background : #ffffff;
+	border : 1px solid #d6d4d5;
+}
+.GroupBox .groupboxtitle
+{
+	background : #ffffff;
+}
+.ImageViewer
+{
+	background : #ffffff;
+	border : 1px solid #dee1e4;
+	border-radius : 3px;
+}
+.ImageViewer .imagetext .nexacontentsbox
+{
+	text-align : center;
+}
+.ListBox
+{
+	border : 1px solid #dee1e4;
+	background : #ffffff;
+	border-radius : 5px;
+}
+.ListBoxControl
+{
+	border : 1px solid #e15e22;
+}
+.MaskEdit
+{
+	border : 1px solid #dee1e4;
+	padding : 0px 10px 1px 10px;
+	background : #ffffff;
+	border-radius : 5px;
+}
+.MaskEditControl
+{
+	border : 1px solid #dee1e4;
+	padding : 0px 10px 1px 10px;
+	background : #ffffff;
+	border-radius : 5px;
+}
+.Menu
+{
+	background : #ffffff;
+}
+.Menu .nextbutton
+{
+	border : 0px none;
+	cursor : poiter;
+}
+.Menu .prevbutton
+{
+	border : 0px none;
+	cursor : poiter;
+}
+.Menu .menuitem
+{
+	font : 700 20px/normal "Pretendard";
+	color : #333333;
+	cursor : pointer;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy
+{
+	border : 1px solid #c8c8c8;
+	background : #ffffff;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .nextbutton
+{
+	cursor : pointer;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .prevbutton
+{
+	cursor : pointer;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem
+{
+	border : 0px none;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem .popupmenuitemcheckbox
+{
+	cursor : pointer;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem .popupmenuitemhotkeytext .nexacontentsbox
+{
+	text-align : right;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem .popupmenuitemhotkeytext
+{
+	color : #c6c6c6;
+}
+.PopupMenu
+{
+	font : 13px/normal "Pretendard";
+	color : #555555;
+	background : #ffffff;
+	border : 1px solid #b5b5b5;
+}
+.PopupMenuControl
+{
+	font : 13px/normal "Pretendard";
+	color : #555555;
+	background : #ffffff;
+	border : 1px solid #b5b5b5;
+}
+.PopupMenu .popupmenuitem
+{
+	color : #555555;
+}
+.PopupMenuControl .popupmenuitem
+{
+	color : #555555;
+}
+.PopupMenu .popupmenuitem .popupmenuitemcheckbox
+{
+	background : URL('./images/chk_WF_Popupmenu_O.png') no-repeat left center;
+}
+.PopupMenuControl .popupmenuitem .popupmenuitemcheckbox
+{
+	background : URL('./images/chk_WF_Popupmenu_O.png') no-repeat left center;
+}
+.PopupMenu .popupmenuitem .popupmenuitemhotkeytext
+{
+	color : #aaaaaa;
+}
+.PopupMenu .popupmenuitem .popupmenuitemhotkeytext .nexacontentsbox
+{
+	text-align : right;
+}
+.PopupMenuControl .popupmenuitem .popupmenuitemhotkeytext
+{
+	color : #aaaaaa;
+}
+.PopupMenuControl .popupmenuitem .popupmenuitemhotkeytext .nexacontentsbox
+{
+	text-align : right;
+}
+.ProgressBar
+{
+	background : #f0f0f0;
+	border : 1px solid #aeaeae;
+}
+.ProgressBarControl
+{
+	background : #f0f0f0;
+	border : 1px solid #aeaeae;
+}
+.ProgressBar .progressbaritem
+{
+	background : #125dae;
+}
+.ProgressBarControl .progressbaritem
+{
+	background : #125dae;
+}
+.ProgressBar .progressbartext
+{
+	color : #ffffff;
+}
+.ProgressBar .progressbartext .nexacontentsbox
+{
+	text-align : center;
+}
+.ProgressBarControl .progressbartext
+{
+	color : #ffffff;
+}
+.ProgressBarControl .progressbartext .nexacontentsbox
+{
+	text-align : center;
+}
+.Spin
+{
+	border : 1px solid #dee1e4;
+	background : #ffffff;
+	border-radius : 5px;
+}
+.Spin .spinedit
+{
+	border : 0px none;
+	padding : 0px 10px 1px 10px;
+}
+.Spin .spinupbutton
+{
+	cursor : pointer;
+}
+.Spin .spindownbutton
+{
+	cursor : pointer;
+}
+.Sketch
+{
+	background : #ffffff;
+	border : 1px solid #d5d5d5;
+}
+.Tab
+{
+	background : url('./images/tab_WF_Bg.png') repeat left top;
+}
+.Tab .prevbuttonTab
+{
+	cursor : pointer;
+}
+.Tab .nextbuttonTab
+{
+	cursor : pointer;
+}
+.Tab .tabbuttonitemTab
+{
+	border : 1px solid #dee1e4,1px solid #dee1e4,1px solid #dee1e4,1px solid #dee1e4;
+	background : #f2f2f2;
+	color : #777777;
+	cursor : pointer;
+	font : 700 13px/normal "Pretendard";
+}
+.Tab .tabbuttonitemTab .extrabutton
+{
+	cursor : pointer;
+}
+.Tab .tabpageTab
+{
+	border : 0px solid #dee1e4, 0px none,0px none, 0px none;
+	background : #ffffff;
+}
+.TextArea
+{
+	border : 1px solid #dee1e4;
+	padding : 10px 10px 10px 10px;
+	background : #ffffff;
+	border-radius : 5px;
+}
+.VScrollBarControl
+{
+	background : transparent;
+	border : 0px none, 0px none, 0px none, 0px solid #d5d5d5;
+	border-radius : 5px;
+}
+.HScrollBarControl
+{
+	background : transparent;
+	border : 0px solid #d5d5d5, 0px none, 0px none, 0px none;
+	border-radius : 5px;
+}
+.VScrollBarControl .trackbar
+{
+	background : #dddddd;
+	border-radius : 10px 10px;
+}
+.HScrollBarControl .trackbar
+{
+	background : #dddddd;
+	border-radius : 10px 10px;
+}
+.VScrollIndicatorControl
+{
+	background : #f2f2f2;
+}
+.HScrollIndicatorControl
+{
+	background : #f2f2f2;
+}
+.VScrollIndicatorControl .trackbar
+{
+	background : #cccccc;
+	border-radius : 10px 10px;
+}
+.HScrollIndicatorControl .trackbar
+{
+	background : #cccccc;
+	border-radius : 10px 10px;
+}
+.CheckBoxSetControl
+{
+	background : #ffffff;
+}
+.MultiCombo
+{
+	border : 1px solid #dee1e4;
+	background : #ffffff;
+	border-radius : 5px;
+}
+.MultiComboControl
+{
+	border : 1px solid #dee1e4;
+	background : #ffffff;
+	border-radius : 5px;
+}
+.MultiCombo .dropbutton
+{
+	background : transparent;
+}
+.MultiComboControl .dropbutton
+{
+	background : transparent;
+}
+.MultiComboTagBoxControl
+{
+	border : 0px none;
+}
+.MultiComboTagBoxControl .tagboxitem
+{
+	background : #eeeeee;
+	border-radius : 10px;
+}
+.MultiComboTagBoxControl .tagboxedit
+{
+	padding : 3px;
+}
+.TagBoxControl
+{
+	background : #eeeeee;
+	border-radius : 10px;
+}
+.TagBoxControl .tagbutton
+{
+	background : url('./images/btn_TF_Close_O.png') no-repeat center center /cover #eeeeee;
+	border-radius : 50%;
+}
+.MultiComboListControl
+{
+	border : 1px solid #dee1e4;
+	background : #ffffff;
+}
+.MultiComboListControl .checkboxset
+{
+	background : #ffffff;
+	border : 0px none;
+}
+.MultiComboListControl .multicomboedit
+{
+	background : #ffffff;
+}
+.Button.btn_LOGIN_Start
+{
+	border : 1px solid #324399;
+	background : #3d4ea8;
+	color : #ffffff;
+	font : 700 16px/normal "Pretendard";
+}
+.Button.btn_LOGIN_Pw
+{
+	border : 0px none;
+	background : transparent;
+	color : #666666;
+	font : 12px/normal "Pretendard";
+}
+.Button.btn_LOGIN_Pw .nexacontentsbox
+{
+	text-align : left;
+}
+.Button.btn_WF_Login
+{
+	border : 0px none;
+	background : linear-gradient(to right top,#e0002a,#ef8009);
+	color : #ffffff;
+	font : 700 16px/normal "Pretendard";
+	border-radius : 30px;
+}
+.Combo.cbo_LOGIN_Input
+{
+	border : 0px none;
+	background : transparent;
+	color : #000000;
+	font : 700 14px/normal "Pretendard";
+}
+.Combo.cbo_LOGIN_Input .comboedit
+{
+	padding : 0px 0px 0px 0px;
+}
+.CheckBox.chk_WF_LoginId
+{
+	color : #bbbbbb;
+}
+.Div.div_WF_Login
+{
+	background : #1b1b1b;
+	border : 3px solid #ff5e14,0px none,0px none;
+}
+.Div.div_LOGIN_Bg
+{
+	background : #ffffff;
+	box-shadow : 3px 3px 10px 0px RGBA(136,136,136,0.20);
+}
+.Edit.edt_LOGIN_Input
+{
+	border : 0px none;
+	padding : 0px 0px 0px 0px;
+	background : transparent;
+	color : #000000;
+	font : 14px/normal "Pretendard";
+	letter-spacing : 1px;
+}
+.Edit.edt_WF_LoginId
+{
+	background : url('./images/edt_WF_LoginId.png') no-repeat left center  transparent;
+	color : #ffffff;
+	padding : 0px 10px 1px 50px;
+	border : 0px solid #2e2f32, 0px none, 1px solid #7b7e80, 0px none;
+	border-radius : 0px;
+	font : 16px/normal "Pretendard";
+}
+.Edit.edt_WF_LoginPw
+{
+	background : url('./images/edt_WF_LoginPw.png') no-repeat left center  transparent;
+	color : #ffffff;
+	padding : 0px 10px 1px 50px;
+	border : 0px solid #2e2f32, 0px none, 1px solid #7b7e80, 0px none;
+	border-radius : 0px;
+	font : 16px/normal "Pretendard";
+}
+.Form.frm_LOGIN_Bg
+{
+	background : #343a40;
+}
+.Static.sta_LOGIN_Pattern
+{
+	background : url('./images/frm_LOGIN_Bg.png') no-repeat center transparent;
+}
+.Static.sta_LOGIN_Pattern02
+{
+	background : url('./images/frm_LOGIN_Bg02.png') no-repeat center transparent;
+}
+.Static.sta_LOGIN_Id
+{
+	background : URL("./images/sta_LOGIN_Id.png") no-repeat left center transparent;
+}
+.Static.sta_LOGIN_Pw
+{
+	background : URL("./images/sta_LOGIN_Pw.png") no-repeat left center transparent;
+}
+.Static.sta_LOGIN_Language
+{
+	border : 0px none, 0px none, 2px solid #e9ebf3, 0px none;
+	background : URL("./images/sta_LOGIN_Language.png") no-repeat left center transparent;
+}
+.Static.sta_LOGIN_Line
+{
+	background : #cacaca;
+}
+.Static.sta_LOGIN_Label
+{
+	color : #c2c2c2;
+	font : 12px/normal "Pretendard";
+	letter-spacing : -0.5px;
+}
+.Static.sta_WF_LoginLogo
+{
+	background : url('./images/sta_WF_LoginLogo.png') no-repeat left center;
+	color : #e7e7e7;
+	font : 700 22px/normal "Pretendard";
+	letter-spacing : -1px;
+}
+.Static.sta_WF_LoginLogoNPS
+{
+	background : url('./images/sta_WF_LoginLogoNPS.png') no-repeat left center;
+	color : #e7e7e7;
+	font : 700 22px/normal "Pretendard";
+	letter-spacing : -1px;
+}
+.Static.sta_WF_LoginLogoPGMON
+{
+	background : url('./images/sta_WF_LoginLogoPGMON.png') no-repeat left center;
+	color : #e7e7e7;
+	font : 700 22px/normal "Pretendard";
+	letter-spacing : -1px;
+}
+.Static.sta_WF_LoginLogoEPAS
+{
+	background : url('./images/sta_WF_LoginLogoEPAS.png') no-repeat left center;
+	color : #e7e7e7;
+	font : 700 22px/normal "Pretendard";
+	letter-spacing : -1px;
+}
+.Static.sta_WF_LoginName
+{
+	color : #e7e7e7;
+	font : 700 22px/normal "Pretendard";
+	letter-spacing : -1px;
+}
+.Static.sta_WF_LoginBg
+{
+	background : hsla(0,0%,100%,0.8);
+	box-shadow : 0px 0px 10px 0px HSLA(0,0%,0%,0.39);
+}
+.Button.btn_TF_Setting
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_TF_User
+{
+	border : 0px none;
+	color : #000000;
+}
+.Button.btn_TF_Logout
+{
+	border : 0px none;
+}
+.Button.btn_TF_Setting02
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_TF_Logout02
+{
+	border : 0px none;
+	background : transparent;
+}
+.Div.div_TF_TopBg
+{
+	background : #ffffff;
+}
+.Static.sta_TF_Logo
+{
+	background : URL("./images/img_TF_Logo.png") left center no-repeat;
+}
+.Static.sta_TF_EPAS
+{
+	background : URL("./images/img_TF_EPAS.png") left center no-repeat;
+}
+.Static.sta_TF_NPS
+{
+	background : URL("./images/img_TF_NPS.png") left center no-repeat;
+}
+.Static.sta_TF_PGMON
+{
+	background : URL("./images/img_TF_PGMON.png") left center no-repeat;
+}
+.Static.sta_TF_UserInfo
+{
+	background : #ff5e14;
+	color : #ffffff;
+	border-radius : 20px;
+	font : 700 12px/normal "Pretendard";
+	letter-spacing : -1px;
+}
+.Button.btn_LF_AllMenu
+{
+	border : 5px solid #2e2f32, 0px none, 0px none, 0px none;
+	background : #343a40;
+	border-radius : 0px;
+	cursor : pointer;
+	color : #bcbcbc;
+	font : 14px/normal "Pretendard";
+}
+.Button.btn_LF_AllMenu .nexacontentsbox
+{
+	text-align : left;
+}
+.Button.btn_LF_AllMenu_S
+{
+	background : #343a40;
+	border-radius : 0px;
+	font : 700 14px/normal "Pretendard";
+	border : 5px solid #ff5e14, 0px none, 0px none, 0px none;
+	color : #ededed;
+}
+.Button.btn_LF_AllMenu_S .nexacontentsbox
+{
+	text-align : left;
+}
+.Button.btn_LF_MyMenu
+{
+	border : 5px solid #2e2f32, 0px none, 0px none, 0px none;
+	background : rgb(45,21,23);
+	border-radius : 0px;
+	cursor : pointer;
+	color : #bcbcbc;
+	font : 700 14px/normal "Pretendard";
+}
+.Button.btn_LF_Mymenu_S
+{
+	background : #343a40;
+	border-radius : 0px;
+	font : 700 14px/normal "Pretendard";
+	border : 5px solid #ff5e14, 0px none, 0px none, 0px none;
+	color : #ededed;
+}
+.Button.btn_WF_menuOpen
+{
+	background : linear-gradient(to right top,#e0002a,#ef8009);
+	border-radius : 0px;
+	border : 0px none;
+	color : #ffffff;
+}
+.Button.btn_WF_menuClose
+{
+	background : #343a40;
+	border-radius : 0px;
+	border : 0px none;
+}
+.Div.div_LF_MenuBg
+{
+	background : #343a40;
+	color : #ffffff;
+}
+.Grid.grd_LF_TreeGrd
+{
+	border : 0px none;
+	background : transparent;
+	color : #cccccc;
+}
+.Grid.grd_LF_TreeGrd .body .row .cell
+{
+	border : 0px none;
+}
+.Grid.grd_LF_TreeGrd .body .row .cell .celltreeitem .treeitemtext
+{
+	color : #cccccc;
+	font : 700 13px/normal "Pretendard";
+}
+.Grid.grd_LF_TreeGrd .vscrollbar
+{
+	background : transparent;
+	border : 0px none;
+}
+.Grid.grd_LF_TreeGrd .hscrollbar
+{
+	background : transparent;
+	border : 0px none;
+}
+.Grid.grd_LF_TreeGrd .vscrollbar .trackbar
+{
+	background : #777777;
+	border-radius : 10px 10px;
+}
+.Grid.grd_LF_TreeGrd .hscrollbar .trackbar
+{
+	background : #777777;
+	border-radius : 10px 10px;
+}
+.Button.btn_MDI_Tab
+{
+	border : 0px none;
+	background : #f5f5f5 url("./images/btn_MDI_TabLine.png") no-repeat right center;
+	border-radius : 0px;
+}
+.Button.btn_MDI_Tab .nexacontentsbox
+{
+	text-align : left;
+}
+.Button.btn_MDI_TabFix
+{
+	border : 0px none;
+	border-radius : 0px;
+}
+.Button.btn_MDI_TabFix .nexacontentsbox
+{
+	text-align : left;
+}
+.Button.btn_MDI_TabClose
+{
+	border : 0px none;
+	background : transparent;
+	border-radius : 0px;
+}
+.Button.btn_MDI_LeftTabCha
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_MDI_RightTabCha
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_MDI_OpenList
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_MDI_ScnFull
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_MDI_ScnWin
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_MDI_ScnVDiv
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_MDI_ScnHDiv
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_MDI_ScnClose
+{
+	border : 0px none;
+	background : transparent;
+}
+.Div.div_GD_Tip
+{
+	background : #fff7d1;
+}
+.Static.sta_GD_Tip .nexacontentsbox
+{
+	vertical-align : top;
+}
+.Static.sta_GD_Title
+{
+	background : #244a89;
+	color : #ffffff;
+	font : 700 30px/normal "Pretendard";
+}
+.Static.sta_GD_SubTitle
+{
+	font : 700 24px/normal "Pretendard";
+}
+.Static.sta_GD_SubTitle02
+{
+	font : 12px/normal "Pretendard";
+}
+.Static.sta_GD_SubBg
+{
+	background : #fafafa;
+	border : 0px none, 0px none,1px solid #d4d4d4, 0px none;
+}
+.Form.frm_GD_Bg
+{
+	background : #fafafa;
+}
+.Button.btn_POP_Yes
+{
+	border : 1px solid #212121;
+	background : #212121;
+	color : #ffffff;
+}
+.Button.btn_POP_X
+{
+	border : 0px none;
+	background : transparent;
+}
+.Div.div_POP_BtnBg
+{
+	background : #f3f3f3;
+}
+.Form.frm_POP_Bg
+{
+	background : #ffffff;
+	border-radius : 10px 10px 10px 10px;
+}
+.Static.sta_POP_Title
+{
+	font : 700 16px/normal "Pretendard";
+	background : #212121;
+	color : #ffffff;
+}
+.Button.btn_MF_More
+{
+	border : 0px solid #c8c8c8;
+	background : transparent;
+}
+.Div.div_MF_NoticeBg
+{
+	background : #ffffff;
+	box-shadow : 3px 3px 10px 0px rgba(136,136,136,0.20);
+	border-radius : 10px;
+}
+.Grid.grd_MF_Notice
+{
+	border : 0px none;
+}
+.Grid.grd_MF_Notice .body .row .cell
+{
+	border : 0px none, 0px none,1px solid #e5e5e5,0px none;
+}
+.Static.sta_MF_Title
+{
+	font : 700 16px/normal "Pretendard";
+}
+.Static.sta_MF_Slogan
+{
+	font : 700 40px/normal "Pretendard";
+	color : #ffffff;
+}
+.Static.sta_MF_Slogan .nexacontentsbox
+{
+	-nexa-word-wrap : char;
+}
+.Static.sta_MF_SubTitle
+{
+	color : #e15e22;
+	font : 700 16px/normal "Pretendard";
+}
+.Static.sta_MF_SubTitle .nexacontentsbox
+{
+	text-align : right;
+}
+.Static.sta_MF_Num
+{
+	color : #ffffff;
+	font : 700 36px/normal "Pretendard";
+}
+.Static.sta_MF_Num .nexacontentsbox
+{
+	text-align : right;
+}
+.Button.btn_WF_Color
+{
+	border : 1px solid #737373;
+	background : #737373;
+	color : #ffffff;
+}
+.Button.btn_WF_Custom
+{
+	border : 1px solid #343a40;
+}
+.Button.btn_WF_EdtPop
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_WF_Point
+{
+	border : 1px solid #e15e22;
+	background : #e15e22;
+	color : #ffffff;
+}
+.Button.btn_WF_Point2
+{
+	border : 1px solid #343a40;
+	background : #343a40;
+	color : #ffffff;
+}
+.Button.btn_WF_SearchSmall
+{
+	background : url('./images/btn_WF_Search_O.png') no-repeat center center #ffffff;
+	border : 1px solid #c8c8c8;
+}
+.Button.btn_WF_Btitle
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_WF_BtitleOn
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_WF_Refresh
+{
+	border : 0px none;
+	background : transparent;
+	opacity : 0.8;
+}
+.Button.btn_WF_Cal
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_WF_CalNext
+{
+	cursor : pointer;
+	background : transparent;
+	border : 0px none;
+}
+.Button.btn_WF_CalPrev
+{
+	cursor : pointer;
+	background : transparent;
+	border : 0px none;
+}
+.Button.btn_WF_CalMonth
+{
+	border : 0px none;
+}
+.Button.btn_WF_CalMonth_S
+{
+	border : 0px none;
+	background : #e15e22;
+	color : #ffffff;
+}
+.Button.btn_WF_Reload
+{
+	opacity : 0.6;
+}
+.Button.btn_WF_Search
+{
+	border : 1px solid #e15e22;
+	background : #d8591f;
+	color : #ffffff;
+}
+.Button.btn_WF_ShuttleL
+{
+	border-radius : 50px;
+}
+.Button.btn_WF_ShuttleR
+{
+	border-radius : 50px;
+}
+.Button.btn_WF_ShuttleU
+{
+	border-radius : 50px;
+}
+.Button.btn_WF_ShuttleD
+{
+	border-radius : 50px;
+}
+.Button.btn_WF_Prev
+{
+	background : transparent;
+}
+.Button.btn_WF_Next
+{
+	background : transparent;
+}
+.Button.btn_WF_End
+{
+	background : transparent;
+}
+.Button.btn_WF_Start
+{
+	background : transparent;
+}
+.Button.btn_WF_GrdSave
+{
+	border : 1px solid #343a40;
+	background : #343a40;
+	color : #ffffff;
+}
+.Button.btn_WF_Confirm
+{
+	border : 1px solid #212121;
+	background : #212121;
+	color : #ffffff;
+}
+.Combo.cmb_WF_CalMonth
+{
+	background : transparent;
+	border : 0px none;
+}
+.Combo.cmb_WF_CalMonth .comboedit
+{
+	color : #ffffff;
+	font : bold 13px/normal "Tahoma";
+	padding : 0px 5px;
+}
+.Calendar.cal_WF_FromTo
+{
+	border : 0px none;
+	border-radius : 0px;
+}
+.Calendar.cal_WF_FromTo .datepicker
+{
+	border : 0px none;
+	border-radius : 0px;
+}
+.DatePickerControl.popupCalendarcal_WF_FromTodatepicker.dummy.dummy
+{
+	border : 0px none;
+	border-radius : 0px;
+}
+.Calendar.cal_WF_FromTo .datepicker .head
+{
+	border : 0px none;
+	border-radius : 0px;
+}
+.DatePickerControl.popupCalendarcal_WF_FromTodatepicker.dummy.dummy .head
+{
+	border : 0px none;
+	border-radius : 0px;
+}
+.Calendar.cal_WF_FromTo .datepicker .body
+{
+	border : 0px none;
+	border-radius : 0px;
+}
+.DatePickerControl.popupCalendarcal_WF_FromTodatepicker.dummy.dummy .body
+{
+	border : 0px none;
+	border-radius : 0px;
+}
+.Div.div_WF_SearchBg
+{
+	background : #f9f9f9;
+	border : 1px solid #dddddd;
+	border-radius : 5px;
+}
+.Div.div_WF_Search
+{
+	background : #f9f9f9;
+	border : 1px solid #dddddd;
+	border-radius : 5px;
+}
+.Div.div_WF_DetailBg
+{
+	background : URL("./images/div_WF_DetailBg.png") repeat;
+	border : 1px solid #e8e7e7,1px solid #e8e7e7,0px solid #e8e7e7,1px solid #e8e7e7;
+}
+.Div.div_WF_Border
+{
+	border : 1px solid #e8e7e7;
+	background : #fafafa;
+	border-radius : 5px;
+}
+.Edit.edt_WF_SchPop
+{
+	padding : 0px 30px 1px 10px;
+}
+.Grid.grd_WF_Tree
+{
+	border : 0px solid #000000, 0px solid #e6e6e6, 0px solid #e6e6e6, 0px solid #e6e6e6;
+	background : transparent;
+}
+.Grid.grd_WF_Tree .body .row .cell
+{
+	border : 0px solid #e6e6e6;
+}
+.Static.sta_WF_menuTitle
+{
+	font : 700 18px/normal "Pretendard";
+}
+.Static.sta_WF_Subtitle
+{
+	font : 700 14px/normal "Pretendard";
+	background : url('./images/sta_WF_Subtitle.png') no-repeat left center;
+	font : 700 14px/normal "Pretendard";
+}
+.Static.sta_WF_Subtitle02
+{
+	background : url('./images/sta_WF_Subtitle02.png') no-repeat left center;
+	color : #333333;
+	font : 700 14px/normal "Pretendard";
+}
+.Static.sta_WF_Subtitle03
+{
+	background : url('./images/sta_WF_Subtitle03.png') no-repeat left center;
+	color : #333333;
+	font : 700 13px/normal "Pretendard";
+}
+.Static.sta_WF_LabelSch_P
+{
+	background : url('./images/sta_WF_LabelSch_P.png') no-repeat left top;
+}
+.Static.sta_WF_Label
+{
+	background : #f5f6fa;
+	border : 1px solid #e8e7e7, 1px solid #e8e7e7, 1px solid #e8e7e7, 1px solid #e8e7e7;
+}
+.Static.sta_WF_Label_P
+{
+	background : url('./images/sta_WF_Label_P.png') no-repeat left top #f5f6fa;
+	border : 1px solid #e8e7e7, 1px solid #e8e7e7, 1px solid #e8e7e7, 1px solid #e8e7e7;
+}
+.Static.sta_WF_Labelbg
+{
+	background : #ffffff;
+	border : 1px solid #e8e7e7,  1px solid #e8e7e7, 1px solid #e8e7e7,  1px solid #e8e7e7;
+}
+.Static.sta_WF_TxtRed
+{
+	color : #ea002c;
+}
+.Static.sta_WF_TxtBlue
+{
+	color : #5da3ea;
+}
+.Static.sta_WF_TxtGreen
+{
+	color : #00a651;
+}
+.Static.sta_WF_TxtGray
+{
+	color : #777777;
+}
+.Static.sta_WF_TxtYellow
+{
+	color : #b2a901;
+}
+.Static.sta_WF_TxtOrange
+{
+	color : #f68e56;
+}
+.Static.sta_WF_Txtbold14
+{
+	font : 700 14px/normal "Pretendard";
+}
+.Static.sta_WF_Txtbold16
+{
+	font : 700 16px/normal "Pretendard";
+}
+.Static.sta_WF_Txt24
+{
+	font : 24px/normal "Pretendard";
+}
+.Static.sta_alert_Txt .nexacontentsbox
+{
+	vertical-align : top;
+}
+.Static.sta_alert_Confirm
+{
+	background : url('./images/sta_alert_Confirm.png') no-repeat center center;
+}
+.Static.sta_alert_Error
+{
+	background : url('./images/sta_alert_Error.png') no-repeat center center;
+}
+.Static.sta_alert_Warning
+{
+	background : url('./images/sta_alert_Warning.png') no-repeat center center;
+}
+.Static.sta_WF_Today
+{
+	background : url('./images/sta_WF_Today.png') no-repeat left center;
+	border : 0px none, 0px none, 0px solid #dee1e4, 0px none;
+}
+.Static.sta_WF_Search
+{
+	background : #f9f9f9;
+	border : 1px solid #dddddd;
+	border-radius : 5px;
+}
+.Static.sta_WF_Des
+{
+	background : url('./images/sta_WF_Des.png') no-repeat left top #fafafa;
+	border-radius : 3px;
+	font : normal 12px/normal "Pretendard";
+}
+.Static.sta_WF_Des .nexacontentsbox
+{
+	-nexa-word-wrap : char;
+}
+.TitleBarControl[status=deactivate]
+{
+	background : #2b3753;
+	color : #ffffff;
+}
+.Button[status=mouseover]
+{
+	border : 1px solid #e15e22;
+}
+.Button[status=focused]
+{
+	border : 1px solid #e15e22;
+}
+.Calendar[status=mouseover]
+{
+	border : 1px solid #e15e22;
+}
+.Calendar[status=focused]
+{
+	border : 1px solid #e15e22;
+}
+.CalendarControl[status=mouseover]
+{
+	border : 1px solid #e15e22;
+}
+.CalendarControl[status=focused]
+{
+	border : 1px solid #e15e22;
+}
+.Calendar[status=readonly]
+{
+	background : #f9f9f9;
+}
+.CalendarControl[status=readonly]
+{
+	background : #f9f9f9;
+}
+.Calendar .calendaredit[status=mouseover]
+{
+	border : 0px none;
+}
+.Calendar .calendaredit[status=focused]
+{
+	border : 0px none;
+}
+.Calendar .calendaredit[status=readonly]
+{
+	border : 0px none;
+}
+.CalendarControl .calendaredit[status=focused]
+{
+	border : 0px none;
+}
+.CalendarControl .calendaredit[status=mouseover]
+{
+	border : 0px none;
+}
+.CalendarControl .calendaredit[status=readonly]
+{
+	border : 0px none;
+}
+.Combo[status=mouseover]
+{
+	border : 1px solid #e15e22;
+}
+.Combo[status=focused]
+{
+	border : 1px solid #e15e22;
+}
+.ComboControl[status=mouseover]
+{
+	border : 1px solid #e15e22;
+}
+.ComboControl[status=focused]
+{
+	border : 1px solid #e15e22;
+}
+.Combo[status=readonly]
+{
+	background : #f9f9f9;
+}
+.ComboControl[status=readonly]
+{
+	background : #f9f9f9;
+}
+.Combo .comboedit[status=focused]
+{
+	border : 0px none;
+}
+.Combo .comboedit[status=mouseover]
+{
+	border : 0px none;
+}
+.Combo .comboedit[status=readonly]
+{
+	border : 0px none;
+}
+.ComboControl .comboedit[status=focused]
+{
+	border : 0px none;
+}
+.ComboControl .comboedit[status=mouseover]
+{
+	border : 0px none;
+}
+.ComboControl .comboedit[status=readonly]
+{
+	border : 0px none;
+}
+.Combo .dropbutton[status=focused]
+{
+	background : transparent;
+}
+.Combo .dropbutton[status=mouseover]
+{
+	background : transparent;
+}
+.ComboControl .dropbutton[status=focused]
+{
+	background : transparent;
+}
+.ComboControl .dropbutton[status=mouseover]
+{
+	background : transparent;
+}
+.DatePickerControl[status=mouseover]
+{
+	border : 1px solid #2b3753;
+	background : #ffffff;
+	cursor : pointer;
+}
+.DatePickerControl[status=focused]
+{
+	border : 1px solid #2b3753;
+	background : #ffffff;
+	cursor : pointer;
+}
+.DatePickerControl[status=readonly]
+{
+	border : 1px solid #2b3753;
+	background : #ffffff;
+	cursor : pointer;
+}
+.DatePickerControl .head[status=mouseover]
+{
+	background : #2b3753;
+	color : #ffffff;
+	cursor : pointer;
+	font : bold 13px/normal "Tahoma";
+	letter-spacing : 0px;
+}
+.DatePickerControl .head[status=focused]
+{
+	background : #2b3753;
+	color : #ffffff;
+	cursor : pointer;
+	font : bold 13px/normal "Tahoma";
+	letter-spacing : 0px;
+}
+.DatePickerControl .head[status=readonly]
+{
+	background : #2b3753;
+	color : #ffffff;
+	cursor : pointer;
+	font : bold 13px/normal "Tahoma";
+	letter-spacing : 0px;
+}
+.DatePickerControl .head .nextbutton[status=focused]
+{
+	cursor : pointer;
+}
+.DatePickerControl .head .prevbutton[status=focused]
+{
+	cursor : pointer;
+}
+.DatePickerControl .head .monthspin[status=mouseover]
+{
+	border : 1px solid #2b3753;
+	background : #2b3753;
+	color : #ffffff;
+}
+.DatePickerControl .head .monthspin[status=focused]
+{
+	border : 1px solid #2b3753;
+	background : #2b3753;
+	color : #ffffff;
+}
+.DatePickerControl .head .yearspin[status=mouseover]
+{
+	border : 1px solid #2b3753;
+	background : #2b3753;
+	color : #ffffff;
+}
+.DatePickerControl .head .yearspin[status=focused]
+{
+	border : 1px solid #2b3753;
+	background : #2b3753;
+	color : #ffffff;
+}
+.DatePickerControl .head .monthspin .spinedit[status=focused]
+{
+	border : 1px solid #2b3753;
+	padding : 0px 0px 0px 0px;
+	background : #2b3753;
+	color : #ffffff;
+}
+.DatePickerControl .head .monthspin .spinedit[status=mouseover]
+{
+	border : 1px solid #2b3753;
+	padding : 0px 0px 0px 0px;
+	background : #2b3753;
+	color : #ffffff;
+}
+.DatePickerControl .head .yearspin .spinedit[status=mouseover]
+{
+	border : 1px solid #2b3753;
+	padding : 0px 0px 0px 0px;
+	background : #2b3753;
+	color : #ffffff;
+}
+.DatePickerControl .head .yearspin .spinedit[status=focused]
+{
+	border : 1px solid #2b3753;
+	padding : 0px 0px 0px 0px;
+	background : #2b3753;
+	color : #ffffff;
+}
+.DatePickerControl .body .weekband[status=mouseover]
+{
+	background : #2b3753;
+	cursor : pointer;
+}
+.DatePickerControl .body .weekitem[status=mouseover]
+{
+	color : #ffffff;
+	cursor : pointer;
+	font : bold 12px/normal "Tahoma";
+}
+.DatePickerControl .body .weekitem[status=readonly]
+{
+	color : #ffffff;
+	cursor : pointer;
+	font : bold 12px/normal "Tahoma";
+}
+.DatePickerControl .body .dayitem[status=focused]
+{
+	cursor : pointer;
+}
+.DatePickerControl .body .dayitem[status=focused] .nexacontentsbox
+{
+	text-align : center;
+}
+.DatePickerControl .body .dayitem[status=readonly]
+{
+	cursor : pointer;
+}
+.DatePickerControl .body .dayitem[status=readonly] .nexacontentsbox
+{
+	text-align : center;
+}
+.DatePickerControl .body .dayitem[status=mouseover]
+{
+	background : #ffefd9;
+	color : #6b6760;
+	font : 700 12px/normal "Tahoma";
+	border-radius : 30px;
+}
+.Edit[status=mouseover]
+{
+	border : 1px solid #e15e22;
+}
+.Edit[status=focused]
+{
+	border : 1px solid #e15e22;
+}
+.FileUpload .fileuploaditem .fileuploaditemedit[status=mouseover]
+{
+	border : 1px solid #e15e22;
+}
+.FileUpload .fileuploaditem .fileuploaditemedit[status=focused]
+{
+	border : 1px solid #e15e22;
+}
+.Edit[status=readonly]
+{
+	background : #f9f9f9;
+}
+.EditControl[status=readonly]
+{
+	background : #f9f9f9;
+}
+.Grid .body .row .cell[status=mouseover]
+{
+	background : #f9f9f9;
+}
+.GridCellControl .celledit[status=mouseover]
+{
+	border : 1px solid #e15e22;
+}
+.GridCellControl .celledit[status=focused]
+{
+	border : 1px solid #e15e22;
+}
+.GridCellControl .celledit[status=readonly]
+{
+	background : #f9f9f9;
+}
+.GridCellControl .celltextarea[status=mouseover]
+{
+	border : 1px solid #e15e22;
+}
+.GridCellControl .celltextarea[status=focused]
+{
+	border : 1px solid #e15e22;
+}
+.GridCellControl .celltextarea[status=readonly]
+{
+	background : #f9f9f9;
+}
+.GridCellControl .cellcombo[status=mouseover]
+{
+	border : 1px solid #e15e22;
+}
+.GridCellControl .cellcombo[status=focused]
+{
+	border : 1px solid #e15e22;
+}
+.GridCellControl .cellcombo .comboedit[status=mouseover]
+{
+	border : 0px none;
+}
+.GridCellControl .cellcombo .comboedit[status=focused]
+{
+	border : 0px none;
+}
+.GridCellControl .cellcalendar .dropbutton[status=focused]
+{
+	border : 0px none;
+}
+.GridCellControl .cellbutton[status=focused]
+{
+	border : 1px solid #e15e22;
+}
+.GridCellControl .cellbutton[status=mouseover]
+{
+	border : 1px solid #e15e22;
+}
+.ListBox[status=mouseover]
+{
+	border : 1px solid #e15e22;
+}
+.ListBox[status=focused]
+{
+	border : 1px solid #e15e22;
+}
+.ListBoxControl[status=mouseover]
+{
+	border : 1px solid #e15e22;
+}
+.ListBoxControl[status=focused]
+{
+	border : 1px solid #e15e22;
+}
+.ListBox .listboxitem[status=mouseover]
+{
+	background : #f9f9f9;
+	color : #333333;
+}
+.ListBoxControl .listboxitem[status=mouseover]
+{
+	background : #f9f9f9;
+	color : #333333;
+}
+.ListBox .listboxitem[status=readonly]
+{
+	background : #f9f9f9;
+}
+.ListBoxControl .listboxitem[status=readonly]
+{
+	background : #f9f9f9;
+}
+.MaskEdit[status=mouseover]
+{
+	border : 1px solid #e15e22;
+}
+.MaskEdit[status=focused]
+{
+	border : 1px solid #e15e22;
+}
+.MaskEditControl[status=mouseover]
+{
+	border : 1px solid #e15e22;
+}
+.MaskEditControl[status=focused]
+{
+	border : 1px solid #e15e22;
+}
+.MaskEdit[status=readonly]
+{
+	background : #f9f9f9;
+}
+.MaskEditControl[status=readonly]
+{
+	background : #f9f9f9;
+}
+.Menu .menuitem[status=mouseover]
+{
+	color : #e15e22;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy[status=mouseover]
+{
+	border : 1px solid #c8c8c8;
+	background : #ffffff;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem[status=focused]
+{
+	background : #ffefd9;
+	color : #333333;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem[status=mouseover]
+{
+	background : #ffefd9;
+	color : #333333;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem .popupmenuitemhotkeytext[status=mouseover]
+{
+	color : #ffffff;
+}
+.PopupMenu .popupmenuitem[status=mouseover]
+{
+	background : #e7e9ed;
+}
+.PopupMenu .popupmenuitem[status=focused]
+{
+	background : #e7e9ed;
+}
+.PopupMenuControl .popupmenuitem[status=mouseover]
+{
+	background : #e7e9ed;
+}
+.PopupMenuControl .popupmenuitem[status=focused]
+{
+	background : #e7e9ed;
+}
+.PopupMenu .popupmenuitem .popupmenuitemcheckbox[status=mouseover]
+{
+	background : URL('./images/chk_WF_Popupmenu_O.png') no-repeat left center;
+}
+.PopupMenuControl .popupmenuitem .popupmenuitemcheckbox[status=mouseover]
+{
+	background : URL('./images/chk_WF_Popupmenu_O.png') no-repeat left center;
+}
+.Spin[status=mouseover]
+{
+	border : 1px solid #e15e22;
+}
+.Spin[status=focused]
+{
+	border : 1px solid #e15e22;
+}
+.Spin[status=readonly]
+{
+	background : #f9f9f9;
+}
+.Spin .spinedit[status=mouseover]
+{
+	border : 0px none;
+	padding : 0px 10px 1px 10px;
+}
+.Spin .spinedit[status=focused]
+{
+	border : 0px none;
+	padding : 0px 10px 1px 10px;
+}
+.Spin .spinedit[status=readonly]
+{
+	border : 0px none;
+	padding : 0px 10px 1px 10px;
+}
+.Tab .tabbuttonitemTab[status=mouseover]
+{
+	border : 1px solid #dee1e4;
+	background : #ffffff;
+	color : #333333;
+}
+.Tab .tabbuttonitemTab[status=focused]
+{
+	border : 1px solid #dee1e4;
+	background : #ffffff;
+	color : #333333;
+}
+.Tab .tabpageTab[status=mouseover]
+{
+	border : 0px solid #dee1e4, 0px none,0px none, 0px none;
+	background : #ffffff;
+}
+.Tab .tabpageTab[status=focused]
+{
+	border : 0px solid #dee1e4, 0px none,0px none, 0px none;
+	background : #ffffff;
+}
+.TextArea[status=mouseover]
+{
+	border : 1px solid #e15e22;
+}
+.TextArea[status=focused]
+{
+	border : 1px solid #e15e22;
+}
+.TextArea[status=readonly]
+{
+	background : #f9f9f9;
+}
+.VScrollBarControl .trackbar[status=focused]
+{
+	background : #999999;
+}
+.HScrollBarControl .trackbar[status=focused]
+{
+	background : #999999;
+}
+.VScrollBarControl .trackbar[status=mouseover]
+{
+	background : #bbbbbb;
+}
+.HScrollBarControl .trackbar[status=mouseover]
+{
+	background : #bbbbbb;
+}
+.VScrollIndicatorControl .trackbar[status=mouseover]
+{
+	background : #999999;
+}
+.HScrollIndicatorControl .trackbar[status=mouseover]
+{
+	background : #999999;
+}
+.MultiCombo[status=mouseover]
+{
+	border : 1px solid #e15e22;
+}
+.MultiCombo[status=focused]
+{
+	border : 1px solid #e15e22;
+}
+.MultiComboControl[status=mouseover]
+{
+	border : 1px solid #e15e22;
+}
+.MultiComboControl[status=focused]
+{
+	border : 1px solid #e15e22;
+}
+.MultiCombo[status=readonly]
+{
+	background : #f9f9f9;
+}
+.MultiComboControl[status=readonly]
+{
+	background : #f9f9f9;
+}
+.MultiCombo .dropbutton[status=mouseover]
+{
+	background : transparent;
+}
+.MultiCombo .dropbutton[status=focused]
+{
+	background : transparent;
+}
+.MultiComboControl .dropbutton[status=mouseover]
+{
+	background : transparent;
+}
+.MultiComboControl .dropbutton[status=focused]
+{
+	background : transparent;
+}
+.MultiComboListControl.popupMultiCombomulticombolist.dummy .checkboxset .checkboxsetitem[status=mouseover]
+{
+	background : #f9f9f9;
+	color : #333333;
+}
+.MultiComboListControl[status=mouseover]
+{
+	border : 1px solid #e15e22;
+}
+.Button.btn_LOGIN_Start[status=mouseover]
+{
+	border : 1px solid #324399;
+	background : #203286;
+}
+.Button.btn_LOGIN_Pw[status=mouseover]
+{
+	border : 0px none;
+	color : #000000;
+}
+.Button.btn_LOGIN_Pw[status=mouseover] .nexacontentsbox
+{
+	text-decoration : underline;
+}
+.Button.btn_LOGIN_Pw[status=focused]
+{
+	border : 0px none;
+	color : #000000;
+}
+.Button.btn_LOGIN_Pw[status=focused] .nexacontentsbox
+{
+	text-decoration : underline;
+}
+.Button.btn_WF_Login[status=focused]
+{
+	border : 0px none;
+	background : linear-gradient(to left bottom,#e0002a,#ef8009);
+}
+.Button.btn_WF_Login[status=mouseover]
+{
+	border : 0px none;
+	background : linear-gradient(to left bottom,#e0002a,#ef8009);
+}
+.Combo.cbo_LOGIN_Input[status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+	color : #000000;
+	font : 700 14px/normal "Pretendard";
+}
+.Combo.cbo_LOGIN_Input[status=focused]
+{
+	border : 0px none;
+	background : transparent;
+	color : #000000;
+	font : 700 14px/normal "Pretendard";
+}
+.Edit.edt_LOGIN_Input[status=mouseover]
+{
+	border : 0px none;
+	padding : 0px 0px 0px 0px;
+	background : transparent;
+	color : #000000;
+	font : 14px/normal "Pretendard";
+	letter-spacing : 1px;
+}
+.Edit.edt_LOGIN_Input[status=focused]
+{
+	border : 0px none;
+	padding : 0px 0px 0px 0px;
+	background : transparent;
+	color : #000000;
+	font : 14px/normal "Pretendard";
+	letter-spacing : 1px;
+}
+.Edit.edt_WF_LoginId[status=mouseover]
+{
+	border : 0px none, 0px none, 1px solid #e15e22, 0px none;
+}
+.Edit.edt_WF_LoginId[status=focused]
+{
+	border : 0px none, 0px none, 1px solid #e15e22, 0px none;
+}
+.Edit.edt_WF_LoginPw[status=mouseover]
+{
+	border : 0px none, 0px none, 1px solid #e15e22, 0px none;
+}
+.Edit.edt_WF_LoginPw[status=focused]
+{
+	border : 0px none, 0px none, 1px solid #e15e22, 0px none;
+}
+.Button.btn_TF_Setting[status=mouseover]
+{
+	border : 0px none;
+}
+.Button.btn_TF_Setting[status=focused]
+{
+	border : 0px none;
+}
+.Button.btn_TF_User[status=focused]
+{
+	border : 0px none;
+}
+.Button.btn_TF_User[status=focused] .nexacontentsbox
+{
+	text-decoration : underline;
+}
+.Button.btn_TF_User[status=mouseover]
+{
+	border : 0px none;
+}
+.Button.btn_TF_User[status=mouseover] .nexacontentsbox
+{
+	text-decoration : underline;
+}
+.Button.btn_TF_Logout[status=focused]
+{
+	border : 0px none;
+	color : #e15e22;
+}
+.Button.btn_TF_Logout[status=focused] .nexacontentsbox
+{
+	text-decoration : underline;
+}
+.Button.btn_TF_Logout[status=mouseover]
+{
+	border : 0px none;
+	color : #e15e22;
+}
+.Button.btn_TF_Logout[status=mouseover] .nexacontentsbox
+{
+	text-decoration : underline;
+}
+.Button.btn_TF_Setting02[status=mouseover]
+{
+	border : 0px none;
+}
+.Button.btn_TF_Setting02[status=focused]
+{
+	border : 0px none;
+}
+.Button.btn_TF_Logout02[status=mouseover]
+{
+	border : 0px none;
+}
+.Button.btn_TF_Logout02[status=focused]
+{
+	border : 0px none;
+}
+.Button.btn_LF_AllMenu[status=mouseover]
+{
+	border : 5px solid #2e2f32, 0px none, 0px none, 0px none;
+	color : #ededed;
+}
+.Button.btn_LF_AllMenu[status=focused]
+{
+	border : 5px solid #2e2f32, 0px none, 0px none, 0px none;
+	color : #ededed;
+}
+.Button.btn_LF_AllMenu_S[status=mouseover]
+{
+	background : #343a40;
+	border-radius : 0px;
+	font : 700 14px/normal "Pretendard";
+	border : 5px solid #ff5e14, 0px none, 0px none, 0px none;
+	color : #ededed;
+}
+.Button.btn_LF_AllMenu_S[status=mouseover] .nexacontentsbox
+{
+	text-align : left;
+}
+.Button.btn_LF_AllMenu_S[status=focused]
+{
+	background : #343a40;
+	border-radius : 0px;
+	font : 700 14px/normal "Pretendard";
+	border : 5px solid #ff5e14, 0px none, 0px none, 0px none;
+	color : #ededed;
+}
+.Button.btn_LF_AllMenu_S[status=focused] .nexacontentsbox
+{
+	text-align : left;
+}
+.Button.btn_LF_Mymenu[status=mouseover]
+{
+	border : 5px solid #2e2f32, 0px none, 0px none, 0px none;
+	color : #ededed;
+}
+.Button.btn_LF_Mymenu[status=focused]
+{
+	border : 5px solid #2e2f32, 0px none, 0px none, 0px none;
+	color : #ededed;
+}
+.Button.btn_LF_Mymenu_S[status=mouseover]
+{
+	background : #343a40;
+	border-radius : 0px;
+	font : 700 14px/normal "Pretendard";
+	border : 5px solid #ff5e14, 0px none, 0px none, 0px none;
+	color : #ededed;
+}
+.Button.btn_LF_Mymenu_S[status=focused]
+{
+	background : #343a40;
+	border-radius : 0px;
+	font : 700 14px/normal "Pretendard";
+	border : 5px solid #ff5e14, 0px none, 0px none, 0px none;
+	color : #ededed;
+}
+.Button.btn_WF_menuOpen[status=focused]
+{
+	border : 0px none;
+	background : linear-gradient(to right top,#e0002a,#ef8009);
+}
+.Button.btn_WF_menuOpen[status=mouseover]
+{
+	border : 0px none;
+	background : linear-gradient(to right top,#e0002a,#ef8009);
+}
+.Button.btn_WF_menuClose[status=focused]
+{
+	background : #343a40;
+	border-radius : 0px;
+	border : 0px none;
+}
+.Button.btn_WF_menuClose[status=mouseover]
+{
+	background : #343a40;
+	border-radius : 0px;
+	border : 0px none;
+}
+.Grid.grd_LF_TreeGrd .body .row .cell[status=mouseover]
+{
+	background : #3f464d;
+	color : #ffffff;
+}
+.Button.btn_MDI_Tab[status=focused]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_Tab[status=focused] .nexacontentsbox
+{
+	text-decoration : underline;
+}
+.Button.btn_MDI_Tab[status=mouseover]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_Tab[status=mouseover] .nexacontentsbox
+{
+	text-decoration : underline;
+}
+.Button.btn_MDI_TabFix[status=focused]
+{
+	border : 0px none;
+	border-radius : 0px;
+}
+.Button.btn_MDI_TabFix[status=focused] .nexacontentsbox
+{
+	text-align : left;
+}
+.Button.btn_MDI_TabFix[status=mouseover]
+{
+	border : 0px none;
+	border-radius : 0px;
+}
+.Button.btn_MDI_TabFix[status=mouseover] .nexacontentsbox
+{
+	text-align : left;
+}
+.Button.btn_MDI_TabClose[status=focused]
+{
+	border : 0px none;
+	background : transparent;
+	border-radius : 0px;
+}
+.Button.btn_MDI_TabClose[status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+	border-radius : 0px;
+}
+.Button.btn_MDI_LeftTabCha[status=mouseover]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_LeftTabCha[status=focused]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_RightTabCha[status=mouseover]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_RightTabCha[status=focused]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_OpenList[status=mouseover]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_OpenList[status=focused]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_ScnFull[status=mouseover]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_ScnFull[status=focused]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_ScnWin[status=mouseover]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_ScnWin[status=focused]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_ScnVDiv[status=mouseover]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_ScnVDiv[status=focused]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_ScnHDiv[status=mouseover]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_ScnHDiv[status=focused]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_ScnClose[status=mouseover]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_ScnClose[status=focused]
+{
+	border : 0px none;
+}
+.Button.btn_POP_No[status=mouseover]
+{
+	border : 1px solid #e15e22;
+}
+.Button.btn_POP_No[status=focused]
+{
+	border : 1px solid #e15e22;
+}
+.Button.btn_POP_Yes[status=mouseover]
+{
+	border : 1px solid #e15e22;
+}
+.Button.btn_POP_Yes[status=focused]
+{
+	border : 1px solid #e15e22;
+}
+.Button.btn_POP_X[status=focused]
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_POP_X[status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_MF_More[status=focused]
+{
+	border : 0px solid #c8c8c8;
+	background : transparent;
+}
+.Button.btn_MF_More[status=mouseover]
+{
+	border : 0px solid #c8c8c8;
+	background : transparent;
+}
+.Button.btn_WF_Color[status=mouseover]
+{
+	border : 1px solid #e15e22;
+}
+.Button.btn_WF_Color[status=focused]
+{
+	border : 1px solid #e15e22;
+}
+.Button.btn_WF_Custom[status=mouseover]
+{
+	border : 1px solid #e15e22;
+}
+.Button.btn_WF_Custom[status=focused]
+{
+	border : 1px solid #e15e22;
+}
+.Button.btn_WF_EdtPop[status=mouseover]
+{
+	border : 0px none;
+}
+.Button.btn_WF_EdtPop[status=focused]
+{
+	border : 0px none;
+}
+.Button.btn_WF_Point[status=mouseover]
+{
+	background : #da3030;
+}
+.Button.btn_WF_Point[status=focused]
+{
+	background : #da3030;
+}
+.Button.btn_WF_Point2[status=mouseover]
+{
+	background : #da3030;
+}
+.Button.btn_WF_Point2[status=focused]
+{
+	background : #da3030;
+}
+.Button.btn_WF_Btitle[status=focused]
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_WF_Btitle[status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_WF_BtitleOn[status=focused]
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_WF_BtitleOn[status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_WF_Refresh[status=focused]
+{
+	border : 0px none;
+	background : transparent;
+	opacity : 0.8;
+}
+.Button.btn_WF_Refresh[status=mouseover]
+{
+	border : 0px none;
+	background : transparent;
+	opacity : 0.8;
+}
+.Button.btn_WF_Cal[status=mouseover]
+{
+	border : 0px none;
+}
+.Button.btn_WF_Cal[status=focused]
+{
+	border : 0px none;
+}
+.Button.btn_WF_CalNext[status=mouseover]
+{
+	border : 0px none;
+}
+.Button.btn_WF_CalNext[status=focused]
+{
+	border : 0px none;
+}
+.Button.btn_WF_CalPrev[status=mouseover]
+{
+	border : 0px none;
+}
+.Button.btn_WF_CalPrev[status=focused]
+{
+	border : 0px none;
+}
+.Button.btn_WF_CalMonth[status=focused]
+{
+	background : #ffefd9;
+}
+.Button.btn_WF_CalMonth[status=mouseover]
+{
+	background : #ffefd9;
+}
+.Button.btn_WF_CalMonth_S[status=focused]
+{
+	border : 0px none;
+	background : #e15e22;
+	color : #ffffff;
+}
+.Button.btn_WF_CalMonth_S[status=mouseover]
+{
+	border : 0px none;
+	background : #e15e22;
+	color : #ffffff;
+}
+.Button.btn_WF_Reload[status=focused]
+{
+	border : 1px solid #c8c8c8;
+	opacity : 1;
+}
+.Button.btn_WF_Reload[status=mouseover]
+{
+	border : 1px solid #c8c8c8;
+	opacity : 1;
+}
+.Button.btn_WF_Search[status=mouseover]
+{
+	border : 1px solid #da3030;
+	background : #da3030;
+}
+.Button.btn_WF_Search[status=focused]
+{
+	border : 1px solid #da3030;
+	background : #da3030;
+}
+.Button.btn_WF_GrdSave[status=mouseover]
+{
+	background : #da3030;
+}
+.Button.btn_WF_GrdSave[status=focused]
+{
+	background : #da3030;
+}
+.Button.btn_WF_Confirm[status=mouseover]
+{
+	border : 1px solid #e15e22;
+}
+.Button.btn_WF_Confirm[status=focused]
+{
+	border : 1px solid #e15e22;
+}
+.Combo.cmb_WF_CalMonth[status=focused]
+{
+	background : transparent;
+	border : 0px none;
+}
+.Combo.cmb_WF_CalMonth[status=mouseover]
+{
+	background : transparent;
+	border : 0px none;
+}
+.Combo.cmb_WF_CalMonth .comboedit[status=mouseover]
+{
+	color : #ffffff;
+	font : bold 13px/normal "Tahoma";
+	padding : 0px 5px;
+}
+.Combo.cmb_WF_CalMonth .comboedit[status=focused]
+{
+	color : #ffffff;
+	font : bold 13px/normal "Tahoma";
+	padding : 0px 5px;
+}
+.Calendar.cal_WF_FromTo[status=focused]
+{
+	border : 0px none;
+	border-radius : 0px;
+}
+.Calendar.cal_WF_FromTo[status=mouseover]
+{
+	border : 0px none;
+	border-radius : 0px;
+}
+.Calendar.cal_WF_FromTo .datepicker[status=focused]
+{
+	border : 0px none;
+	border-radius : 0px;
+}
+.DatePickerControl.popupCalendarcal_WF_FromTodatepicker.dummy.dummy[status=focused]
+{
+	border : 0px none;
+	border-radius : 0px;
+}
+.Calendar.cal_WF_FromTo .datepicker[status=mouseover]
+{
+	border : 0px none;
+	border-radius : 0px;
+}
+.DatePickerControl.popupCalendarcal_WF_FromTodatepicker.dummy.dummy[status=mouseover]
+{
+	border : 0px none;
+	border-radius : 0px;
+}
+.Form[userstatus=contents]
+{
+	background : transparent;
+}
+.Button[userstatus=pushed]
+{
+	border : 1px solid #e15e22;
+}
+.Button[userstatus=selected]
+{
+	border : 1px solid #e15e22;
+}
+.Calendar .calendaredit[userstatus=nulltext]
+{
+	border : 0px none;
+}
+.CalendarControl .calendaredit[userstatus=nulltext]
+{
+	border : 0px none;
+}
+.Combo .comboedit[userstatus=nulltext]
+{
+	border : 0px none;
+}
+.ComboControl .comboedit[userstatus=nulltext]
+{
+	border : 0px none;
+}
+.Combo .dropbutton[userstatus=pushed]
+{
+	background : transparent;
+}
+.Combo .dropbutton[userstatus=selected]
+{
+	background : transparent;
+}
+.ComboControl .dropbutton[userstatus=pushed]
+{
+	background : transparent;
+}
+.ComboControl .dropbutton[userstatus=selected]
+{
+	background : transparent;
+}
+.DatePickerControl .head .nextbutton[userstatus=selected]
+{
+	cursor : pointer;
+}
+.DatePickerControl .head .prevbutton[userstatus=selected]
+{
+	cursor : pointer;
+}
+.DatePickerControl .body .weekitem[userstatus=sunday]
+{
+	color : #ee6b67;
+}
+.DatePickerControl .body .dayitem[userstatus=sunday]
+{
+	color : #ee6b67;
+}
+.DatePickerControl .body .weekitem[userstatus=saturday]
+{
+	color : #5f9dde;
+}
+.DatePickerControl .body .dayitem[userstatus=saturday]
+{
+	color : #5f9dde;
+}
+.DatePickerControl .body .dayitem[userstatus=selected]
+{
+	background : #e15e22;
+	font : bold 12px/normal "Tahoma";
+	color : #fffffF;
+	border-radius : 30px;
+}
+.DatePickerControl .body .dayitem[userstatus=today]
+{
+	background : #737373;
+	font : bold 12px/normal "Tahoma";
+	color : #ffffff;
+	border-radius : 30px;
+}
+.DatePickerControl .body .dayitem[userstatus=trailingday]
+{
+	color : #bebebe;
+}
+.Edit[userstatus=nulltext]
+{
+	color : #ababab;
+}
+.EditControl[userstatus=nulltext]
+{
+	color : #ababab;
+}
+.Grid .body .row .cell[userstatus=selected]
+{
+	background : #e8e8e8;
+}
+.Grid .body .row .cell[userstatus=blinked]
+{
+	background : #125dae;
+	color : #ffffff;
+}
+.GridCellControl .celledit[userstatus=nulltext]
+{
+	color : #ababab;
+}
+.GridCellControl .celltextarea[userstatus=nulltext]
+{
+	color : #ababab;
+}
+.GridCellControl .cellcombo .comboedit[userstatus=nulltext]
+{
+	color : #ababab;
+}
+.GridCellControl .cellcalendar .dropbutton[userstatus=selected]
+{
+	border : 0px none;
+}
+.GridCellControl .cellbutton[userstatus=selected]
+{
+	border : 1px solid #e15e22;
+}
+.GridCellControl .cellbutton[userstatus=pushed]
+{
+	border : 1px solid #e15e22;
+}
+.ListBox .listboxitem[userstatus=selected]
+{
+	background : #e15e22;
+	color : #ffffff;
+}
+.ListBoxControl .listboxitem[userstatus=selected]
+{
+	background : #e15e22;
+	color : #ffffff;
+}
+.MaskEdit[userstatus=nulltext]
+{
+	color : #ababab;
+}
+.MaskEditControl[userstatus=nulltext]
+{
+	color : #ababab;
+}
+.Menu .menuitem[userstatus=selected]
+{
+	color : #e15e22;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem[userstatus=selected]
+{
+	background : #e15e22;
+	color : #ffffff;
+}
+.PopupMenu .popupmenuitem[userstatus=selected]
+{
+	color : #ffffff;
+	background : #125dae;
+}
+.PopupMenuControl .popupmenuitem[userstatus=selected]
+{
+	color : #ffffff;
+	background : #125dae;
+}
+.Spin .spinedit[userstatus=nulltext]
+{
+	color : #ababab;
+}
+.Tab .tabbuttonitemTab[userstatus=selected]
+{
+	border : 2px solid #e15e22,1px solid #dee1e4,1px solid #ffffff,1px solid #dee1e4;
+	background : #ffffff;
+	color : #333333;
+}
+.TextArea[userstatus=nulltext]
+{
+	color : #ababab;
+}
+.VScrollBarControl .trackbar[userstatus=pushed]
+{
+	background : #999999;
+}
+.VScrollBarControl .trackbar[userstatus=selected]
+{
+	background : #999999;
+}
+.HScrollBarControl .trackbar[userstatus=pushed]
+{
+	background : #999999;
+}
+.HScrollBarControl .trackbar[userstatus=selected]
+{
+	background : #999999;
+}
+.VScrollIndicatorControl .trackbar[userstatus=pushed]
+{
+	background : #606060;
+}
+.HScrollIndicatorControl .trackbar[userstatus=pushed]
+{
+	background : #606060;
+}
+.MultiCombo .dropbutton[userstatus=pushed]
+{
+	background : transparent;
+}
+.MultiCombo .dropbutton[userstatus=selected]
+{
+	background : transparent;
+}
+.MultiComboControl .dropbutton[userstatus=pushed]
+{
+	background : transparent;
+}
+.MultiComboControl .dropbutton[userstatus=selected]
+{
+	background : transparent;
+}
+.MultiComboListControl.popupMultiCombomulticombolist.dummy .checkboxset .checkboxsetitem[userstatus=selected]
+{
+	background : #e15e22;
+	color : #ffffff;
+}
+.TagBoxControl[userstatus=selected]
+{
+	background : #5a86cd;
+	color : #ffffff;
+}
+.Button.btn_LOGIN_Start[userstatus=pushed]
+{
+	border : 1px solid #324399;
+	background : #203286;
+}
+.Button.btn_LOGIN_Start[userstatus=selected]
+{
+	border : 1px solid #324399;
+	background : #203286;
+}
+.Button.btn_LOGIN_Pw[userstatus=pushed]
+{
+	border : 0px none;
+	color : #000000;
+}
+.Button.btn_LOGIN_Pw[userstatus=pushed] .nexacontentsbox
+{
+	text-decoration : underline;
+}
+.Button.btn_LOGIN_Pw[userstatus=selected]
+{
+	border : 0px none;
+	color : #000000;
+}
+.Button.btn_LOGIN_Pw[userstatus=selected] .nexacontentsbox
+{
+	text-decoration : underline;
+}
+.Button.btn_WF_Login[userstatus=pushed]
+{
+	border : 0px none;
+	background : linear-gradient(to left bottom,#e0002a,#ef8009);
+}
+.Button.btn_WF_Login[userstatus=selected]
+{
+	border : 0px none;
+	background : linear-gradient(to left bottom,#e0002a,#ef8009);
+}
+.Button.btn_TF_Setting[userstatus=pushed]
+{
+	border : 0px none;
+}
+.Button.btn_TF_Setting[userstatus=selected]
+{
+	border : 0px none;
+}
+.Button.btn_TF_User[userstatus=pushed]
+{
+	border : 0px none;
+}
+.Button.btn_TF_User[userstatus=pushed] .nexacontentsbox
+{
+	text-decoration : underline;
+}
+.Button.btn_TF_User[userstatus=selected]
+{
+	border : 0px none;
+}
+.Button.btn_TF_User[userstatus=selected] .nexacontentsbox
+{
+	text-decoration : underline;
+}
+.Button.btn_TF_Logout[userstatus=pushed]
+{
+	border : 0px none;
+	color : #e15e22;
+}
+.Button.btn_TF_Logout[userstatus=pushed] .nexacontentsbox
+{
+	text-decoration : underline;
+}
+.Button.btn_TF_Logout[userstatus=selected]
+{
+	border : 0px none;
+	color : #e15e22;
+}
+.Button.btn_TF_Logout[userstatus=selected] .nexacontentsbox
+{
+	text-decoration : underline;
+}
+.Button.btn_TF_Setting02[userstatus=pushed]
+{
+	border : 0px none;
+}
+.Button.btn_TF_Setting02[userstatus=selected]
+{
+	border : 0px none;
+}
+.Button.btn_TF_Logout02[userstatus=pushed]
+{
+	border : 0px none;
+}
+.Button.btn_TF_Logout02[userstatus=selected]
+{
+	border : 0px none;
+}
+.Button.btn_LF_AllMenu[userstatus=pushed]
+{
+	border : 5px solid #2e2f32, 0px none, 0px none, 0px none;
+	color : #ededed;
+}
+.Button.btn_LF_AllMenu[userstatus=selected]
+{
+	border : 5px solid #2e2f32, 0px none, 0px none, 0px none;
+	color : #ededed;
+}
+.Button.btn_LF_AllMenu_S[userstatus=pushed]
+{
+	background : #343a40;
+	border-radius : 0px;
+	font : 700 14px/normal "Pretendard";
+	border : 5px solid #ff5e14, 0px none, 0px none, 0px none;
+	color : #ededed;
+}
+.Button.btn_LF_AllMenu_S[userstatus=pushed] .nexacontentsbox
+{
+	text-align : left;
+}
+.Button.btn_LF_AllMenu_S[userstatus=selected]
+{
+	background : #343a40;
+	border-radius : 0px;
+	font : 700 14px/normal "Pretendard";
+	border : 5px solid #ff5e14, 0px none, 0px none, 0px none;
+	color : #ededed;
+}
+.Button.btn_LF_AllMenu_S[userstatus=selected] .nexacontentsbox
+{
+	text-align : left;
+}
+.Button.btn_LF_Mymenu[userstatus=pushed]
+{
+	border : 5px solid #2e2f32, 0px none, 0px none, 0px none;
+	color : #ededed;
+}
+.Button.btn_LF_Mymenu[userstatus=selected]
+{
+	border : 5px solid #2e2f32, 0px none, 0px none, 0px none;
+	color : #ededed;
+}
+.Button.btn_LF_Mymenu_S[userstatus=pushed]
+{
+	background : #343a40;
+	border-radius : 0px;
+	font : 700 14px/normal "Pretendard";
+	border : 5px solid #ff5e14, 0px none, 0px none, 0px none;
+	color : #ededed;
+}
+.Button.btn_LF_Mymenu_S[userstatus=selected]
+{
+	background : #343a40;
+	border-radius : 0px;
+	font : 700 14px/normal "Pretendard";
+	border : 5px solid #ff5e14, 0px none, 0px none, 0px none;
+	color : #ededed;
+}
+.Button.btn_WF_menuOpen[userstatus=pushed]
+{
+	border : 0px none;
+	background : linear-gradient(to right top,#e0002a,#ef8009);
+}
+.Button.btn_WF_menuOpen[userstatus=selected]
+{
+	border : 0px none;
+	background : linear-gradient(to right top,#e0002a,#ef8009);
+}
+.Button.btn_WF_menuClose[userstatus=pushed]
+{
+	background : #343a40;
+	border-radius : 0px;
+	border : 0px none;
+}
+.Button.btn_WF_menuClose[userstatus=selected]
+{
+	background : #343a40;
+	border-radius : 0px;
+	border : 0px none;
+}
+.Grid.grd_LF_TreeGrd .body .row .cell[userstatus=selected]
+{
+	background : #22272b;
+	color : #ffffff;
+}
+.Button.btn_MDI_Tab[userstatus=selected]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_Tab[userstatus=pushed]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_TabFix[userstatus=pushed]
+{
+	border : 0px none;
+	border-radius : 0px;
+}
+.Button.btn_MDI_TabFix[userstatus=pushed] .nexacontentsbox
+{
+	text-align : left;
+}
+.Button.btn_MDI_TabFix[userstatus=selected]
+{
+	border : 0px none;
+	border-radius : 0px;
+}
+.Button.btn_MDI_TabFix[userstatus=selected] .nexacontentsbox
+{
+	text-align : left;
+}
+.Button.btn_MDI_TabClose[userstatus=pushed]
+{
+	border : 0px none;
+	background : transparent;
+	border-radius : 0px;
+}
+.Button.btn_MDI_TabClose[userstatus=selected]
+{
+	border : 0px none;
+	background : transparent;
+	border-radius : 0px;
+}
+.Button.btn_MDI_LeftTabCha[userstatus=pushed]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_LeftTabCha[userstatus=selected]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_RightTabCha[userstatus=pushed]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_RightTabCha[userstatus=selected]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_OpenList[userstatus=selected]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_OpenList[userstatus=pushed]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_ScnFull[userstatus=selected]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_ScnFull[userstatus=pushed]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_ScnWin[userstatus=selected]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_ScnWin[userstatus=pushed]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_ScnVDiv[userstatus=selected]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_ScnVDiv[userstatus=pushed]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_ScnHDiv[userstatus=selected]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_ScnHDiv[userstatus=pushed]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_ScnClose[userstatus=selected]
+{
+	border : 0px none;
+}
+.Button.btn_MDI_ScnClose[userstatus=pushed]
+{
+	border : 0px none;
+}
+.Button.btn_POP_No[userstatus=pushed]
+{
+	border : 1px solid #e15e22;
+}
+.Button.btn_POP_No[userstatus=selected]
+{
+	border : 1px solid #e15e22;
+}
+.Button.btn_POP_Yes[userstatus=pushed]
+{
+	border : 1px solid #e15e22;
+}
+.Button.btn_POP_Yes[userstatus=selected]
+{
+	border : 1px solid #e15e22;
+}
+.Button.btn_POP_X[userstatus=pushed]
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_POP_X[userstatus=selected]
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_MF_More[userstatus=pushed]
+{
+	border : 0px solid #c8c8c8;
+	background : transparent;
+}
+.Button.btn_MF_More[userstatus=selected]
+{
+	border : 0px solid #c8c8c8;
+	background : transparent;
+}
+.Button.btn_WF_Color[userstatus=pushed]
+{
+	border : 1px solid #e15e22;
+}
+.Button.btn_WF_Color[userstatus=selected]
+{
+	border : 1px solid #e15e22;
+}
+.Button.btn_WF_Custom[userstatus=pushed]
+{
+	border : 1px solid #e15e22;
+}
+.Button.btn_WF_Custom[userstatus=selected]
+{
+	border : 1px solid #e15e22;
+}
+.Button.btn_WF_EdtPop[userstatus=pushed]
+{
+	border : 0px none;
+}
+.Button.btn_WF_EdtPop[userstatus=selected]
+{
+	border : 0px none;
+}
+.Button.btn_WF_Point[userstatus=pushed]
+{
+	background : #da3030;
+}
+.Button.btn_WF_Point[userstatus=selected]
+{
+	background : #da3030;
+}
+.Button.btn_WF_Point2[userstatus=pushed]
+{
+	background : #da3030;
+}
+.Button.btn_WF_Point2[userstatus=selected]
+{
+	background : #da3030;
+}
+.Button.btn_WF_Btitle[userstatus=pushed]
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_WF_Btitle[userstatus=selected]
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_WF_BtitleOn[userstatus=pushed]
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_WF_BtitleOn[userstatus=selected]
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_WF_Refresh[userstatus=pushed]
+{
+	border : 0px none;
+	background : transparent;
+	opacity : 0.8;
+}
+.Button.btn_WF_Refresh[userstatus=selected]
+{
+	border : 0px none;
+	background : transparent;
+	opacity : 0.8;
+}
+.Button.btn_WF_Cal[userstatus=selected]
+{
+	border : 0px none;
+}
+.Button.btn_WF_Cal[userstatus=pushed]
+{
+	border : 0px none;
+}
+.Button.btn_WF_CalNext[userstatus=pushed]
+{
+	border : 0px none;
+}
+.Button.btn_WF_CalNext[userstatus=selected]
+{
+	border : 0px none;
+}
+.Button.btn_WF_CalPrev[userstatus=pushed]
+{
+	border : 0px none;
+}
+.Button.btn_WF_CalPrev[userstatus=selected]
+{
+	border : 0px none;
+}
+.Button.btn_WF_CalMonth[userstatus=pushed]
+{
+	border : 0px none;
+	background : #e15e22;
+	color : #ffffff;
+}
+.Button.btn_WF_CalMonth[userstatus=selected]
+{
+	border : 0px none;
+	background : #e15e22;
+	color : #ffffff;
+}
+.Button.btn_WF_CalMonth_S[userstatus=pushed]
+{
+	border : 0px none;
+	background : #e15e22;
+	color : #ffffff;
+}
+.Button.btn_WF_CalMonth_S[userstatus=selected]
+{
+	border : 0px none;
+	background : #e15e22;
+	color : #ffffff;
+}
+.Button.btn_WF_Reload[userstatus=pushed]
+{
+	border : 1px solid #c8c8c8;
+	opacity : 1;
+}
+.Button.btn_WF_Reload[userstatus=selected]
+{
+	border : 1px solid #c8c8c8;
+	opacity : 1;
+}
+.Button.btn_WF_Search[userstatus=pushed]
+{
+	border : 1px solid #da3030;
+	background : #da3030;
+}
+.Button.btn_WF_Search[userstatus=selected]
+{
+	border : 1px solid #da3030;
+	background : #da3030;
+}
+.Button.btn_WF_GrdSave[userstatus=pushed]
+{
+	background : #da3030;
+}
+.Button.btn_WF_GrdSave[userstatus=selected]
+{
+	background : #da3030;
+}
+.Button.btn_WF_Confirm[userstatus=pushed]
+{
+	border : 1px solid #e15e22;
+}
+.Button.btn_WF_Confirm[userstatus=selected]
+{
+	border : 1px solid #e15e22;
+}
+.Form[status=disabled]
+{
+	color : #999999;
+}
+.TitleBarControl[status=disabled]
+{
+	background : #2b3753;
+	color : #ffffff;
+}
+.StatusBarControl[status=disabled]
+{
+	background : #dddddd;
+}
+.Button[status=disabled]
+{
+	background : #fafafa;
+	color : #999999;
+	cursor : default;
+}
+.Calendar[status=disabled]
+{
+	background : #f9f9f9;
+	color : #999999;
+}
+.CalendarControl[status=disabled]
+{
+	background : #f9f9f9;
+	color : #999999;
+}
+.CheckBox[status=disabled]
+{
+	color : #999999;
+}
+.CheckBoxControl[status=disabled]
+{
+	color : #999999;
+}
+.Combo[status=disabled]
+{
+	background : #f9f9f9;
+	color : #999999;
+}
+.ComboControl[status=disabled]
+{
+	background : #f9f9f9;
+	color : #999999;
+}
+.DatePickerControl .body .weekband[status=disabled]
+{
+	background : #2b3753;
+	cursor : pointer;
+}
+.DatePickerControl .body .weekitem[status=disabled]
+{
+	color : #ffffff;
+	cursor : pointer;
+	font : bold 12px/normal "Tahoma";
+}
+.Edit[status=disabled]
+{
+	background : #f9f9f9;
+	color : #999999;
+}
+.EditControl[status=disabled]
+{
+	background : #f9f9f9;
+	color : #999999;
+}
+.FileUpload .fileuploaditem .fileuploaditemedit[status=disabled]
+{
+	background : #f9f9f9;
+	color : #999999;
+}
+.Grid .head .row .cell[status=disabled]
+{
+	color : #999999;
+}
+.GridCellControl .celledit[status=disabled]
+{
+	background : #f9f9f9;
+	color : #999999;
+}
+.GridCellControl .celltextarea[status=disabled]
+{
+	background : #f9f9f9;
+	color : #999999;
+}
+.GridCellControl .cellcombo .comboedit[status=disabled]
+{
+	border : 0px none;
+	background : #f9f9f9;
+	color : #999999;
+}
+.GridCellControl .cellcalendar .calendaredit[status=disabled]
+{
+	border : 0px none;
+}
+.GridCellControl .cellbutton[status=disabled]
+{
+	border : 1px solid #999999;
+	background : #999999;
+	color : #dddddd;
+}
+.GridCellControl .celltreeitem .treeitemtext[status=disabled]
+{
+	color : #999999;
+}
+.GroupBox .groupboxcontents[status=disabled]
+{
+	background : #efefef;
+}
+.GroupBox .groupboxtitle[status=disabled]
+{
+	color : #999999;
+	background : #efefef;
+}
+.ImageViewer[status=disabled]
+{
+	opacity : 0.5;
+}
+.ImageViewer .imagetext[status=disabled]
+{
+	color : #999999;
+}
+.ListBox[status=disabled]
+{
+	background : #f9f9f9;
+	color : #999999;
+}
+.ListBoxControl[status=disabled]
+{
+	background : #f9f9f9;
+	color : #999999;
+}
+.MaskEdit[status=disabled]
+{
+	background : #f9f9f9;
+	color : #999999;
+}
+.MaskEditControl[status=disabled]
+{
+	background : #f9f9f9;
+	color : #999999;
+}
+.Menu[status=disabled]
+{
+	background : #ffffff;
+}
+.Menu .nextbutton[status=disabled]
+{
+	cursor : default;
+}
+.Menu .prevbutton[status=disabled]
+{
+	cursor : default;
+}
+.Menu .menuitem[status=disabled]
+{
+	color : #999999;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy[status=disabled]
+{
+	color : #afafaf;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem[status=disabled]
+{
+	color : #999999;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem .popupmenuitemcheckbox[status=disabled]
+{
+	cursor : pointer;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem .popupmenuitemhotkeytext[status=disabled] .nexacontentsbox
+{
+	text-align : right;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem .popupmenuitemhotkeytext[status=disabled]
+{
+	color : #c6c6c6;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem .popupmenuitemtext[status=disabled]
+{
+	color : #d6d6d6;
+}
+.PopupMenu .popupmenuitem[status=disabled]
+{
+	color : #999999;
+}
+.PopupMenuControl .popupmenuitem[status=disabled]
+{
+	color : #999999;
+}
+.PopupMenu .popupmenuitem .popupmenuitemcheckbox[status=disabled]
+{
+	background : URL('./images/chk_WF_Popupmenu.png') no-repeat left center;
+}
+.PopupMenuControl .popupmenuitem .popupmenuitemcheckbox[status=disabled]
+{
+	background : URL('./images/chk_WF_Popupmenu.png') no-repeat left center;
+}
+.PopupMenu .popupmenuitem .popupmenuitemhotkeytext[status=disabled]
+{
+	color : #4577b9;
+}
+.PopupMenuControl .popupmenuitem .popupmenuitemhotkeytext[status=disabled]
+{
+	color : #4577b9;
+}
+.ProgressBar .progressbaritem[status=disabled]
+{
+	background : #b5b5b5;
+}
+.ProgressBarControl .progressbaritem[status=disabled]
+{
+	background : #b5b5b5;
+}
+.Radio .radioitem[status=disabled]
+{
+	color : #999999;
+}
+.Spin[status=disabled]
+{
+	background : #f9f9f9;
+	color : #999999;
+}
+.Spin .spinedit[status=disabled]
+{
+	border : 0px none;
+}
+.Sketch[status=disabled]
+{
+	background : #efefef;
+}
+.Static[status=disabled]
+{
+	color : #999999;
+}
+.StaticControl[status=disabled]
+{
+	color : #999999;
+}
+.Tab .tabbuttonitemTab[status=disabled]
+{
+	opacity : 0.50;
+}
+.Tab .tabbuttonitemTab .extrabutton[status=disabled]
+{
+	opacity : 0.50;
+}
+.Tab .tabpageTab[status=disabled]
+{
+	opacity : 0.50;
+}
+.TextArea[status=disabled]
+{
+	background : #f9f9f9;
+	color : #999999;
+}
+.VScrollBarControl .trackbar[status=disabled]
+{
+	background : #eeeeee;
+}
+.HScrollBarControl .trackbar[status=disabled]
+{
+	background : #eeeeee;
+}
+.CheckBoxSetControl[status=disabled]
+{
+	background : #ffffff;
+}
+.MultiCombo[status=disabled]
+{
+	background : #f9f9f9;
+	color : #999999;
+}
+.MultiComboControl[status=disabled]
+{
+	background : #f9f9f9;
+	color : #999999;
+}
+.MultiComboListControl[status=disabled]
+{
+	background : #efefef;
+}
+.Button.btn_LOGIN_Start[status=disabled]
+{
+	border : 1px solid #324399;
+	background : #3d4ea8;
+	opacity : 0.5;
+}
+.Edit.edt_WF_LoginId[status=disabled]
+{
+	color : #999999;
+}
+.Edit.edt_WF_LoginPw[status=disabled]
+{
+	color : #999999;
+}
+.Button.btn_TF_Setting[status=disabled]
+{
+	background : transparent;
+}
+.Button.btn_TF_User[status=disabled]
+{
+	color : #999999;
+}
+.Button.btn_TF_Logout[status=disabled]
+{
+	color : #999999;
+	cursor : default;
+}
+.Button.btn_TF_Setting02[status=disabled]
+{
+	background : transparent;
+}
+.Button.btn_TF_Logout02[status=disabled]
+{
+	background : transparent;
+}
+.Button.btn_LF_AllMenu[status=disabled]
+{
+	border : 5px solid #2e2f32, 0px none, 0px none, 0px none;
+	background : #343a40;
+	border-radius : 0px;
+	cursor : pointer;
+	color : #bcbcbc;
+	font : 14px/normal "Pretendard";
+}
+.Button.btn_LF_AllMenu[status=disabled] .nexacontentsbox
+{
+	text-align : left;
+}
+.Button.btn_LF_AllMenu_S[status=disabled]
+{
+	border : 5px solid #2e2f32, 0px none, 0px none, 0px none;
+	background : #343a40;
+	border-radius : 0px;
+	cursor : pointer;
+	color : #bcbcbc;
+	font : 14px/normal "Pretendard";
+}
+.Button.btn_LF_AllMenu_S[status=disabled] .nexacontentsbox
+{
+	text-align : left;
+}
+.Button.btn_LF_MyMenu[status=disabled]
+{
+	border : 5px solid #2e2f32, 0px none, 0px none, 0px none;
+	background : rgb(45,21,23);
+	border-radius : 0px;
+	cursor : pointer;
+	color : #bcbcbc;
+	font : 700 14px/normal "Pretendard";
+}
+.Button.btn_LF_MyMenu_S[status=disabled]
+{
+	border : 5px solid #2e2f32, 0px none, 0px none, 0px none;
+	background : rgb(45,21,23);
+	border-radius : 0px;
+	cursor : pointer;
+	color : #bcbcbc;
+	font : 700 14px/normal "Pretendard";
+}
+.Button.btn_WF_menuOpen[status=disabled]
+{
+	background : linear-gradient(to right top,#e0002a,#ef8009);
+	border-radius : 0px;
+	border : 0px none;
+	color : #ffffff;
+}
+.Button.btn_WF_menuClose[status=disabled]
+{
+	background : #343a40;
+	border-radius : 0px;
+	border : 0px none;
+}
+.Button.btn_MDI_Tab[status=disabled]
+{
+	border : 0px none;
+	background : #f5f5f5 url("./images/btn_MDI_TabLine.png") no-repeat right center;
+	border-radius : 0px;
+}
+.Button.btn_MDI_Tab[status=disabled] .nexacontentsbox
+{
+	text-align : left;
+}
+.Button.btn_MDI_TabFix[status=disabled]
+{
+	border : 0px none;
+	border-radius : 0px;
+}
+.Button.btn_MDI_TabFix[status=disabled] .nexacontentsbox
+{
+	text-align : left;
+}
+.Button.btn_MDI_TabClose[status=disabled]
+{
+	border : 0px none;
+	background : transparent;
+	border-radius : 0px;
+}
+.Button.btn_MDI_LeftTabCha[status=disabled]
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_MDI_RightTabCha[status=disabled]
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_MDI_OpenList[status=disabled]
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_MDI_ScnFull[status=disabled]
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_MDI_ScnWin[status=disabled]
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_MDI_ScnVDiv[status=disabled]
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_MDI_ScnHDiv[status=disabled]
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_MDI_ScnClose[status=disabled]
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_POP_No[status=disabled]
+{
+	background : #fafafa;
+	color : #999999;
+	cursor : default;
+}
+.Button.btn_POP_Yes[status=disabled]
+{
+	background : #999999;
+	border : 1px solid #999999;
+	color : #dddddd;
+}
+.Button.btn_POP_X[status=disabled]
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_MF_More[status=disabled]
+{
+	border : 0px solid #c8c8c8;
+	background : transparent;
+}
+.Button.btn_WF_Color[status=disabled]
+{
+	border : 1px solid #999999;
+	background : #999999;
+	color : #dddddd;
+}
+.Button.btn_WF_Custom[status=disabled]
+{
+	color : #999999;
+	border : 1px solid #c8c8c8;
+}
+.Button.btn_WF_EdtPop[status=disabled]
+{
+	background : transparent;
+}
+.Button.btn_WF_Point[status=disabled]
+{
+	background : #999999;
+	border : 1px solid #999999;
+	color : #dddddd;
+}
+.Button.btn_WF_Point2[status=disabled]
+{
+	background : #999999;
+	border : 1px solid #999999;
+	color : #dddddd;
+}
+.Button.btn_WF_SearchSmall[status=disabled]
+{
+	background : url('./images/btn_WF_Search_D.png') no-repeat center center #fafafa;
+	color : #999999;
+}
+.Button.btn_WF_Btitle[status=disabled]
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_WF_BtitleOn[status=disabled]
+{
+	border : 0px none;
+	background : transparent;
+}
+.Button.btn_WF_Cal[status=disabled]
+{
+	border : 0px none;
+}
+.Button.btn_WF_CalNext[status=disabled]
+{
+	border : 0px none;
+}
+.Button.btn_WF_CalPrev[status=disabled]
+{
+	border : 0px none;
+}
+.Button.btn_WF_Search[status=disabled]
+{
+	background : #999999;
+	border : 1px solid #999999;
+	color : #dddddd;
+}
+.Button.btn_WF_Save[status=disabled]
+{
+	background : #999999;
+	border : 1px solid #999999;
+	color : #dddddd;
+}
+.Button.btn_WF_ShuttleR[status=disabled]
+{
+	opacity : 0.6;
+}
+.Button.btn_WF_ShuttleL[status=disabled]
+{
+	opacity : 0.6;
+}
+.Button.btn_WF_ShuttleU[status=disabled]
+{
+	opacity : 0.6;
+}
+.Button.btn_WF_ShuttleD[status=disabled]
+{
+	opacity : 0.6;
+}
+.Button.btn_WF_Prev[status=disabled]
+{
+	opacity : 0.6;
+}
+.Button.btn_WF_Next[status=disabled]
+{
+	opacity : 0.6;
+}
+.Button.btn_WF_End[status=disabled]
+{
+	opacity : 0.6;
+}
+.Button.btn_WF_Start[status=disabled]
+{
+	opacity : 0.6;
+}
+.Button.btn_WF_GrdSave[status=disabled]
+{
+	background : #999999;
+	border : 1px solid #999999;
+	color : #dddddd;
+}
+.Button.btn_WF_Confirm[status=disabled]
+{
+	background : #999999;
+	border : 1px solid #999999;
+	color : #dddddd;
+}
+.CheckBox[status=disabled][userstatus=selected]
+{
+	color : #999999;
+}
+.CheckBoxControl[status=disabled][userstatus=selected]
+{
+	color : #999999;
+}
+.DatePickerControl .body .dayitem[userstatus=saturday][status=mouseover]
+{
+	background : #ffefd9;
+	color : #6b6760;
+	font : 700 12px/normal "Tahoma";
+	border-radius : 30px;
+}
+.DatePickerControl .body .dayitem[userstatus=sunday][status=mouseover]
+{
+	background : #ffefd9;
+	color : #6b6760;
+	font : 700 12px/normal "Tahoma";
+	border-radius : 30px;
+}
+.DatePickerControl .body .dayitem[userstatus=trailingday][status=mouseover]
+{
+	background : #ffefd9;
+	color : #6b6760;
+	font : 700 12px/normal "Tahoma";
+	border-radius : 30px;
+}
+.DatePickerControl .body .dayitem[userstatus=today][status=mouseover]
+{
+	background : #ffefd9;
+	color : #6b6760;
+	font : 700 12px/normal "Tahoma";
+	border-radius : 30px;
+}
+.DatePickerControl .body .dayitem[userstatus=selected][status=mouseover]
+{
+	background : #ffefd9;
+	color : #6b6760;
+	font : 700 12px/normal "Tahoma";
+	border-radius : 30px;
+}
+.Grid .body .row .cell[status=disabled][userstatus=selected]
+{
+	background : #f0f0f0;
+}
+.ListBox .listboxitem[userstatus=selected][status=mouseover]
+{
+	background : #e15e22;
+	color : #ffffff;
+}
+.ListBoxControl .listboxitem[userstatus=selected][status=mouseover]
+{
+	background : #e15e22;
+	color : #ffffff;
+}
+.ListBox .listboxitem[userstatus=selected][status=disabled]
+{
+	background : #efefef;
+	color : #999999;
+}
+.ListBoxControl .listboxitem[userstatus=selected][status=disabled]
+{
+	background : #efefef;
+	color : #999999;
+}
+.ListBox .listboxitem[userstatus=selected][status=readonly]
+{
+	background : #efefef;
+	color : #333333;
+}
+.ListBoxControl .listboxitem[userstatus=selected][status=readonly]
+{
+	background : #efefef;
+	color : #333333;
+}
+.PopupMenuControl.popupMenumenupopupmenu.dummy .popupmenuitem[userstatus=selected][status=mouseover]
+{
+	background : #e15e22;
+	color : #ffffff;
+}
+.Radio .radioitem[userstatus=selected][status=disabled]
+{
+	color : #999999;
+}

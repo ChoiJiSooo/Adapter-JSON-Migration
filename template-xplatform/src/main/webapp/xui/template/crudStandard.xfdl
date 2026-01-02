@@ -68,7 +68,7 @@
           <Row/>
         </Rows>
       </Dataset>
-      <Dataset id="ds_param" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep">
+      <Dataset id="ds_input" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep">
         <ColumnInfo>
           <Column id="searchCondition" type="STRING" size="256"/>
           <Column id="searchKeyword" type="STRING" size="256"/>
@@ -76,8 +76,7 @@
         </ColumnInfo>
         <Rows>
           <Row>
-            <Col id="searchCondition">0</Col>
-            <Col id="searchUseYn">Y</Col>
+            <Col id="searchCondition">1</Col>
           </Row>
         </Rows>
       </Dataset>
@@ -112,7 +111,7 @@
       </Dataset>
     </Objects>
     <Bind>
-      <BindItem id="item0" compid="Edit00" propid="value" datasetid="ds_param" columnid="searchKeyword"/>
+      <BindItem id="item0" compid="Edit00" propid="value" datasetid="ds_input" columnid="searchKeyword"/>
     </Bind>
     <Script type="xscript4.0"><![CDATA[/************************************************************************************************
  * 01. 업무구분 : 샘플 
@@ -172,18 +171,12 @@ function fn_formInit()
 // search(조회)
 function fn_search(obj:Button,  e:ClickEventInfo)
 {
-
-	ds_param.addRow();
-	ds_param.setColumn(0,"searchCondition", "1");
-	ds_param.setColumn(0,"searchKeyword", "11");
-
-
 	var strSvcid 		= "selectSvc";
 	var strController 	= "egovSampleList.do";
-	//var strVoClass 		= "egovframework.rte.sample.service.SampleVO";
-	var strInputDs 		= "ds_input=ds_param";
+	var strVoClass 		= "egovframework.rte.sample.service.SampleVO";
+	var strInputDs 		= "ds_input=ds_input";
 	var strOutputDs 	= "ds_list=ds_output";
-	var strParam 		= "a=b";
+	var strParam 		= "";
 	var strFnCallback 	= "fn_callBack";
 	
 	

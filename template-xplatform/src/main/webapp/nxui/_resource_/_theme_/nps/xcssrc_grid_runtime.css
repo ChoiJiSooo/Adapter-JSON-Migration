@@ -1,0 +1,595 @@
+﻿
+        
+.nexainput.nexaleftalign
+{
+  text-align:left;
+}
+.nexainput.nexarightalign
+{
+  text-align:right;
+}
+.nexainput.nexacenteralign
+{
+  text-align:center;
+}
+
+.nexacontentsbox.nexaleftalign
+{
+  text-align:left;
+}
+.nexacontentsbox.nexarightalign
+{
+  text-align:right;
+}
+.nexacontentsbox.nexacenteralign
+{
+  text-align:center;
+}
+.celltreeline
+{
+  border : 1px dotted #999999;
+}
+.Edit, .MaskEdit, .TextArea, .EditControl, .MaskEditControl, .TextAreaControl
+{
+  cursor:text;
+}
+.Button .nexacontentsbox, .ButtonControl .nexacontentsbox
+{
+  text-align:center;
+}
+
+.FileDownload  .nexacontentsbox, .FileDownloadControl .nexacontentsbox
+{
+  text-align:center;
+}
+
+.IconTextControl .nexacontentsbox, .IconControl .nexacontentsbox
+{
+  text-align:center;
+}
+
+.DatePickerDayItemControl .nexacontentsbox, .DatePickerWeekItemControl .nexacontentsbox, .DatepickerYearItemControl .nexacontentsbox, .TitleBarButtonControl .nexacontentsbox
+{
+  text-align:center;
+}
+
+.MainFrame, .VScrollBarControl, .HScrollBarControl
+{
+  cursor:default;
+}
+
+.Sketch .nexacontentsbox
+{
+   text-align:center;
+}
+
+.nexainput
+{
+  cursor:inherit;
+}
+
+.Static.sta_grd_move
+{
+	background : #fef5f3;
+	border : 2px dotted #ff8e7c;
+	border-radius : 0px;
+	color : #d8351a;
+	font : 14px "Malgun Gothic","Arial";
+}
+.Div.div_cellMoveBox
+{
+	background : #fef5f3;
+	border : 1px dashed #ff8e7c;
+}
+.Static.sta_WF_excel
+{
+	background : url('./../../../_resource_/_images_/icon_WF_excel.png') no-repeat left center;
+	color : #222222;
+	font : bold 11pt "Malgun Gothic","Arial";
+}
+.Static.sta_WF_excel .nexacontentsbox
+{
+	text-align : left;
+	vertical-align : middle;
+}
+.Static.sta_WF_hancel
+{
+	background : url('./../../../_resource_/_images_/icon_WF_hancel.png') no-repeat left center;
+	color : #222222;
+	font : bold 11pt "Malgun Gothic","Arial";
+}
+.Static.sta_WF_hancel .nexacontentsbox
+{
+	text-align : left;
+	vertical-align : middle;
+}
+.Grid.grd_excel .head
+{
+	background : #666666;
+	border : 1px solid #333333, 0px none, 0px none, 0px none;
+}
+.Grid.grd_excel .head .row .cell
+{
+	background : #666666;
+	color : #ffffff;
+	font : bold 9pt "Malgun Gothic","Arial";
+	border : 1px solid #cbcbcb;
+}
+.Grid.grd_excel .head .row .cell.oddcell
+{
+	background : #666666;
+	color : #ffffff;
+}
+.Grid.grd_excel .body .row .cell
+{
+	color : #222222;
+}
+.Grid.grd_red .head
+{
+	background : #d5e0f3;
+	border : 1px solid #d8351a, 0px none, 0px none, 0px none;
+}
+.Grid.grd_red .head .row .cell
+{
+	background : transparent;
+	color : #d8351a;
+	font : bold 9pt "Malgun Gothic","Arial";
+	border : 1px solid #ff6c54;
+}
+.Grid.grd_red .head .row .cell.oddcell
+{
+	background : transparent;
+	color : #d8351a;
+}
+.Grid.grd_red .body
+{
+	background : #ffffff;
+	border : 0px none;
+}
+.Grid.grd_red .body .row .cell
+{
+	background : #ffffff;
+	color : #222222;
+	border : 1px solid #9c9c9c;
+}
+.Grid.grd_red .body .row .cell .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : middle;
+}
+.Grid.grd_red .body .row .cell.oddcell
+{
+	background : #f7f7f7;
+	color : #222222;
+}
+.Grid.grd_cellMove
+{
+	cursor : pointer;
+}
+.Grid.grd_cellMove .head
+{
+	background : #6682ae;
+	border : 0px none;
+}
+.Grid.grd_cellMove .head .row .cell
+{
+	background : url('./../../../_resource_/_images_/img_grd_cellMove.png') no-repeat left top #6682ae;
+	color : #ffffff;
+	border : 0px none,1px solid #dddddd;
+}
+.Grid.grd_cellMove .head .row .cell.oddcell
+{
+	background : url('./../../../_resource_/_images_/img_grd_cellMove.png') no-repeat left top #6682ae;
+	color : #ffffff;
+}
+.Grid.grd_cellMove .body
+{
+	background : #ffffff;
+	border : 0px none;
+}
+.Grid.grd_cellMove .body .row .cell
+{
+	background : #ffffff;
+	color : #222222;
+	border : 1px solid #9c9c9c;
+}
+.Grid.grd_cellMove .body .row .cell .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : middle;
+}
+.Grid.grd_cellMove .body .row .cell.oddcell
+{
+	background : #f7f7f7;
+	color : #222222;
+}
+.Grid.grd_dynamic
+{
+	background : transparent;
+	border : 0px none;
+	border-radius : 0px;
+	color : #222222;
+	cursor : pointer;
+}
+.Grid.grd_dynamic .summary .row .cell .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : middle;
+}
+.Grid.grd_dynamic .head
+{
+	background : #6682ae;
+	border : 0px none;
+	border-radius : 3px;
+}
+.Grid.grd_dynamic .head .row .cell
+{
+	color : #ffffff;
+	border : 0px none;
+}
+.Grid.grd_dynamic .head .row .cell.oddcell
+{
+	color : #ffffff;
+}
+.Grid.grd_dynamic .head .row .cell .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : middle;
+}
+.Grid.grd_dynamic .body
+{
+	border : 0px none;
+	border-radius : 0px;
+}
+.Grid.grd_dynamic .body .row .cell
+{
+	background : #ffffff;
+	-nexa-edge : url('./../../../_resource_/_images_/img_grd_Dynamic.png') 15px 15px;
+	color : #222222;
+	border : 0px none;
+}
+.Grid.grd_dynamic .body .row .cell .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : middle;
+}
+.Grid.grd_dynamic .vscrollbar
+{
+	background : #e8e8e8;
+	border : 0px none;
+	border-radius : 10px;
+}
+.Grid.grd_tree
+{
+	background : transparent;
+	border : 1px solid #9c9c9c;
+	color : #222222;
+	cursor : pointer;
+}
+.Grid.grd_tree .head .row .cell .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : middle;
+}
+.Grid.grd_tree .body .row .cell .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : middle;
+}
+.Grid.grd_tree .summary .row .cell .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : middle;
+}
+.Grid.grd_excel .head[status=mouseover]
+{
+	background : #666666;
+	border : 1px solid #333333, 0px none, 0px none, 0px none;
+}
+.Grid.grd_excel .head[status=focused]
+{
+	background : #666666;
+	border : 1px solid #333333, 0px none, 0px none, 0px none;
+}
+.Grid.grd_excel .head .row .cell[status=mouseover]
+{
+	background : #666666;
+	color : #ffffff;
+	font : bold 9pt "Malgun Gothic","Arial";
+	border : 1px solid #cbcbcb;
+}
+.Grid.grd_excel .head .row .cell.oddcell[status=mouseover]
+{
+	background : #666666;
+	color : #ffffff;
+}
+.Grid.grd_excel .head .row .cell[status=focused]
+{
+	background : #666666;
+	color : #ffffff;
+	font : bold 9pt "Malgun Gothic","Arial";
+	border : 1px solid #cbcbcb;
+}
+.Grid.grd_excel .head .row .cell.oddcell[status=focused]
+{
+	background : #666666;
+	color : #ffffff;
+}
+.Grid.grd_excel .body .row .cell[status=focused]
+{
+	color : #f55136;
+}
+.Grid.grd_red .head[status=mouseover]
+{
+	background : #d5e0f3;
+	border : 1px solid #d8351a, 0px none, 0px none, 0px none;
+}
+.Grid.grd_red .head[status=focused]
+{
+	background : #d5e0f3;
+	border : 1px solid #d8351a, 0px none, 0px none, 0px none;
+}
+.Grid.grd_red .head .row .cell[status=mouseover]
+{
+	background : transparent;
+	color : #d8351a;
+	font : bold 9pt "Malgun Gothic","Arial";
+	border : 1px solid #ff6c54;
+}
+.Grid.grd_red .head .row .cell.oddcell[status=mouseover]
+{
+	background : transparent;
+	color : #d8351a;
+}
+.Grid.grd_red .head .row .cell[status=focused]
+{
+	background : transparent;
+	color : #d8351a;
+	font : bold 9pt "Malgun Gothic","Arial";
+	border : 1px solid #ff6c54;
+}
+.Grid.grd_red .head .row .cell.oddcell[status=focused]
+{
+	background : transparent;
+	color : #d8351a;
+}
+.Grid.grd_red .body[status=focused]
+{
+	background : #ffffff;
+	border : 0px none;
+}
+.Grid.grd_red .body .row .cell[status=focused]
+{
+	background : #ffffff;
+	color : #222222;
+	border : 1px solid #9c9c9c;
+}
+.Grid.grd_red .body .row .cell[status=focused] .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : middle;
+}
+.Grid.grd_red .body .row .cell.oddcell[status=focused]
+{
+	background : #f7f7f7;
+	color : #222222;
+}
+.Grid.grd_red .body .row .cell[status=mouseover]
+{
+	color : #222222;
+	background : #9c9c9c;
+}
+.Grid.grd_red .body .row .cell.oddcell[status=mouseover]
+{
+	color : #222222;
+	background : #9c9c9c;
+}
+.Grid.grd_cellMove .head[status=mouseover]
+{
+	background : #efefef;
+	border : 0px none;
+}
+.Grid.grd_cellMove .head[status=focused]
+{
+	background : #efefef;
+	border : 0px none;
+}
+.Grid.grd_cellMove .head .row .cell[status=mouseover]
+{
+	background : url('./../../../_resource_/_images_/img_grd_cellMove_O.png') no-repeat left top #5a7bae;
+	color : #ffffff;
+	border : 0px none,1px solid #dddddd;
+}
+.Grid.grd_cellMove .head .row .cell.oddcell[status=mouseover]
+{
+	background : url('./../../../_resource_/_images_/img_grd_cellMove_O.png') no-repeat left top #5a7bae;
+	color : #ffffff;
+}
+.Grid.grd_cellMove .head .row .cell[status=focused]
+{
+	background : url('./../../../_resource_/_images_/img_grd_cellMove_O.png') no-repeat left top #5a7bae;
+	color : #ffffff;
+	border : 0px none,1px solid #dddddd;
+}
+.Grid.grd_cellMove .head .row .cell.oddcell[status=focused]
+{
+	background : url('./../../../_resource_/_images_/img_grd_cellMove_O.png') no-repeat left top #5a7bae;
+	color : #ffffff;
+}
+.Grid.grd_cellMove .body[status=focused]
+{
+	background : #ffffff;
+	border : 0px none;
+}
+.Grid.grd_cellMove .body .row .cell[status=focused]
+{
+	background : #ffffff;
+	color : #222222;
+	border : 1px solid #9c9c9c;
+}
+.Grid.grd_cellMove .body .row .cell[status=focused] .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : middle;
+}
+.Grid.grd_cellMove .body .row .cell.oddcell[status=focused]
+{
+	background : #f7f7f7;
+	color : #222222;
+}
+.Grid.grd_cellMove .body .row .cell[status=mouseover]
+{
+	background : #eaf0f9;
+	color : #222222;
+}
+.Grid.grd_cellMove .body .row .cell.oddcell[status=mouseover]
+{
+	background : #eaf0f9;
+	color : #222222;
+}
+.Grid.grd_dynamic[status=mouseover]
+{
+	background : transparent;
+	border : 0px none;
+	border-radius : 0px;
+	color : #222222;
+	cursor : pointer;
+}
+.Grid.grd_dynamic[status=focused]
+{
+	background : transparent;
+	border : 0px none;
+	border-radius : 0px;
+	color : #222222;
+	cursor : pointer;
+}
+.Grid.grd_dynamic .head[status=mouseover]
+{
+	background : #6682ae;
+	border : 0px none;
+	border-radius : 3px;
+}
+.Grid.grd_dynamic .head[status=focused]
+{
+	background : #6682ae;
+	border : 0px none;
+	border-radius : 3px;
+}
+.Grid.grd_dynamic .head .row .cell[status=mouseover]
+{
+	color : #ffffff;
+	border : 0px none;
+}
+.Grid.grd_dynamic .head .row .cell.oddcell[status=mouseover]
+{
+	color : #ffffff;
+}
+.Grid.grd_dynamic .head .row .cell[status=mouseover] .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : middle;
+}
+.Grid.grd_dynamic .head .row .cell[status=focused]
+{
+	color : #ffffff;
+	border : 0px none;
+}
+.Grid.grd_dynamic .head .row .cell.oddcell[status=focused]
+{
+	color : #ffffff;
+}
+.Grid.grd_dynamic .head .row .cell[status=focused] .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : middle;
+}
+.Grid.grd_dynamic .body[status=focused]
+{
+	border : 0px none;
+	border-radius : 0px;
+}
+.Grid.grd_dynamic .body .row .cell[status=focused]
+{
+	background : #ffffff;
+	-nexa-edge : url('./../../../_resource_/_images_/img_grd_Dynamic.png') 15px 15px;
+	color : #222222;
+	border : 0px none;
+}
+.Grid.grd_dynamic .body .row .cell[status=focused] .nexacontentsbox
+{
+	text-align : center;
+	vertical-align : middle;
+}
+.Grid.grd_dynamic .body .row .cell[status=mouseover]
+{
+	background : #d5e0f3;
+	-nexa-edge : url('./../../../_resource_/_images_/img_grd_Dynamic_O.png') 15px 15px;
+}
+.Grid.grd_dynamic .body .row .cell.oddcell[status=mouseover]
+{
+	background : #d5e0f3;
+}
+.Grid.grd_excel .body .row .cell[userstatus=selected]
+{
+	color : #f55136;
+}
+.Grid.grd_red .body .row .cell[userstatus=selected]
+{
+	background : #9c9c9c;
+	color : #222222;
+	border : 1px solid #9c9c9c;
+}
+.Grid.grd_cellMove .body .row .cell[userstatus=selected]
+{
+	background : #d5e0f3;
+	color : #f55136;
+	border : 1px solid #9c9c9c;
+}
+.Grid.grd_dynamic .body .row .cell[userstatus=selected]
+{
+	background : #d5e0f3;
+	-nexa-edge : url('./../../../_resource_/_images_/img_grd_Dynamic_S.png') 15px 15px;
+	color : #d8351a;
+	border : 0px none;
+}
+.Grid.grd_red .body .row .cell[status=disabled]
+{
+	background : #ffffff;
+	color : #6e6e63;
+}
+.Grid.grd_red .body .row .cell.oddcell[status=disabled]
+{
+	background : #e5e5e5;
+}
+.Grid.grd_excel .body .row .cell[status=mouseover][userstatus=selected]
+{
+	color : #f55136;
+}
+.Grid.grd_excel .body .row .cell[status=focused][userstatus=selected]
+{
+	color : #f55136;
+}
+.Grid.grd_red .body .row .cell[status=focused][userstatus=selected]
+{
+	background : #9c9c9c;
+	color : #222222;
+	border : 1px solid #9c9c9c;
+}
+.Grid.grd_red .body .row .cell[status=disabled][userstatus=selected]
+{
+	background : #ffffff;
+	color : #6e6e63;
+}
+.Grid.grd_cellMove .body .row .cell[status=focused][userstatus=selected]
+{
+	background : #d5e0f3;
+	color : #f55136;
+	border : 1px solid #9c9c9c;
+}
+.Grid.grd_dynamic .body .row .cell[status=focused][userstatus=selected]
+{
+	background : #d5e0f3;
+	-nexa-edge : url('./../../../_resource_/_images_/img_grd_Dynamic_S.png') 15px 15px;
+	color : #d8351a;
+	border : 0px none;
+}

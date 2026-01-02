@@ -1,0 +1,89 @@
+﻿{
+    "version" : "21.0.0.1",
+    "runtime" :
+    {
+        "target" :
+        {
+            "os" : "windows"
+        },
+        "framework" :
+        [    
+        "./nexacrolib/framework/Framework.js"
+        ],
+        "component" :
+        [    
+        "./nexacrolib/component/CompBase.js",
+        "./nexacrolib/component/ComComp.js",
+        "./nexacrolib/component/Grid.js",
+        "./nexacrolib/component/DeviceAPI.js",
+        "./nexacrolib/component/Accessibility.js",
+        "./nexacrolib/component/Graphics.js",
+        "./nexacrolib/component/ListView.js",
+        "./nexacrolib/component/Push.js",
+        "./nexacrolib/component/npsLib/Frame.js",
+        "./nexacrolib/component/npsLib/Util.js",
+        "./nexacrolib/component/npsLib/Const.js",
+        "./nexacrolib/component/npsLib/Grid.js",
+        "./nexacrolib/component/npsLib/Popup.js",
+        "./nexacrolib/component/npsLib/Transaction.js",
+        "./nexacrolib/component/npsLib/Excel.js",
+        "./nexacrolib/component/npsLib/Validate.js",
+        "./nexacrolib/component/compositeModule/commPaging.xcdl.js"
+        ],
+        "environment" :
+        [    
+        {
+        "file":"./environment.xml.js"
+        }
+        ],
+        "screen" :
+        [    
+        {"id":"desktop","type":"desktop","filesecurelevel":"all","themeid":"theme::nps"}
+        ],
+        "xadl" :
+        [
+        {
+        	"screenid":"desktop",
+        	"launch":"./App_Desktop.xadl.js",
+        	"quickview":"./App_Desktop.xadl.quickview.js",
+        	"form":[
+        				"./frame/Login.xfdl.js"
+        	]
+        }
+        ],  
+        "protocol" :
+        {
+            "adaptors" :
+            []
+        },
+        "resource" :
+        {
+            "windows" : {
+                "updateurl" : "./",
+                "timeout" : "30",
+                "retry" : "3",
+                "autoupdate" : "auto",
+                "updatetype" : "server"
+            }
+        },
+		"deploy" :
+        {
+            "windows" : {
+                "updateurl" : "./"
+            }
+        },
+        "userfont" :
+        [
+        {
+            "font-family" : "Pretendard",
+            "font-weight" : "700",
+            "local-font-family" : "Pretendard Bold"
+        },
+        {
+            "font-family" : "Pretendard",
+            "font-weight" : "400",
+            "local-font-family" : "Pretendard Regular"
+        }
+        ]
+    }
+}
