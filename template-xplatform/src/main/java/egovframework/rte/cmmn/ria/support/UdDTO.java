@@ -6,9 +6,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.tobesoft.xplatform.data.DataSet;
-import com.tobesoft.xplatform.data.DataSetList;
-import com.tobesoft.xplatform.data.VariableList;
+import com.nexacro.xapi.data.DataSet;
+import com.nexacro.xapi.data.DataSetList;
+import com.nexacro.xapi.data.VariableList;
 
 /**
  * X-Platform UdDTO 클래스
@@ -19,7 +19,7 @@ import com.tobesoft.xplatform.data.VariableList;
  *
  * <pre>
  * << 개정이력(Modification Information) >>
- *   
+ *
  *   수정일      수정자           수정내용
  *  -------    --------    ---------------------------
  *   2010.01.01  홍길동          최초 생성
@@ -29,51 +29,51 @@ import com.tobesoft.xplatform.data.VariableList;
 
 public class UdDTO implements Serializable {
 
-	private Map variableList;
-	private Map dataSetList;
-	private Map Objects;
+    private Map variableList;
+    private Map dataSetList;
+    private Map Objects;
 
-	public void setVariableList(Map variableList) {
-		this.variableList = variableList;
+    public void setVariableList(Map variableList) {
+        this.variableList = variableList;
 
-	}
-	
-	public void setDataSetList(Map dataSetList) {
-		//this.dataSetList = dataSetList;
+    }
 
-	}
-	
-	public Map getVariableList() {
-		return variableList;
-	}
+    public void setDataSetList(Map dataSetList) {
+        //this.dataSetList = dataSetList;
 
-	public Map getDataSetList() {
-		return dataSetList;
-	}
+    }
 
-	public void setObjects(Map objects) {
-		Objects = objects;
-	}
+    public Map getVariableList() {
+        return variableList;
+    }
 
-	public Map getObjects() {
-		return Objects;
-	}
-		
-	public void setVariableListToMap(VariableList vList) {
-		
-		variableList = new HashMap<String, String>();
-		
-		for ( int i = 0; i < vList.size(); i ++ ) {
-			variableList.put(vList.get(i).getName(), vList.get(i).getString());
-		}
+    public Map getDataSetList() {
+        return dataSetList;
+    }
 
-	}
-	public void setDataSetListToMap(DataSetList dataSetList) {
-		
-		List list = new ArrayList<Object>();
-		
-		java.util.Map<String, String> hm = new HashMap<String, String>();
-        
+    public void setObjects(Map objects) {
+        Objects = objects;
+    }
+
+    public Map getObjects() {
+        return Objects;
+    }
+
+    public void setVariableListToMap(VariableList vList) {
+
+        variableList = new HashMap<String, String>();
+
+        for ( int i = 0; i < vList.size(); i ++ ) {
+            variableList.put(vList.get(i).getName(), vList.get(i).getString());
+        }
+
+    }
+    public void setDataSetListToMap(DataSetList dataSetList) {
+
+        List list = new ArrayList<Object>();
+
+        java.util.Map<String, String> hm = new HashMap<String, String>();
+
         DataSet ds_input = dataSetList.get("ds_input");
         // insert, update처리
         for ( int i = 0; i < ds_input.getRowCount(); i ++ )
@@ -85,7 +85,7 @@ public class UdDTO implements Serializable {
                 {
                     hm.put(ds_input.getColumn(j).getName(), ds_input.getString(i, j));
                 }
-                
+
             } else if ( DataSet.ROW_TYPE_INSERTED == ds_input.getRowType(i) )
             {
                 hm = new HashMap<String, String>();
@@ -96,8 +96,8 @@ public class UdDTO implements Serializable {
             }
             list.add(hm);
         }
-		this.dataSetList.put("ds_input", hm);
+        this.dataSetList.put("ds_input", hm);
 
-	}
+    }
 
 }

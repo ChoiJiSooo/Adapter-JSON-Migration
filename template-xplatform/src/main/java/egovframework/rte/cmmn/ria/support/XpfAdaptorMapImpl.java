@@ -3,7 +3,7 @@ package egovframework.rte.cmmn.ria.support;
 import javax.servlet.http.HttpServletRequest;
 
 import com.inswave.websqaure.uix.HttpWebsquareConvRequest;
-import com.tobesoft.xplatform.data.PlatformData;
+import com.nexacro.xapi.data.PlatformData;
 
 /**
  * X-Platform MiAdaptor 구현 클래스

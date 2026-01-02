@@ -13,12 +13,12 @@ import org.springframework.web.servlet.view.AbstractView;
 
 import com.inswave.websqaure.uix.HttpWebsquareConvRequest;
 import com.inswave.websqaure.uix.HttpWebsquareConvResponse;
-import com.tobesoft.xplatform.data.DataSet;
-import com.tobesoft.xplatform.data.DataSetList;
-import com.tobesoft.xplatform.data.DataTypes;
-import com.tobesoft.xplatform.data.PlatformData;
-import com.tobesoft.xplatform.data.VariableList;
-import com.tobesoft.xplatform.tx.PlatformType;
+import com.nexacro.xapi.data.DataSet;
+import com.nexacro.xapi.data.DataSetList;
+import com.nexacro.xapi.data.DataTypes;
+import com.nexacro.xapi.data.PlatformData;
+import com.nexacro.xapi.data.VariableList;
+import com.nexacro.xapi.tx.PlatformType;
 
 /**
  * X-Platform View 구현 클래스
