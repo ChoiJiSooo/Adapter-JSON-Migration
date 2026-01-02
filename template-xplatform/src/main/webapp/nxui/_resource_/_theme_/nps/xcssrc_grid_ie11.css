@@ -1,0 +1,938 @@
+﻿
+@media screen and (min-width:0\0) and (-ms-high-contrast: active) 
+{ 
+.nexacontentsbox {-ms-high-contrast-adjust:none; } 
+} 
+
+html, body
+{
+  position:absolute;
+  width:100%;
+  height:100%;  
+  font:12pt Verdana;
+}
+
+div, header, nav, section, article, aside, footer
+{
+  position:absolute;
+  box-sizing:border-box;
+  overflow:hidden;
+  background-origin:padding-box;
+  background-repeat:no-repeat;
+  white-space : pre;
+  -ms-user-select:none;
+  -moz-user-select:-moz-none;
+  -webkit-user-select:none;
+  -webkit-touch-callout:none;
+  -webkit-appearance:none;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  outline:none;
+}
+
+table
+{
+  position:absolute;
+  box-sizing:border-box;
+  overflow:hidden;
+}
+
+input
+{
+  position:absolute;
+  box-sizing:border-box;
+  overflow:hidden;
+}
+
+img
+{
+  position:absolute;
+  box-sizing:border-box;
+}
+
+input::-ms-clear,input::-ms-reveal
+{
+  display: none;
+}
+
+
+.nexacontainer
+{
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:100%;
+  height:100%;
+}
+.nexacontainer.withvscroll
+{
+  right:14px;
+}
+.nexacontainer.withhscroll
+{
+  bottom:14px;
+}
+.nexacontainer.withbothscroll
+{
+  right:14px;
+  bottom:14px;
+}
+
+.nexalefttop
+{
+  left:0px;
+  top:0px;
+  background-repeat:no-repeat;
+  background-position:left top;
+  font-size:1px;
+}
+.nexaleftbottom
+{
+  left:0px;
+  bottom:0px;
+  background-repeat:no-repeat;
+  background-position:left bottom;
+  font-size:1px;
+}
+.nexarightbottom
+{
+  right:0px;
+  bottom:0px;
+  background-repeat:no-repeat;
+  background-position:right bottom;
+  font-size:1px;
+}
+.nexarighttop
+{
+  right:0px;
+  top:0px;
+  background-repeat:no-repeat;
+  background-position:right top;
+}
+.nexaedge
+{
+  width:100%;
+  height:100%;
+}
+.nexamodaloverlay
+{
+  width:100%;
+  height:100%;
+}
+.nexainnercontainer
+{
+  transform : translate3d(0px, 0px, 0);
+}
+
+.nexatransform
+{
+  transform : translate3d(0px, 0px, 0);
+}
+
+.nexacontentsbox
+{
+  position:relative;
+  display:table-cell;
+  background-position:left center;
+  background-repeat:no-repeat;
+  vertical-align:middle;
+  pointer-events:none;
+}
+.nexacontentsboxflex
+{
+  display: -ms-flexbox;
+  display: flex;
+  background-position:left center;
+  background-repeat:no-repeat;
+  align-items : center;
+}
+.nexatextitem
+{
+  position:relative;
+  vertical-align:middle;
+  white-space:inherit;
+  word-wrap:inherit;
+  word-break:inherit;
+  text-decoration:inherit;
+}
+.nexaiconitem
+{
+  position:relative;
+  vertical-align:middle;
+  background-position:center center;
+  background-repeat:no-repeat;
+}
+
+.nexainput
+{
+  font:inherit;
+  color:inherit;
+  cursor:inherit;
+  letter-spacing:inherit;
+  word-spacing:inherit;
+  border:none;
+  outline:none;
+  background:transparent;
+  padding : 0px;
+}
+
+.nexatextarea
+{
+  font:inherit;
+  color:inherit;
+  cursor:inherit;
+  line-height : inherit;
+  letter-spacing:inherit;
+  word-spacing:inherit;
+  white-space:pre;
+  word-wrap:normal;
+  border:none;
+  outline:none;
+  resize:none;
+  background:transparent;
+  padding : 0px;
+  box-sizing:border-box;		
+}
+
+.nexaleftalign
+{
+  text-align:left;
+  justify-content:flex-start;
+}
+
+.nexarightalign
+{
+  text-align:right;
+  justify-content:flex-end;
+}
+
+.nexacenteralign
+{
+  text-align:center;
+  justify-content:center;
+}
+
+.nexamap div *
+{
+  overflow:visible;
+}
+
+.nexanativescroll
+{
+  overflow:scroll;
+  -ms-overflow-style:none;
+  color:black;
+}
+
+.celltreeline
+{
+  border : 1px dotted #999999;
+}
+
+.Edit, .MaskEdit, .TextArea, .EditControl, .MaskEditControl, .TextAreaControl
+{
+  cursor:text;
+}
+.Button .nexacontentsbox, .ButtonControl .nexacontentsbox
+{
+  text-align:center;
+  background-position:center center;
+}
+
+.FileDownload  .nexacontentsbox, .FileDownloadControl .nexacontentsbox
+{
+  text-align:center;
+  background-position:center center;
+}
+
+.IconTextControl .nexacontentsbox, .IconControl .nexacontentsbox
+{
+  text-align:center;
+  background-position:center center;
+}
+
+.DatePickerDayItemControl .nexacontentsbox, .DatePickerWeekItemControl .nexacontentsbox, .DatepickerYearItemControl .nexacontentsbox, .TitleBarButtonControl .nexacontentsbox
+{
+  text-align:center;
+  background-position:center center;
+}
+
+.Sketch .nexacontentsbox
+{
+   text-align:center;
+}
+
+.MainFrame, .VScrollBarControl, .HScrollBarControl
+{
+  cursor:default;
+}
+
+.Static.sta_grd_move
+{
+	background : #fef5f3;
+	border : 2px dotted #ff8e7c;
+	border-radius : 0px;
+	color : #d8351a;
+	font : 14px "Malgun Gothic","Arial";
+}
+.Div.div_cellMoveBox
+{
+	background : #fef5f3;
+	border : 1px dashed #ff8e7c;
+}
+.Static.sta_WF_excel
+{
+	background : url('./../../../_resource_/_images_/icon_WF_excel.png') no-repeat left center;
+	color : #222222;
+	font : bold 11pt "Malgun Gothic","Arial";
+}
+.Static.sta_WF_excel .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+	vertical-align : middle;
+	background-position-y : center;
+}
+.Static.sta_WF_hancel
+{
+	background : url('./../../../_resource_/_images_/icon_WF_hancel.png') no-repeat left center;
+	color : #222222;
+	font : bold 11pt "Malgun Gothic","Arial";
+}
+.Static.sta_WF_hancel .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+	vertical-align : middle;
+	background-position-y : center;
+}
+.Grid.grd_excel .head
+{
+	background : #666666;
+	border-top : 1px solid #333333;
+	border-right : 0px none;
+	border-bottom : 0px none;
+	border-left : 0px none;
+}
+.Grid.grd_excel .head .row .cell
+{
+	background : #666666;
+	color : #ffffff;
+	font : bold 9pt "Malgun Gothic","Arial";
+	border : 1px solid #cbcbcb;
+}
+.Grid.grd_excel .head .row .cell.oddcell
+{
+	background : #666666;
+	color : #ffffff;
+}
+.Grid.grd_excel .body .row .cell
+{
+	color : #222222;
+}
+.Grid.grd_red .head
+{
+	background : #d5e0f3;
+	border-top : 1px solid #d8351a;
+	border-right : 0px none;
+	border-bottom : 0px none;
+	border-left : 0px none;
+}
+.Grid.grd_red .head .row .cell
+{
+	background : transparent;
+	color : #d8351a;
+	font : bold 9pt "Malgun Gothic","Arial";
+	border : 1px solid #ff6c54;
+}
+.Grid.grd_red .head .row .cell.oddcell
+{
+	background : transparent;
+	color : #d8351a;
+}
+.Grid.grd_red .body
+{
+	background : #ffffff;
+	border : 0px none;
+}
+.Grid.grd_red .body .row .cell
+{
+	justify-content : center;
+	align-items : center;
+	background : #ffffff;
+	color : #222222;
+	border : 1px solid #9c9c9c;
+}
+.Grid.grd_red .body .row .cell > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : middle;
+	background-position-y : center;
+}
+.Grid.grd_red .body .row .cell.oddcell
+{
+	background : #f7f7f7;
+	color : #222222;
+}
+.Grid.grd_cellMove
+{
+	cursor : pointer;
+}
+.Grid.grd_cellMove .head
+{
+	background : #6682ae;
+	border : 0px none;
+}
+.Grid.grd_cellMove .head .row .cell
+{
+	background : url('./../../../_resource_/_images_/img_grd_cellMove.png') no-repeat left top #6682ae;
+	color : #ffffff;
+	border-top : 0px none;
+	border-right : 1px solid #dddddd;
+	border-bottom : 0px none;
+	border-left : 1px solid #dddddd;
+}
+.Grid.grd_cellMove .head .row .cell.oddcell
+{
+	background : url('./../../../_resource_/_images_/img_grd_cellMove.png') no-repeat left top #6682ae;
+	color : #ffffff;
+}
+.Grid.grd_cellMove .body
+{
+	background : #ffffff;
+	border : 0px none;
+}
+.Grid.grd_cellMove .body .row .cell
+{
+	justify-content : center;
+	align-items : center;
+	background : #ffffff;
+	color : #222222;
+	border : 1px solid #9c9c9c;
+}
+.Grid.grd_cellMove .body .row .cell > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : middle;
+	background-position-y : center;
+}
+.Grid.grd_cellMove .body .row .cell.oddcell
+{
+	background : #f7f7f7;
+	color : #222222;
+}
+.Grid.grd_dynamic
+{
+	background : transparent;
+	border : 0px none;
+	border-radius : 0px;
+	color : #222222;
+	cursor : pointer;
+}
+.Grid.grd_dynamic .summary .row .cell
+{
+	justify-content : center;
+	align-items : center;
+}
+.Grid.grd_dynamic .summary .row .cell > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : middle;
+	background-position-y : center;
+}
+.Grid.grd_dynamic .head
+{
+	background : #6682ae;
+	border : 0px none;
+	border-radius : 3px;
+}
+.Grid.grd_dynamic .head .row .cell
+{
+	color : #ffffff;
+	border : 0px none;
+	justify-content : center;
+	align-items : center;
+}
+.Grid.grd_dynamic .head .row .cell.oddcell
+{
+	color : #ffffff;
+}
+.Grid.grd_dynamic .head .row .cell > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : middle;
+	background-position-y : center;
+}
+.Grid.grd_dynamic .body
+{
+	border : 0px none;
+	border-radius : 0px;
+}
+.Grid.grd_dynamic .body .row .cell
+{
+	justify-content : center;
+	align-items : center;
+	background : #ffffff;
+	color : #222222;
+	border : 0px none;
+}
+.Grid.grd_dynamic .body .row .cell > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : middle;
+	background-position-y : center;
+}
+.Grid.grd_dynamic .body .row .cell >.nexaedge
+{
+	border : 15px solid transparent;
+	border-top : 15px solid transparent;
+	border-left : 15px solid transparent;
+	border-bottom : 15px solid transparent;
+	border-right : 15px solid transparent;
+	border-image-source : url('./../../../_resource_/_images_/img_grd_Dynamic.png');
+	border-image-slice : 15 15 fill;
+	border-image-width : 15px 15px;
+}
+.Grid.grd_dynamic .vscrollbar
+{
+	background : #e8e8e8;
+	border : 0px none;
+	border-radius : 10px;
+}
+.Grid.grd_tree
+{
+	background : transparent;
+	border : 1px solid #9c9c9c;
+	color : #222222;
+	cursor : pointer;
+}
+.Grid.grd_tree .head .row .cell
+{
+	justify-content : center;
+	align-items : center;
+}
+.Grid.grd_tree .head .row .cell > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : middle;
+	background-position-y : center;
+}
+.Grid.grd_tree .body .row .cell
+{
+	justify-content : center;
+	align-items : center;
+}
+.Grid.grd_tree .body .row .cell > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : middle;
+	background-position-y : center;
+}
+.Grid.grd_tree .summary .row .cell
+{
+	justify-content : center;
+	align-items : center;
+}
+.Grid.grd_tree .summary .row .cell > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : middle;
+	background-position-y : center;
+}
+#nexacontainer .Grid.grd_excel .head[data-status=mouseover]
+{
+	background : #666666;
+	border-top : 1px solid #333333;
+	border-right : 0px none;
+	border-bottom : 0px none;
+	border-left : 0px none;
+}
+#nexacontainer .Grid.grd_excel .head[data-status=focused]
+{
+	background : #666666;
+	border-top : 1px solid #333333;
+	border-right : 0px none;
+	border-bottom : 0px none;
+	border-left : 0px none;
+}
+#nexacontainer .Grid.grd_excel .head .row .cell[data-status=mouseover]
+{
+	background : #666666;
+	color : #ffffff;
+	font : bold 9pt "Malgun Gothic","Arial";
+	border : 1px solid #cbcbcb;
+}
+#nexacontainer .Grid.grd_excel .head .row .cell.oddcell[data-status=mouseover]
+{
+	background : #666666;
+	color : #ffffff;
+}
+#nexacontainer .Grid.grd_excel .head .row .cell[data-status=focused]
+{
+	background : #666666;
+	color : #ffffff;
+	font : bold 9pt "Malgun Gothic","Arial";
+	border : 1px solid #cbcbcb;
+}
+#nexacontainer .Grid.grd_excel .head .row .cell.oddcell[data-status=focused]
+{
+	background : #666666;
+	color : #ffffff;
+}
+#nexacontainer .Grid.grd_excel .body .row .cell[data-status=focused]
+{
+	color : #f55136;
+}
+#nexacontainer .Grid.grd_red .head[data-status=mouseover]
+{
+	background : #d5e0f3;
+	border-top : 1px solid #d8351a;
+	border-right : 0px none;
+	border-bottom : 0px none;
+	border-left : 0px none;
+}
+#nexacontainer .Grid.grd_red .head[data-status=focused]
+{
+	background : #d5e0f3;
+	border-top : 1px solid #d8351a;
+	border-right : 0px none;
+	border-bottom : 0px none;
+	border-left : 0px none;
+}
+#nexacontainer .Grid.grd_red .head .row .cell[data-status=mouseover]
+{
+	background : transparent;
+	color : #d8351a;
+	font : bold 9pt "Malgun Gothic","Arial";
+	border : 1px solid #ff6c54;
+}
+#nexacontainer .Grid.grd_red .head .row .cell.oddcell[data-status=mouseover]
+{
+	background : transparent;
+	color : #d8351a;
+}
+#nexacontainer .Grid.grd_red .head .row .cell[data-status=focused]
+{
+	background : transparent;
+	color : #d8351a;
+	font : bold 9pt "Malgun Gothic","Arial";
+	border : 1px solid #ff6c54;
+}
+#nexacontainer .Grid.grd_red .head .row .cell.oddcell[data-status=focused]
+{
+	background : transparent;
+	color : #d8351a;
+}
+#nexacontainer .Grid.grd_red .body[data-status=focused]
+{
+	background : #ffffff;
+	border : 0px none;
+}
+#nexacontainer .Grid.grd_red .body .row .cell[data-status=focused] > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : middle;
+	background-position-y : center;
+}
+#nexacontainer .Grid.grd_red .body .row .cell[data-status=focused]
+{
+	justify-content : center;
+	align-items : center;
+	background : #ffffff;
+	color : #222222;
+	border : 1px solid #9c9c9c;
+}
+#nexacontainer .Grid.grd_red .body .row .cell.oddcell[data-status=focused]
+{
+	background : #f7f7f7;
+	color : #222222;
+}
+#nexacontainer .Grid.grd_red .body .row .cell[data-status=mouseover]
+{
+	color : #222222;
+	background : #9c9c9c;
+}
+#nexacontainer .Grid.grd_red .body .row .cell.oddcell[data-status=mouseover]
+{
+	color : #222222;
+	background : #9c9c9c;
+}
+#nexacontainer .Grid.grd_cellMove .head[data-status=mouseover]
+{
+	background : #efefef;
+	border : 0px none;
+}
+#nexacontainer .Grid.grd_cellMove .head[data-status=focused]
+{
+	background : #efefef;
+	border : 0px none;
+}
+#nexacontainer .Grid.grd_cellMove .head .row .cell[data-status=mouseover]
+{
+	background : url('./../../../_resource_/_images_/img_grd_cellMove_O.png') no-repeat left top #5a7bae;
+	color : #ffffff;
+	border-top : 0px none;
+	border-right : 1px solid #dddddd;
+	border-bottom : 0px none;
+	border-left : 1px solid #dddddd;
+}
+#nexacontainer .Grid.grd_cellMove .head .row .cell.oddcell[data-status=mouseover]
+{
+	background : url('./../../../_resource_/_images_/img_grd_cellMove_O.png') no-repeat left top #5a7bae;
+	color : #ffffff;
+}
+#nexacontainer .Grid.grd_cellMove .head .row .cell[data-status=focused]
+{
+	background : url('./../../../_resource_/_images_/img_grd_cellMove_O.png') no-repeat left top #5a7bae;
+	color : #ffffff;
+	border-top : 0px none;
+	border-right : 1px solid #dddddd;
+	border-bottom : 0px none;
+	border-left : 1px solid #dddddd;
+}
+#nexacontainer .Grid.grd_cellMove .head .row .cell.oddcell[data-status=focused]
+{
+	background : url('./../../../_resource_/_images_/img_grd_cellMove_O.png') no-repeat left top #5a7bae;
+	color : #ffffff;
+}
+#nexacontainer .Grid.grd_cellMove .body[data-status=focused]
+{
+	background : #ffffff;
+	border : 0px none;
+}
+#nexacontainer .Grid.grd_cellMove .body .row .cell[data-status=focused] > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : middle;
+	background-position-y : center;
+}
+#nexacontainer .Grid.grd_cellMove .body .row .cell[data-status=focused]
+{
+	justify-content : center;
+	align-items : center;
+	background : #ffffff;
+	color : #222222;
+	border : 1px solid #9c9c9c;
+}
+#nexacontainer .Grid.grd_cellMove .body .row .cell.oddcell[data-status=focused]
+{
+	background : #f7f7f7;
+	color : #222222;
+}
+#nexacontainer .Grid.grd_cellMove .body .row .cell[data-status=mouseover]
+{
+	background : #eaf0f9;
+	color : #222222;
+}
+#nexacontainer .Grid.grd_cellMove .body .row .cell.oddcell[data-status=mouseover]
+{
+	background : #eaf0f9;
+	color : #222222;
+}
+#nexacontainer .Grid.grd_dynamic[data-status=mouseover]
+{
+	background : transparent;
+	border : 0px none;
+	border-radius : 0px;
+	color : #222222;
+	cursor : pointer;
+}
+#nexacontainer .Grid.grd_dynamic[data-status=focused]
+{
+	background : transparent;
+	border : 0px none;
+	border-radius : 0px;
+	color : #222222;
+	cursor : pointer;
+}
+#nexacontainer .Grid.grd_dynamic .head[data-status=mouseover]
+{
+	background : #6682ae;
+	border : 0px none;
+	border-radius : 3px;
+}
+#nexacontainer .Grid.grd_dynamic .head[data-status=focused]
+{
+	background : #6682ae;
+	border : 0px none;
+	border-radius : 3px;
+}
+#nexacontainer .Grid.grd_dynamic .head .row .cell[data-status=mouseover]
+{
+	color : #ffffff;
+	border : 0px none;
+	justify-content : center;
+	align-items : center;
+}
+#nexacontainer .Grid.grd_dynamic .head .row .cell.oddcell[data-status=mouseover]
+{
+	color : #ffffff;
+}
+#nexacontainer .Grid.grd_dynamic .head .row .cell[data-status=mouseover] > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : middle;
+	background-position-y : center;
+}
+#nexacontainer .Grid.grd_dynamic .head .row .cell[data-status=focused]
+{
+	color : #ffffff;
+	border : 0px none;
+	justify-content : center;
+	align-items : center;
+}
+#nexacontainer .Grid.grd_dynamic .head .row .cell.oddcell[data-status=focused]
+{
+	color : #ffffff;
+}
+#nexacontainer .Grid.grd_dynamic .head .row .cell[data-status=focused] > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : middle;
+	background-position-y : center;
+}
+#nexacontainer .Grid.grd_dynamic .body[data-status=focused]
+{
+	border : 0px none;
+	border-radius : 0px;
+}
+#nexacontainer .Grid.grd_dynamic .body .row .cell[data-status=focused] > .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+	vertical-align : middle;
+	background-position-y : center;
+}
+#nexacontainer .Grid.grd_dynamic .body .row .cell[data-status=focused]
+{
+	justify-content : center;
+	align-items : center;
+	background : #ffffff;
+	color : #222222;
+	border : 0px none;
+}
+#nexacontainer .Grid.grd_dynamic .body .row .cell[data-status=focused] >.nexaedge
+{
+	border : 15px solid transparent;
+	border-top : 15px solid transparent;
+	border-left : 15px solid transparent;
+	border-bottom : 15px solid transparent;
+	border-right : 15px solid transparent;
+	border-image-source : url('./../../../_resource_/_images_/img_grd_Dynamic.png');
+	border-image-slice : 15 15 fill;
+	border-image-width : 15px 15px;
+}
+#nexacontainer .Grid.grd_dynamic .body .row .cell[data-status=mouseover]
+{
+	background : #d5e0f3;
+}
+#nexacontainer .Grid.grd_dynamic .body .row .cell[data-status=mouseover] >.nexaedge
+{
+	border : 15px solid transparent;
+	border-top : 15px solid transparent;
+	border-left : 15px solid transparent;
+	border-bottom : 15px solid transparent;
+	border-right : 15px solid transparent;
+	border-image-source : url('./../../../_resource_/_images_/img_grd_Dynamic_O.png');
+	border-image-slice : 15 15 fill;
+	border-image-width : 15px 15px;
+}
+#nexacontainer .Grid.grd_dynamic .body .row .cell.oddcell[data-status=mouseover]
+{
+	background : #d5e0f3;
+}
+#nexacontainer .Grid.grd_excel .body .row .cell[data-userstatus=selected]
+{
+	color : #f55136;
+}
+#nexacontainer .Grid.grd_red .body .row .cell[data-userstatus=selected]
+{
+	background : #9c9c9c;
+	color : #222222;
+	border : 1px solid #9c9c9c;
+}
+#nexacontainer .Grid.grd_cellMove .body .row .cell[data-userstatus=selected]
+{
+	background : #d5e0f3;
+	color : #f55136;
+	border : 1px solid #9c9c9c;
+}
+#nexacontainer .Grid.grd_dynamic .body .row .cell[data-userstatus=selected]
+{
+	background : #d5e0f3;
+	color : #d8351a;
+	border : 0px none;
+}
+#nexacontainer .Grid.grd_dynamic .body .row .cell[data-userstatus=selected] >.nexaedge
+{
+	border : 15px solid transparent;
+	border-top : 15px solid transparent;
+	border-left : 15px solid transparent;
+	border-bottom : 15px solid transparent;
+	border-right : 15px solid transparent;
+	border-image-source : url('./../../../_resource_/_images_/img_grd_Dynamic_S.png');
+	border-image-slice : 15 15 fill;
+	border-image-width : 15px 15px;
+}
+#nexacontainer .Grid.grd_red .body .row .cell[data-status=disabled]
+{
+	background : #ffffff;
+	color : #6e6e63;
+}
+#nexacontainer .Grid.grd_red .body .row .cell.oddcell[data-status=disabled]
+{
+	background : #e5e5e5;
+}
+#nexacontainer .Grid.grd_excel .body .row .cell[data-status=mouseover][data-userstatus=selected]
+{
+	color : #f55136;
+}
+#nexacontainer .Grid.grd_excel .body .row .cell[data-status=focused][data-userstatus=selected]
+{
+	color : #f55136;
+}
+#nexacontainer .Grid.grd_red .body .row .cell[data-status=focused][data-userstatus=selected]
+{
+	background : #9c9c9c;
+	color : #222222;
+	border : 1px solid #9c9c9c;
+}
+#nexacontainer .Grid.grd_red .body .row .cell[data-status=disabled][data-userstatus=selected]
+{
+	background : #ffffff;
+	color : #6e6e63;
+}
+#nexacontainer .Grid.grd_cellMove .body .row .cell[data-status=focused][data-userstatus=selected]
+{
+	background : #d5e0f3;
+	color : #f55136;
+	border : 1px solid #9c9c9c;
+}
+#nexacontainer .Grid.grd_dynamic .body .row .cell[data-status=focused][data-userstatus=selected]
+{
+	background : #d5e0f3;
+	color : #d8351a;
+	border : 0px none;
+}
+#nexacontainer .Grid.grd_dynamic .body .row .cell[data-status=focused][data-userstatus=selected] >.nexaedge
+{
+	border : 15px solid transparent;
+	border-top : 15px solid transparent;
+	border-left : 15px solid transparent;
+	border-bottom : 15px solid transparent;
+	border-right : 15px solid transparent;
+	border-image-source : url('./../../../_resource_/_images_/img_grd_Dynamic_S.png');
+	border-image-slice : 15 15 fill;
+	border-image-width : 15px 15px;
+}

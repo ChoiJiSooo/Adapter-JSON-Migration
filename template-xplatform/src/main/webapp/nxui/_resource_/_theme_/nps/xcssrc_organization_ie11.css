@@ -1,0 +1,529 @@
+﻿
+@media screen and (min-width:0\0) and (-ms-high-contrast: active) 
+{ 
+.nexacontentsbox {-ms-high-contrast-adjust:none; } 
+} 
+
+html, body
+{
+  position:absolute;
+  width:100%;
+  height:100%;  
+  font:12pt Verdana;
+}
+
+div, header, nav, section, article, aside, footer
+{
+  position:absolute;
+  box-sizing:border-box;
+  overflow:hidden;
+  background-origin:padding-box;
+  background-repeat:no-repeat;
+  white-space : pre;
+  -ms-user-select:none;
+  -moz-user-select:-moz-none;
+  -webkit-user-select:none;
+  -webkit-touch-callout:none;
+  -webkit-appearance:none;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  outline:none;
+}
+
+table
+{
+  position:absolute;
+  box-sizing:border-box;
+  overflow:hidden;
+}
+
+input
+{
+  position:absolute;
+  box-sizing:border-box;
+  overflow:hidden;
+}
+
+img
+{
+  position:absolute;
+  box-sizing:border-box;
+}
+
+input::-ms-clear,input::-ms-reveal
+{
+  display: none;
+}
+
+
+.nexacontainer
+{
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:100%;
+  height:100%;
+}
+.nexacontainer.withvscroll
+{
+  right:14px;
+}
+.nexacontainer.withhscroll
+{
+  bottom:14px;
+}
+.nexacontainer.withbothscroll
+{
+  right:14px;
+  bottom:14px;
+}
+
+.nexalefttop
+{
+  left:0px;
+  top:0px;
+  background-repeat:no-repeat;
+  background-position:left top;
+  font-size:1px;
+}
+.nexaleftbottom
+{
+  left:0px;
+  bottom:0px;
+  background-repeat:no-repeat;
+  background-position:left bottom;
+  font-size:1px;
+}
+.nexarightbottom
+{
+  right:0px;
+  bottom:0px;
+  background-repeat:no-repeat;
+  background-position:right bottom;
+  font-size:1px;
+}
+.nexarighttop
+{
+  right:0px;
+  top:0px;
+  background-repeat:no-repeat;
+  background-position:right top;
+}
+.nexaedge
+{
+  width:100%;
+  height:100%;
+}
+.nexamodaloverlay
+{
+  width:100%;
+  height:100%;
+}
+.nexainnercontainer
+{
+  transform : translate3d(0px, 0px, 0);
+}
+
+.nexatransform
+{
+  transform : translate3d(0px, 0px, 0);
+}
+
+.nexacontentsbox
+{
+  position:relative;
+  display:table-cell;
+  background-position:left center;
+  background-repeat:no-repeat;
+  vertical-align:middle;
+  pointer-events:none;
+}
+.nexacontentsboxflex
+{
+  display: -ms-flexbox;
+  display: flex;
+  background-position:left center;
+  background-repeat:no-repeat;
+  align-items : center;
+}
+.nexatextitem
+{
+  position:relative;
+  vertical-align:middle;
+  white-space:inherit;
+  word-wrap:inherit;
+  word-break:inherit;
+  text-decoration:inherit;
+}
+.nexaiconitem
+{
+  position:relative;
+  vertical-align:middle;
+  background-position:center center;
+  background-repeat:no-repeat;
+}
+
+.nexainput
+{
+  font:inherit;
+  color:inherit;
+  cursor:inherit;
+  letter-spacing:inherit;
+  word-spacing:inherit;
+  border:none;
+  outline:none;
+  background:transparent;
+  padding : 0px;
+}
+
+.nexatextarea
+{
+  font:inherit;
+  color:inherit;
+  cursor:inherit;
+  line-height : inherit;
+  letter-spacing:inherit;
+  word-spacing:inherit;
+  white-space:pre;
+  word-wrap:normal;
+  border:none;
+  outline:none;
+  resize:none;
+  background:transparent;
+  padding : 0px;
+  box-sizing:border-box;		
+}
+
+.nexaleftalign
+{
+  text-align:left;
+  justify-content:flex-start;
+}
+
+.nexarightalign
+{
+  text-align:right;
+  justify-content:flex-end;
+}
+
+.nexacenteralign
+{
+  text-align:center;
+  justify-content:center;
+}
+
+.nexamap div *
+{
+  overflow:visible;
+}
+
+.nexanativescroll
+{
+  overflow:scroll;
+  -ms-overflow-style:none;
+  color:black;
+}
+
+.celltreeline
+{
+  border : 1px dotted #999999;
+}
+
+.Edit, .MaskEdit, .TextArea, .EditControl, .MaskEditControl, .TextAreaControl
+{
+  cursor:text;
+}
+.Button .nexacontentsbox, .ButtonControl .nexacontentsbox
+{
+  text-align:center;
+  background-position:center center;
+}
+
+.FileDownload  .nexacontentsbox, .FileDownloadControl .nexacontentsbox
+{
+  text-align:center;
+  background-position:center center;
+}
+
+.IconTextControl .nexacontentsbox, .IconControl .nexacontentsbox
+{
+  text-align:center;
+  background-position:center center;
+}
+
+.DatePickerDayItemControl .nexacontentsbox, .DatePickerWeekItemControl .nexacontentsbox, .DatepickerYearItemControl .nexacontentsbox, .TitleBarButtonControl .nexacontentsbox
+{
+  text-align:center;
+  background-position:center center;
+}
+
+.Sketch .nexacontentsbox
+{
+   text-align:center;
+}
+
+.MainFrame, .VScrollBarControl, .HScrollBarControl
+{
+  cursor:default;
+}
+
+.Static.sta_WF_box01
+{
+	background : #ffffff;
+	color : #101010;
+	font : 14px "나눔고딕";
+	border : 1px solid #d3d5d8;
+}
+.Static.sta_WF_box01 .nexacontentsbox
+{
+	text-align : center;
+	background-position-x : center;
+}
+.Static.sta_WF_box02
+{
+	background : #f2f2f2;
+	color : #101010;
+	font : 14px "나눔고딕";
+	border : 1px solid #d3d5d8;
+}
+.Static.sta_WF_box02 .nexacontentsbox
+{
+	text-align : left;
+	background-position-x : left;
+}
+.Static.sta_WF_searchID
+{
+	font : normal 600 16px "나눔고딕";
+}
+.Static.sta_WF_searchID .nexacontentsbox
+{
+	text-align : right;
+	background-position-x : right;
+}
+.Static.sta_WF_docScript01
+{
+	background : #797a6c;
+	color : #ffffff;
+	font : normal 500 14px "나눔고딕";
+	border : 3px solid #bcbda5;
+}
+.Static.sta_WF_docScript01 .nexacontentsbox
+{
+	vertical-align : middle;
+	background-position-y : center;
+}
+.Static.sta_WF_doctor01 >.nexaedge
+{
+	border : 0px solid transparent;
+	border-top : 0px solid transparent;
+	border-left : 0px solid transparent;
+	border-bottom : 0px solid transparent;
+	border-right : 0px solid transparent;
+	border-image-source : url('./../../../_resource_/_images_/img_WF_doctor01.png');
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+}
+.Static.sta_WF_doctor02 >.nexaedge
+{
+	border : 0px solid transparent;
+	border-top : 0px solid transparent;
+	border-left : 0px solid transparent;
+	border-bottom : 0px solid transparent;
+	border-right : 0px solid transparent;
+	border-image-source : url('./../../../_resource_/_images_/img_WF_doctor02.png');
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+}
+.Static.sta_WF_doctor03 >.nexaedge
+{
+	border : 0px solid transparent;
+	border-top : 0px solid transparent;
+	border-left : 0px solid transparent;
+	border-bottom : 0px solid transparent;
+	border-right : 0px solid transparent;
+	border-image-source : url('./../../../_resource_/_images_/img_WF_doctor03.png');
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+}
+.Static.sta_WF_doctor04 >.nexaedge
+{
+	border : 0px solid transparent;
+	border-top : 0px solid transparent;
+	border-left : 0px solid transparent;
+	border-bottom : 0px solid transparent;
+	border-right : 0px solid transparent;
+	border-image-source : url('./../../../_resource_/_images_/img_WF_doctor04.png');
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+}
+.Static.sta_WF_doctor05 >.nexaedge
+{
+	border : 0px solid transparent;
+	border-top : 0px solid transparent;
+	border-left : 0px solid transparent;
+	border-bottom : 0px solid transparent;
+	border-right : 0px solid transparent;
+	border-image-source : url('./../../../_resource_/_images_/img_WF_doctor05.png');
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+}
+.Static.sta_WF_doctor06 >.nexaedge
+{
+	border : 0px solid transparent;
+	border-top : 0px solid transparent;
+	border-left : 0px solid transparent;
+	border-bottom : 0px solid transparent;
+	border-right : 0px solid transparent;
+	border-image-source : url('./../../../_resource_/_images_/img_WF_doctor06.png');
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+}
+.Static.sta_WF_doctor07 >.nexaedge
+{
+	border : 0px solid transparent;
+	border-top : 0px solid transparent;
+	border-left : 0px solid transparent;
+	border-bottom : 0px solid transparent;
+	border-right : 0px solid transparent;
+	border-image-source : url('./../../../_resource_/_images_/img_WF_doctor07.png');
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+}
+.Static.sta_WF_doctor08 >.nexaedge
+{
+	border : 0px solid transparent;
+	border-top : 0px solid transparent;
+	border-left : 0px solid transparent;
+	border-bottom : 0px solid transparent;
+	border-right : 0px solid transparent;
+	border-image-source : url('./../../../_resource_/_images_/img_WF_doctor08.png');
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+}
+.Static.sta_WF_doctor09 >.nexaedge
+{
+	border : 0px solid transparent;
+	border-top : 0px solid transparent;
+	border-left : 0px solid transparent;
+	border-bottom : 0px solid transparent;
+	border-right : 0px solid transparent;
+	border-image-source : url('./../../../_resource_/_images_/img_WF_doctor09.png');
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+}
+.Static.sta_WF_doctor10 >.nexaedge
+{
+	border : 0px solid transparent;
+	border-top : 0px solid transparent;
+	border-left : 0px solid transparent;
+	border-bottom : 0px solid transparent;
+	border-right : 0px solid transparent;
+	border-image-source : url('./../../../_resource_/_images_/img_WF_doctor10.png');
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+}
+.Static.sta_WF_doctor11 >.nexaedge
+{
+	border : 0px solid transparent;
+	border-top : 0px solid transparent;
+	border-left : 0px solid transparent;
+	border-bottom : 0px solid transparent;
+	border-right : 0px solid transparent;
+	border-image-source : url('./../../../_resource_/_images_/img_WF_doctor11.png');
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+}
+.Static.sta_WF_doctor12 >.nexaedge
+{
+	border : 0px solid transparent;
+	border-top : 0px solid transparent;
+	border-left : 0px solid transparent;
+	border-bottom : 0px solid transparent;
+	border-right : 0px solid transparent;
+	border-image-source : url('./../../../_resource_/_images_/img_WF_doctor12.png');
+	border-image-slice : 0 0 fill;
+	border-image-width : 0px 0px;
+}
+.Button.btn_WF_width
+{
+	background : url("./../../../_resource_/_images_/btn_WF_width.png") no-repeat center center #1c67cc;
+	border-radius : 5px;
+	cursor : pointer;
+	border : 0px none;
+}
+.Button.btn_WF_height
+{
+	background : url("./../../../_resource_/_images_/btn_WF_height.png") no-repeat center center #1c67cc;
+	border-radius : 5px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_width[data-status=focused]
+{
+	background : url("./../../../_resource_/_images_/btn_WF_width.png") no-repeat center center #1c67cc;
+	border-radius : 5px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_width[data-status=mouseover]
+{
+	background : url("./../../../_resource_/_images_/btn_WF_width.png") no-repeat center center #135aba;
+	border-radius : 5px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_height[data-status=focused]
+{
+	background : url("./../../../_resource_/_images_/btn_WF_height.png") no-repeat center center #1c67cc;
+	border-radius : 5px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_height[data-status=mouseover]
+{
+	background : url("./../../../_resource_/_images_/btn_WF_height.png") no-repeat center center #135aba;
+	border-radius : 5px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_width[data-userstatus=selected]
+{
+	background : url("./../../../_resource_/_images_/btn_WF_width.png") no-repeat center center #1c67cc;
+	border-radius : 5px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_width[data-userstatus=pushed]
+{
+	background : url("./../../../_resource_/_images_/btn_WF_width.png") no-repeat center center #135aba;
+	border-radius : 5px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_height[data-userstatus=selected]
+{
+	background : url("./../../../_resource_/_images_/btn_WF_height.png") no-repeat center center #1c67cc;
+	border-radius : 5px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_height[data-userstatus=pushed]
+{
+	background : url("./../../../_resource_/_images_/btn_WF_height.png") no-repeat center center #135aba;
+	border-radius : 5px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_width[data-status=disabled]
+{
+	background : url("./../../../_resource_/_images_/btn_WF_width.png") no-repeat center center #959595;
+	border-radius : 5px;
+	cursor : pointer;
+	border : 0px none;
+}
+#nexacontainer .Button.btn_WF_height[data-status=disabled]
+{
+	background : url("./../../../_resource_/_images_/btn_WF_height.png") no-repeat center center #959595;
+	border-radius : 5px;
+	cursor : pointer;
+	border : 0px none;
+}
