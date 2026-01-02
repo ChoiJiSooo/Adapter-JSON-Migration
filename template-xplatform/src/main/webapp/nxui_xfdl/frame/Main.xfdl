@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Main" width="1280" height="979" titletext="New Form" onload="Main_onload" onhscroll="Main_onhscroll" onvscroll="Main_onvscroll" ontimer="Main_ontimer" background="linear-gradient(to right,#343a40 0%,#2d1517 100%) rgb(45,21,23)">
+    <Layouts>
+      <Layout height="979" mobileorientation="landscape" width="1280">
+        <Static id="sta00" taborder="0" text="개인정보 처리방침 &#13;&#10;SK하이스텍㈜ 경기도 이천시 부발읍 경충대로 2091&#13;&#10;&#13;&#10; &#13;&#10;대표번호: 031-8094-7669&#13;&#10;&#13;&#10;COPYRIGHT © 2023 SK HYSTEC INC. ALL RIGHTS RESERVED." left="0" height="60" right="0" bottom="0"/>
+        <Div id="div_search" taborder="1" text="Div00" left="20" top="20" height="50" cssclass="div_WF_SearchBg" right="20" formscrollbartype="none none">
+          <Layouts>
+            <Layout>
+              <Button id="Button00" taborder="0" width="66" height="30" cssclass="btn_WF_Search" text="조회" right="20" fittocontents="width" bottom="10" onclick="div_search_Button00_onclick"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Grid id="Grid00" taborder="2" binddataset="ds_list" useinputpanel="false" autofittype="col" left="20" top="91" right="20" bottom="70" oncelldblclick="Grid00_oncelldblclick">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="카테고리ID"/>
+                <Cell col="1" text="카테고리명"/>
+                <Cell col="2" text="사용여부"/>
+                <Cell col="3" text="Description"/>
+                <Cell col="4" text="등록자"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:id"/>
+                <Cell col="1" text="bind:name"/>
+                <Cell col="2" text="bind:useYn"/>
+                <Cell col="3" text="bind:description"/>
+                <Cell col="4" text="bind:regUser"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="btnAddRow" taborder="3" text="등록" width="75" height="30" fittocontents="width" cssclass="btn_WF_AddRow" right="20" bottom="24" onclick="btnAddRow_onclick"/>
+      </Layout>
+      <Layout name="Layout0" width="850" height="2430" mobileorientation="portrait"/>
+      <Layout name="Layout1" width="450" height="2270" mobileorientation="portrait"/>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Main_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+};
+
+
+this.div_search_Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	let option = {};
+	option.svcId 	= "selectSvc";
+	option.svcUrl 	= "egovSampleList.do";    		
+	option.inDs 	= "ds_input=ds_param";
+	option.outDs 	= "ds_list=ds_output";
+	option.argument = "a=b";
+	option.callback = "fn_callback";
+	option.dataType = "0";
+	this.gfnTransaction(this, option);
+};
+
+
+this.fn_callback = function (svcid, errcd, errmsg)
+{
+
+};
+
+
+this.btnAddRow_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var option = {
+		popupId  : "modalPopup", 
+		url      : "design::compTemplate/insert.xfdl", 
+		title    : "신규등록", 
+		arg      : "", 
+		resizable : true,
+		callback : function(popupId, retVal){
+			this.div_search_Button00_onclick();
+		}
+	};
+
+	
+	this.gfnModal(this, option);
+};
+
+this.Grid00_oncelldblclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	var option = {
+		popupId  : "modalPopup", 
+		url      : "design::compTemplate/update.xfdl", 
+		title    : "내용수정", 
+		arg      : "", 
+		resizable : true,
+		callback : function(popupId, retVal){
+			this.div_search_Button00_onclick();
+		}
+	};
+
+	option.arg = {
+		param : this.ds_list.getColumn(e.row, "id")
+	};
+
+	
+	this.gfnModal(this, option);
+};
+]]></Script>
+    <Objects>
+      <Dataset id="ds_param">
+        <ColumnInfo>
+          <Column id="searchCondition" type="STRING" size="256"/>
+          <Column id="searchKeyword" type="STRING" size="256"/>
+          <Column id="searchUseYn" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="searchCondition">0</Col>
+            <Col id="searchUseYn">Y</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_list">
+        <ColumnInfo>
+          <Column id="chk" type="STRING" size="256"/>
+          <Column id="rowStatus" type="STRING" size="256"/>
+          <Column id="id" type="STRING" size="256"/>
+          <Column id="name" type="STRING" size="256"/>
+          <Column id="description" type="STRING" size="256"/>
+          <Column id="useYn" type="STRING" size="256"/>
+          <Column id="regUser" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item0" compid="div_search.form.edt_XXXX" propid="value" datasetid="ds_param" columnid="searchKeyword"/>
+    </Bind>
+  </Form>
+</FDL>

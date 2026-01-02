@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Top" width="1280" height="70" titletext="New Form" onload="form_onload">
+    <Layouts>
+      <Layout height="70" mobileorientation="landscape" width="1280">
+        <Div id="div_top" taborder="0" left="0" top="0" right="10" maxwidth="" formscrollbartype="none none" formscrolltype="none" cssclass="div_TF_TopBg" bottom="0">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="1" left="20" top="5" cssclass="sta_TF_Logo" onclick="home_onclick" cursor="pointer" width="150" bottom="10"/>
+              <Menu id="mnu_top" taborder="0" left="160" top="0" right="310" innerdataset="dsTopMenu" onmenuclick="div_top_mnu_top_onmenuclick" fittocontents="width" bottom="0"/>
+              <Button id="Button00" taborder="2" top="18" width="40" right="0" cssclass="btn_TF_Setting" height="30" text=""/>
+              <Static id="Static01" taborder="4" text="Static01" top="25" width="1" height="18" background="#eef0f2" right="Button00:4"/>
+              <Button id="btn_logout" taborder="5" top="18" width="20" height="30" right="Static01:10" cssclass="btn_TF_Logout02" onclick="div_top_btn_logout_onclick"/>
+              <Button id="Button00_00" taborder="3" top="18" width="99" right="90" cssclass="btn_TF_User" height="30" rtl="false" text="SK하이텍 홍길동" fittocontents="width" onclick="div_top_Button00_00_onclick"/>
+              <Static id="Static02" taborder="6" text="구성원" top="23" width="49" height="21" cssclass="sta_TF_UserInfo" fittocontents="width" right="Button00_00:5"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static00" taborder="1" text="Static00" left="0" height="2" bottom="0" right="0" background="#ff5e14" visible="false"/>
+        <Static id="Static00_00" taborder="2" left="20" top="105" cssclass="sta_TF_EPAS" onclick="home_onclick" cursor="pointer" width="150" bottom="-90" visible="false"/>
+        <Static id="Static00_01" taborder="3" left="20" top="170" cssclass="sta_TF_NPS" onclick="home_onclick" cursor="pointer" width="150" bottom="-155" visible="false"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[/**
+*  nexacro nps
+*  @MenuPath    Frame > Top
+*  @FileName  Top.xfdl 
+*  @Creator  presales
+*  @CreateDate  2019.09.23
+*  @Desction    스크립트 표준 및 주석 표준 정의
+************** 소스 수정 이력 ***********************************************
+*  date            Modifier                Description
+*******************************************************************************
+*  2019.09.23      presales                  최초 생성 
+*******************************************************************************
+*/
+
+/************************************************************************************************
+ * FORM 변수 선언 영역
+ ************************************************************************************************/
+
+/************************************************************************************************
+ * FORM EVENT 영역(onload, onbeforeclose)
+ ************************************************************************************************/
+/**
+ * @description MegaMenu를 생성한다.
+*/
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.div_top.form.mnu_top.set_captioncolumn(CONST_MENU_NM);
+	this.div_top.form.mnu_top.set_idcolumn(CONST_MENU_ID);
+	this.div_top.form.mnu_top.set_levelcolumn(CONST_MENU_LVL);
+
+	nexacro.getApplication().gdsMenu.set_filterstr(CONST_MENU_LVL + " == 0");
+	this.dsTopMenu.copyData(nexacro.getApplication().gdsMenu,true);
+	nexacro.getApplication().gdsMenu.set_filterstr(null);
+	//nexacro.getApplication().mainframe.VFrameSet.HFrameSet.Left.form.fn_setMenuDisplay(this.dsTopMenu.getColumn(0, CONST_MENU_LVL));
+};
+
+/************************************************************************************************
+ * CALLBACK 콜백 처리부분(Transaction, Popup)
+ ************************************************************************************************/
+ 
+ /************************************************************************************************
+ * CRUD 및 TRANSACTION 서비스 호출 처리
+ ************************************************************************************************/
+
+
+
+/**
+* fnCommClick : 공통클릭 함수
+* @return : N/A
+* @example :  
+*/
+
+
+/************************************************************************************************
+ * 각 COMPONENT 별 EVENT 영역
+ ************************************************************************************************/
+
+/**
+ * @description 메인화면을 보여준다.
+*/
+this.home_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
+{
+	nexacro.getApplication().mainframe.VFrameSet.HFrameSet.VFrameSet00.set_separatesize("34,0,*");
+};
+
+this.div_top_btn_sysConfig_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	
+};
+
+this.div_top_btn_sysConfig2_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	
+};
+
+this.div_top_mnu_top_onmenuclick = function(obj:nexacro.Menu,e:nexacro.MenuClickEventInfo)
+{
+	nexacro.getApplication().mainframe.VFrameSet.HFrameSet.set_separatesize("264,*");	
+	//nexacro.getApplication().mainframe.VFrameSet.HFrameSet.Left.form.fn_setMenuDisplay(e.id);
+
+};
+
+this.div_top_btn_logout_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	r = this.confirm("시스템을 종료하시겠습니까?");
+	if(r) {
+		nexacro.getApplication().exit();
+	}
+};
+]]></Script>
+    <Objects>
+      <Dataset id="dsTopMenu">
+        <ColumnInfo>
+          <Column id="MENU_LVL" type="INT" size="22"/>
+          <Column id="MENU_ID" type="STRING" size="10"/>
+          <Column id="MENU_NM" type="STRING" size="256"/>
+          <Column id="MENU_URL" type="STRING" size="256"/>
+          <Column id="PARENT_MENU_ID" type="STRING" size="10"/>
+          <Column id="MOBILE_YN" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

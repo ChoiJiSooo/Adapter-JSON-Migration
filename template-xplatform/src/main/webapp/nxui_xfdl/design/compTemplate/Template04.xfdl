@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="template" left="0" top="0" width="1200" height="600" titletext="조회+그리드+디테일(좌우)" scrollbartype="none none">
+    <Layouts>
+      <Layout width="1200" height="600">
+        <Static id="Static05" taborder="2" text="디테일타이틀" cssclass="sta_WF_Subtitle02" top="91" right="25" width="495" height="50"/>
+        <Div id="Div00" taborder="1" text="Div00" top="141" width="495" right="25" bottom="30" formscrollbartype="none none">
+          <Layouts>
+            <Layout>
+              <Static id="Static04" taborder="7" cssclass="sta_WF_Labelbg" left="0" top="78" width="495" height="40"/>
+              <Static id="Static01" taborder="6" cssclass="sta_WF_Labelbg" left="0" top="39" width="495" height="40"/>
+              <Static id="Static15" taborder="5" cssclass="sta_WF_Labelbg" left="0" top="0" width="495" height="40"/>
+              <Static id="Static20" taborder="0" text="에디트" cssclass="sta_WF_Label" left="0" top="0" width="115" height="40"/>
+              <Edit id="Edit10" taborder="1" left="125" top="5" width="118" height="30"/>
+              <Static id="Static00" taborder="2" text="마스크에디트" cssclass="sta_WF_Label" left="252" top="0" width="105" height="40"/>
+              <Static id="Static03" taborder="3" text="체크박스" cssclass="sta_WF_Label" left="252" top="39" width="105" height="40"/>
+              <Static id="Static06" taborder="4" text="라디오버튼" cssclass="sta_WF_Label" left="252" top="78" width="105" height="40"/>
+              <Static id="Static13" taborder="8" cssclass="sta_WF_Labelbg" left="0" top="117" height="39" right="0"/>
+              <Spin id="Spin00" taborder="9" value="100" left="125" top="44" width="118" height="30"/>
+              <Combo id="Combo00" taborder="10" value="0" text="가나다" innerdataset="ds_cmb" codecolumn="lv" datacolumn="data" index="0" displayrowcount="5" left="125" top="83" width="118" height="30"/>
+              <MaskEdit id="MaskEdit00" taborder="11" value="100000" mask="###,###" left="367" top="5" width="118" height="30"/>
+              <CheckBox id="CheckBox02" taborder="12" text="남" value="true" left="369" top="44" width="42" height="30"/>
+              <CheckBox id="CheckBox00" taborder="13" text="여" left="428" top="44" width="42" height="30"/>
+              <Radio id="Radio00" taborder="14" index="1" innerdataset="@ds_rdo" codecolumn="lv" datacolumn="data" value="1" onitemclick="Radio00_onitemclick" left="369" top="83" width="125" height="30" direction="vertical" columncount="-1" rowcount="-1"/>
+              <Static id="Static19" taborder="15" cssclass="sta_WF_Label_Top" left="0" top="0" height="2" right="0"/>
+              <Static id="Static20_00" taborder="16" text="스핀" cssclass="sta_WF_Label" left="0" top="39" width="115" height="40"/>
+              <Static id="Static20_01" taborder="17" text="콤보" cssclass="sta_WF_Label" left="0" top="78" width="115" height="40"/>
+              <Static id="Static20_02" taborder="18" text="에디트" cssclass="sta_WF_Label" left="0" top="117" width="115" height="40"/>
+              <Edit id="Edit10_00" taborder="19" left="125" top="122" width="118" height="30"/>
+              <Static id="Static00_00" taborder="20" text="마스크에디트" cssclass="sta_WF_Label" left="252" top="117" width="105" height="40"/>
+              <MaskEdit id="MaskEdit00_00" taborder="21" value="100000" mask="###,###" left="367" top="122" width="118" height="30"/>
+              <Static id="Static13_00" taborder="22" cssclass="sta_WF_Labelbg" left="0" top="155" height="39" right="0"/>
+              <Static id="Static20_02_00" taborder="23" text="에디트" cssclass="sta_WF_Label" left="0" top="154" width="115" height="40"/>
+              <Edit id="Edit10_00_00" taborder="24" left="125" top="159" width="118" height="30"/>
+              <Static id="Static00_00_00" taborder="25" text="마스크에디트" cssclass="sta_WF_Label" left="252" top="154" width="105" height="40"/>
+              <MaskEdit id="MaskEdit00_00_00" taborder="26" value="100000" mask="###,###" left="367" top="159" width="118" height="30"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Grid id="Grid00" taborder="0" binddataset="da_grd" useinputpanel="false" autofittype="col" left="0" top="141" bottom="0" right="Div00:20">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="28"/>
+                <Column size="50"/>
+                <Column size="212"/>
+                <Column size="63"/>
+                <Column size="84"/>
+              </Columns>
+              <Rows>
+                <Row size="40" band="head"/>
+                <Row size="40"/>
+                <Row size="40" band="summ"/>
+              </Rows>
+              <Band id="head">
+                <Cell displaytype="checkbox" edittype="checkbox"/>
+                <Cell col="1" text="순번"/>
+                <Cell col="2" text="Normal"/>
+                <Cell col="3" text="Text"/>
+                <Cell col="4" text="Date"/>
+              </Band>
+              <Band id="body">
+                <Cell displaytype="checkbox" edittype="checkbox"/>
+                <Cell col="1" displaytype="text" style="align: ;" text="bind:Column0"/>
+                <Cell col="2" style="align: ;" text="bind:Column2"/>
+                <Cell col="3" displaytype="text" style="align: ;" text="bind:Column3"/>
+                <Cell col="4" displaytype="date" edittype="date" style="align: ;" text="bind:Column4"/>
+              </Band>
+              <Band id="summary">
+                <Cell colspan="3" text="합계"/>
+                <Cell col="3" colspan="2" style="align:right middle;" text="43,843,145"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Div id="div_search" taborder="3" text="Div00" left="0" top="0" height="91" cssclass="div_WF_SearchBg" right="25" formscrollbartype="none none">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="45" text="가나다라" cssclass="sta_WF_LabelSch_P" left="0" top="10" width="82" height="30"/>
+              <Edit id="edt_XXXX" taborder="46" left="87" top="10" width="140" height="30" tooltiptext="edit"/>
+              <Static id="Static01" taborder="47" text="가나다라" cssclass="sta_WF_LabelSch" left="232" top="10" width="82" height="30"/>
+              <Static id="Static02" taborder="49" text="가나다라" cssclass="sta_WF_LabelSch" left="466" top="10" width="82" height="30"/>
+              <Static id="Static03" taborder="51" text="가나다라" cssclass="sta_WF_LabelSch" left="0" top="50" width="82" height="30"/>
+              <Static id="Static04" taborder="53" text="가나다라" cssclass="sta_WF_LabelSch" left="232" top="50" width="82" height="30"/>
+              <Static id="Static05" taborder="55" text="가나다라" cssclass="sta_WF_LabelSch" left="466" top="50" width="82" height="30"/>
+              <Static id="Static06" taborder="57" text="가나다라" cssclass="sta_WF_LabelSch" left="678" top="10" width="82" height="30"/>
+              <Static id="Static07" taborder="59" text="가나다라" cssclass="sta_WF_LabelSch" left="678" top="50" width="82" height="30"/>
+              <Combo id="cbo_XXXX" taborder="61" text="Combo00" left="87" top="50" width="140" height="30"/>
+              <MaskEdit id="msk_XXXX" taborder="62" left="319" top="10" height="30" width="142"/>
+              <Calendar id="cal_XXXX" taborder="63" left="319" top="50" height="30" width="142"/>
+              <Radio id="rdo_XXXX" taborder="64" index="1" innerdataset="@ds_rdo" codecolumn="lv" datacolumn="data" value="1" onitemclick="Radio00_onitemclick" left="553" top="10" width="120" height="30" direction="vertical" columncount="-1" rowcount="-1"/>
+              <CheckBox id="chk_XXXX" taborder="65" text="14세 이상" left="553" top="50" height="30" width="120"/>
+              <Edit id="edt_XXXX00" taborder="67" left="765" top="50" width="140" height="30" tooltiptext="edit"/>
+              <Spin id="spn_XXXX" taborder="68" value="0" left="765" top="10" height="30" width="141"/>
+              <Button id="Button00" taborder="16" width="66" height="30" cssclass="btn_WF_Search" text="조회" right="20" fittocontents="width" bottom="10"/>
+              <Button id="btn_00" taborder="17" width="30" height="30" cssclass="btn_WF_Reload" right="Button00:5" bottom="10"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static20" taborder="4" text="그리드타이틀" cssclass="sta_WF_Subtitle" left="0" top="91" width="128" height="50" fittocontents="width"/>
+        <Static id="Static54" taborder="5" text="h15" visible="false" top="91" width="300" height="15" background="rgba(251,123,123,0.47843137254901963)" right="0"/>
+        <Static id="Static00" taborder="6" text="w&#13;&#10;25" visible="false" top="0" width="25" right="0" background="rgba(251,123,123,0.47843137254901963)" bottom="0"/>
+        <Static id="Static54_00" taborder="7" text="h50" visible="false" top="90" width="160" height="50" background="rgba(251,123,123,0.47843137254901963)" right="840"/>
+        <Div id="divModuleBtn" taborder="8" text="div_00" top="div_search:0" width="300" height="50" right="25">
+          <Layouts>
+            <Layout type="horizontal" spacing="15px 0px 5px 0px" horizontalgap="5" flexmainaxisalign="end">
+              <Button id="btn_03" taborder="0" text="신규" left="30" top="15" width="64" height="30" fittocontents="width" cssclass="btn_WF_New"/>
+              <Button id="btn_00" taborder="3" text="수정" left="219" top="15" width="64" height="30" cssclass="btn_WF_Modify" fittocontents="width"/>
+              <Button id="btn_03_00_00_00" taborder="2" text="삭제" left="136" top="15" width="64" height="30" fittocontents="width" cssclass="btn_WF_Del"/>
+              <Button id="btn_03_00" taborder="1" text="저장" left="83" top="15" width="64" height="30" fittocontents="width" cssclass="btn_WF_GrdSave"/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="da_grd" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column2" type="STRING" size="256"/>
+          <Column id="Column3" type="STRING" size="256"/>
+          <Column id="Column4" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">1000000000001</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">2</Col>
+            <Col id="Column1">1000000000002</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">3</Col>
+            <Col id="Column1">1000000000003</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">4</Col>
+            <Col id="Column1">1000000000004</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">5</Col>
+            <Col id="Column1">1000000000005</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">6</Col>
+            <Col id="Column1">1000000000006</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">7</Col>
+            <Col id="Column1">1000000000007</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">8</Col>
+            <Col id="Column1">1000000000008</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">9</Col>
+            <Col id="Column1">1000000000009</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">10</Col>
+            <Col id="Column1">1000000000010</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">11</Col>
+            <Col id="Column1">1000000000011</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_rdo" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false">
+        <ColumnInfo>
+          <Column id="lv" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="lv">0</Col>
+            <Col id="data">선택</Col>
+          </Row>
+          <Row>
+            <Col id="lv">1</Col>
+            <Col id="data">미선택</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[]]></Script>
+  </Form>
+</FDL>

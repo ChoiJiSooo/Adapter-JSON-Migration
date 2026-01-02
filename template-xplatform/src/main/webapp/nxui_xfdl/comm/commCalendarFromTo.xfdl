@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="commCalendarFromTo" width="280" height="27" titletext="기간달력" onload="commCalendarFromTo_onload">
+    <Layouts>
+      <Layout width="280" height="27">
+        <Calendar id="calFrom" taborder="0" left="0" top="0" width="45.36%" dateformat="yyyy-MM-dd" type="normal" buttonsize="0 0" bottom="0"/>
+        <Static id="Static00" taborder="2" text="~" left="calFrom:0" top="0" width="25" textAlign="center" verticalAlign="middle" bottom="0"/>
+        <Calendar id="calTo" taborder="1" left="Static00:0" top="0" dateformat="yyyy-MM-dd" buttonsize="0 0" bottom="0" right="0"/>
+        <PopupDiv id="popdivCalendar" text="PopupDiv00" left="0" top="44" width="400" height="240" visible="false" border="1px solid #2b3753" oncloseup="popdivCalendar_oncloseup" background="white">
+          <Layouts>
+            <Layout>
+              <Static id="sta_00_00" taborder="5" left="200" top="0" width="1" bottom="1" background="#f2f2f2"/>
+              <Static id="sta_01" taborder="4" left="0" height="40" right="0" bottom="0" background="#f2f3f3"/>
+              <Static id="sta_00" taborder="3" left="0" top="0" height="51" background="#2b3753" right="0" color="#ffffff" padding="0px 0px 0px 10px" visible="true"/>
+              <Calendar id="calFrom" taborder="0" type="monthonly" left="10" top="6" width="169" dateformat="yyyy-MM-dd ddd" cssclass="cal_WF_FromTo" bottom="sta_01:10"/>
+              <Calendar id="calTo" taborder="1" type="monthonly" left="sta_00_00:10" top="6" width="169" dateformat="yyyy-MM-dd ddd" cssclass="cal_WF_FromTo" bottom="sta_01:10"/>
+              <Static id="stToday" taborder="2" left="12" cssclass="sta_WF_Today" height="25" bottom="7" right="12"/>
+              <Static id="staLine" taborder="6" left="0" top="51" height="1" background="#2b3753" right="0" color="#ffffff" padding="0px 0px 0px 10px" visible="true"/>
+            </Layout>
+          </Layouts>
+        </PopupDiv>
+        <Button id="Button00" taborder="2" left="calFrom:-30" top="1" width="30" onclick="Button_onclick" cssclass="btn_WF_Cal" bottom="1"/>
+        <Button id="Button01" taborder="3" top="1" width="30" onclick="Button_onclick" cssclass="btn_WF_Cal" bottom="1" left="calTo:-30"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_FromTo" firefirstcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false">
+        <ColumnInfo>
+          <Column id="FROMDATE" type="STRING" size="256"/>
+          <Column id="TODATE" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row/>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_Holyday" firefirstcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false">
+        <ColumnInfo>
+          <Column id="DATE" type="STRING" size="256"/>
+          <Column id="COLOR" type="STRING" size="256"/>
+          <Column id="BGCOLOR" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DATE">20141117</Col>
+            <Col id="COLOR">#ffffff</Col>
+            <Col id="BGCOLOR">#ff0000</Col>
+          </Row>
+          <Row>
+            <Col id="DATE">20141118</Col>
+            <Col id="COLOR">#ffffff</Col>
+            <Col id="BGCOLOR">#00ff00</Col>
+          </Row>
+          <Row>
+            <Col id="DATE">20141119</Col>
+            <Col id="COLOR">#ffffff</Col>
+            <Col id="BGCOLOR">#0000ff</Col>
+          </Row>
+          <Row>
+            <Col id="DATE">20141120</Col>
+            <Col id="COLOR">#ffffff</Col>
+            <Col id="BGCOLOR">#ffff00</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item2" compid="popdivCalendar.calFrom" propid="value" datasetid="ds_FromTo" columnid="FROMDATE"/>
+      <BindItem id="item3" compid="popdivCalendar.calTo" propid="value" datasetid="ds_FromTo" columnid="TODATE"/>
+    </Bind>
+    <Script type="xscript5.1"><![CDATA[/**
+*  nexacro nps
+*  @MenuPath    대메뉴 > 소메뉴
+*  @FileName    commCalendarFromTo.xfdl
+*  @Creator     presales
+*  @CreateDate  2019/10/14
+*  @Desction    스크립트 표준 및 주석 표준 정의
+************** 소스 수정 이력 ***********************************************
+*  date            Modifier                Description
+*******************************************************************************
+*  2019/10/14          presales                  최초 생성 
+*******************************************************************************
+*/
+
+/************************************************************************************************
+ * FORM 변수 선언 영역
+ ************************************************************************************************/
+
+/************************************************************************************************
+ * FORM EVENT 영역(onload, onbeforeclose)
+ ************************************************************************************************/
+/**
+ * @description 화면 load시 초기설정 event
+*/
+this.commCalendarFromTo_onload = function (obj:Form, e:nexacro.LoadEventInfo)
+{
+
+	var sToDate = this.gfnGetDate();
+	var sFromDate = this.gfnAddMonth(sToDate, -1);
+
+	//this.ds_FromTo.setColumn(0, "FROMDATE", sFromDate);
+	//this.ds_FromTo.setColumn(0, "TODATE", sToDate);
+	
+// 	this.calFrom.set_value(sFromDate);
+// 	this.calTo.set_value(sToDate);
+	this.popdivCalendar.form.calFrom.set_value(sFromDate);
+	this.popdivCalendar.form.calTo.set_value(sToDate);
+	
+	this.popdivCalendar.form.stToday.set_text("" + sToDate.substr(0, 4) + "-" + sToDate.substr(4, 2) + "-" + sToDate.substr(6, 2));
+};
+
+/************************************************************************************************
+ * CALLBACK 콜백 처리부분(Transaction, Popup)
+ ************************************************************************************************/
+
+ 
+ /************************************************************************************************
+ * CRUD 및 TRANSACTION 서비스 호출 처리
+ ************************************************************************************************/
+
+/************************************************************************************************
+ * 사용자 FUNCTION 영역
+ ************************************************************************************************/
+ 
+/************************************************************************************************
+ * 각 COMPONENT 별 EVENT 영역
+ ************************************************************************************************/
+/**
+ * @description 버튼 click이벤트
+*/
+this.Button_onclick = function (obj:Button, e:nexacro.ClickEventInfo)
+{
+	this.popdivCalendar.trackPopupByComponent(this.calFrom, 0, 30);
+};
+
+/**
+ * @description 팝업 div 종료시 이벤트
+*/
+this.popdivCalendar_oncloseup = function(obj:nexacro.PopupDiv,e:nexacro.EventInfo)
+{
+	var sFormDate = this.popdivCalendar.form.calFrom.value;
+	var sToDate = this.popdivCalendar.form.calTo.value;
+	
+	if(sFormDate > sToDate) {
+		sFormDate = sToDate;
+	}
+	
+	this.calFrom.set_value(sFormDate);
+	this.calTo.set_value(sToDate);
+};
+]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="ModuleCalendarMonth" width="200" height="160" titletext="월달력" border="1px solid #2b3753" onload="form_onload" background="#ffffff" ontimer="ModuleCalendarMonth_ontimer">
+    <Layouts>
+      <Layout height="160" width="200">
+        <Static id="sta_00" taborder="16" left="0" top="0" height="34" background="#2b3753" right="0" padding="0px 0px 0px 10px"/>
+        <Combo id="cob_year" taborder="0" left="60" top="2" height="30" innerdataset="gdsYear" codecolumn="CODE" datacolumn="DATA" value="1" index="0" displayrowcount="10" onitemchanged="cob_Year_onitemchanged" cssclass="cmb_WF_CalMonth" right="60"/>
+        <Button id="btn_prev" taborder="13" left="20" top="2" width="20" height="30" text="" onclick="btn_Prev_onclick" cssclass="btn_WF_CalPrev"/>
+        <Button id="btn_next" taborder="14" top="2" width="20" height="30" onclick="btn_Next_onclick" cssclass="btn_WF_CalNext" right="20"/>
+        <Button id="btn_01" taborder="1" left="14" top="47" width="36" height="28" text="1" onclick="month_onclick" cssclass="btn_WF_CalMonth"/>
+        <Button id="btn_02" taborder="2" left="58" top="47" width="36" height="28" text="2" onclick="month_onclick" cssclass="btn_WF_CalMonth"/>
+        <Button id="btn_03" taborder="3" left="102" top="47" width="36" height="28" text="3" onclick="month_onclick" cssclass="btn_WF_CalMonth"/>
+        <Button id="btn_04" taborder="4" left="146" top="47" width="36" height="28" text="4" onclick="month_onclick" cssclass="btn_WF_CalMonth"/>
+        <Button id="btn_05" taborder="5" left="14" top="80" width="36" height="28" text="5" onclick="month_onclick" cssclass="btn_WF_CalMonth"/>
+        <Button id="btn_06" taborder="6" left="58" top="80" width="36" height="28" text="6" onclick="month_onclick" cssclass="btn_WF_CalMonth"/>
+        <Button id="btn_07" taborder="7" left="102" top="80" width="36" height="28" text="7" onclick="month_onclick" cssclass="btn_WF_CalMonth"/>
+        <Button id="btn_08" taborder="8" left="146" top="80" width="36" height="28" text="8" onclick="month_onclick" cssclass="btn_WF_CalMonth"/>
+        <Button id="btn_09" taborder="9" left="14" top="113" width="36" height="28" text="9" onclick="month_onclick" cssclass="btn_WF_CalMonth"/>
+        <Button id="btn_10" taborder="10" left="58" top="113" width="36" height="28" text="10" onclick="month_onclick" cssclass="btn_WF_CalMonth"/>
+        <Button id="btn_11" taborder="11" left="102" top="113" width="36" height="28" text="11" onclick="month_onclick" cssclass="btn_WF_CalMonth"/>
+        <Button id="btn_12" taborder="12" left="146" top="113" width="36" height="28" text="12" onclick="month_onclick" cssclass="btn_WF_CalMonth"/>
+        <Calendar id="cal_day" taborder="15" left="10" top="220" width="82" height="18" dateformat="yyyy-MM" visible="false" editformat="yyyy-MM"/>
+        <Div id="div_00" taborder="17" text="div_00" left="350" top="10" width="250" height="220" cssclass="div_GD_Tip" visible="false">
+          <Layouts>
+            <Layout>
+              <Static id="sta_01" taborder="0" text="★class 교체해서 적용&#13;&#10;&#13;&#10;btn_WF_CalMonth &#13;&#10;btn_WF_CalMonth_S&#13;&#10;" left="10" top="90" width="140" height="90"/>
+              <Button id="btn_02" taborder="1" left="32" top="24" width="36" height="28" text="2" onclick="month_onclick" cssclass="btn_WF_CalMonth"/>
+              <Button id="btn_02_00" taborder="2" left="95" top="24" width="36" height="28" text="2" onclick="month_onclick" cssclass="btn_WF_CalMonth_S"/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[/**
+ * 통합정보시스템 고도화 구축
+ * @FileName    ModuleMonthCalendar.xfdl
+ * @Creator     최병욱
+ * @CreateDate  2022.12.28
+ * @Description 월달력
+ ************** 소스 수정 이력 ***********************************************
+ * date                Modifier                Description
+ *******************************************************************************
+ * 2022.12.28          최병욱                    최초 생성
+ *******************************************************************************
+ */
+
+/************************************************************************************************
+ * 1. FORM 변수 선언 영역
+ ************************************************************************************************/
+this.fv_selDate = "";
+/************************************************************************************************
+ * 2. FORM EVENT 영역(onload)
+ ************************************************************************************************/
+// onload 이벤트
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.fn_setInit(obj);
+};
+
+// 화면 초기화 정의
+this.fn_setInit = function(obj)
+{
+	var userComp = this.parent.user_comp;
+	var value = "";
+	
+	if (userComp instanceof Grid) { // Grid
+		value = this.parent.user_value;
+	} else { // Calendar
+		value = userComp.value;
+	}
+	
+	if (this.gfnIsNull(value)) value = this.gfnGetDate();
+	this.cal_day.set_value(value);
+	
+	// 년
+	var year = value.substr(0, 4);
+	this.cob_year.set_value(year);
+	
+	// 월
+	var month = value.substr(4, 2);
+	this.fn_setMonth(month);
+};
+
+/************************************************************************************************
+ * 3. TRANSACTION 서비스 호출 처리
+ ************************************************************************************************/
+
+
+/************************************************************************************************
+ * 4. CALLBACK 함수 처리부분
+ ************************************************************************************************/
+
+
+/************************************************************************************************
+ * 5. 사용자 FUNCTION 영역
+ ************************************************************************************************/
+/**
+ * @class  월 설정 <br>
+ * @param  N/A
+ * @param  {String} 변수명 - 설명
+ * @return N/A
+ */
+this.fn_setMonth = function(month)
+{
+	var arrMonth = [this.btn_01, this.btn_02, this.btn_03, this.btn_04,
+					this.btn_05, this.btn_06, this.btn_07, this.btn_08,
+					this.btn_09, this.btn_10, this.btn_11, this.btn_12
+					];
+	
+	for (var i = 0; i < arrMonth.length; i++) {
+		var tmp = arrMonth[i].name.replace("btn_", "");
+		if (month == tmp) {
+			arrMonth[i].setSelectStatus(true);
+		} else {
+			arrMonth[i].setSelectStatus(false);
+		}
+	}
+};
+
+/************************************************************************************************
+ * 6. 각 COMPONENT 별 EVENT 영역
+ ************************************************************************************************/
+// 이전 년
+this.btn_Prev_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var value = this.cal_day.getYear() - 1;
+	this.cob_year.set_value(value);
+	this.cal_day.set_value(value);
+};
+
+// 다음 년
+this.btn_Next_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var value = this.cal_day.getYear() + 1;
+	this.cob_year.set_value(value);
+	this.cal_day.set_value(value);
+};
+
+// 월 선택
+this.month_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var year  = this.cob_year.value;
+	var month = obj.name.replace("btn_", "");
+	var value = year + month + "01";	
+	
+	var userComp = this.parent.user_comp;
+	if (userComp instanceof Grid) { // Grid
+		var bindDs = this.parent.user_bindDs;
+		var column = this.parent.user_column;
+		
+		//bindDs.setColumn(bindDs.rowposition, column, value);
+		// dataset oncolumnchanged event와 충돌나면서
+		// date format이 초기화 안되는 현상발생
+		this.fv_selDate = value;
+		this.setTimer(10000,20);
+	} 
+	// Calendar
+	else {		
+		//이전 값 가져오기
+		var preValue  = userComp.value;
+		
+		// 변경된 값 가져오기
+		var postValue = value;
+		
+		//값 변경에 대한 Event 호출
+		//Calendar의 onchanged 이벤트 발생됨
+		userComp._on_value_change(preValue, postValue);
+		userComp.set_value(value);
+	}	
+	this.parent.closePopup(value);
+};
+
+
+this.ModuleCalendarMonth_ontimer = function(obj:nexacro.Form,e:nexacro.TimerEventInfo)
+{
+	if (e.timerid == 10000){
+		this.killTimer(10000);
+		var userComp = this.parent.user_comp;
+		var bindDs = this.parent.user_bindDs;
+		var column = this.parent.user_column;
+		
+		bindDs.setColumn(bindDs.rowposition, column, this.fv_selDate);
+	}
+};
+]]></Script>
+  </Form>
+</FDL>

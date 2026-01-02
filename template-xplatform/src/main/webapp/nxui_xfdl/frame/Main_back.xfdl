@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Main" width="1280" height="979" titletext="New Form" onload="Main_onload" onhscroll="Main_onhscroll" onvscroll="Main_onvscroll" ontimer="Main_ontimer" background="linear-gradient(to right,#343a40 0%,#2d1517 100%) rgb(45,21,23)">
+    <Layouts>
+      <Layout height="979" mobileorientation="landscape" width="1280">
+        <Static id="sta02" taborder="5" text="sta02" left="100" top="0" cssclass="sta_LOGIN_Pattern02" right="0" bottom="60" opacity="0.8" onclick="sta02_onclick"/>
+        <Static id="sta00" taborder="1" text="개인정보 처리방침 &#13;&#10;SK하이스텍㈜ 경기도 이천시 부발읍 경충대로 2091&#13;&#10;&#13;&#10; &#13;&#10;대표번호: 031-8094-7669&#13;&#10;&#13;&#10;COPYRIGHT © 2023 SK HYSTEC INC. ALL RIGHTS RESERVED." left="0" height="60" right="0" bottom="0"/>
+        <Div id="div00" taborder="0" text="div00" left="0" top="324" height="300" width="50%" cssclass="div_MF_NoticeBg" borderRadius="10px 0px 0px">
+          <Layouts>
+            <Layout>
+              <Static id="sta01" taborder="1" left="40" top="50" width="3" height="15" background="#ff5e14"/>
+              <Static id="sta00" taborder="0" text="공지사항" left="sta01:5" top="44" width="283" height="30" cssclass="sta_MF_Title"/>
+              <Grid id="grd00" taborder="2" left="40" top="94" cssclass="grd_MF_Notice" binddataset="ds00" autofittype="col" right="60" bottom="0">
+                <Formats>
+                  <Format id="default">
+                    <Columns>
+                      <Column size="80"/>
+                      <Column size="400"/>
+                      <Column size="150"/>
+                    </Columns>
+                    <Rows>
+                      <Row size="40"/>
+                    </Rows>
+                    <Band id="body">
+                      <Cell text="bind:no" displaytype="imagecontrol"/>
+                      <Cell col="1" text="bind:data"/>
+                      <Cell col="2" text="bind:date" displaytype="date" calendardateformat="yyyy-MM-dd"/>
+                    </Band>
+                  </Format>
+                </Formats>
+              </Grid>
+              <Button id="btn00" taborder="3" top="44" width="20" height="30" cssclass="btn_MF_More" right="60"/>
+            </Layout>
+            <Layout name="Layout0"/>
+            <Layout name="Layout1"/>
+          </Layouts>
+        </Div>
+        <Div id="div00_00" taborder="2" text="div00" left="div00:0" top="324" height="300" right="25" cssclass="div_MF_NoticeBg" borderRadius="0px 10px 0px 0px">
+          <Layouts>
+            <Layout>
+              <Static id="sta01" taborder="1" left="40" top="50" width="3" height="15" background="#ff5e14"/>
+              <Static id="sta00" taborder="0" text="정보공유" left="sta01:5" top="44" width="283" height="30" cssclass="sta_MF_Title"/>
+              <Grid id="grd00" taborder="2" left="40" top="94" cssclass="grd_MF_Notice" binddataset="ds00" autofittype="col" right="60" bottom="0">
+                <Formats>
+                  <Format id="default">
+                    <Columns>
+                      <Column size="80"/>
+                      <Column size="400"/>
+                      <Column size="150"/>
+                    </Columns>
+                    <Rows>
+                      <Row size="40"/>
+                    </Rows>
+                    <Band id="body">
+                      <Cell text="bind:img" displaytype="imagecontrol"/>
+                      <Cell col="1" text="bind:data"/>
+                      <Cell col="2" text="bind:date" displaytype="date" calendardateformat="yyyy-MM-dd"/>
+                    </Band>
+                  </Format>
+                </Formats>
+              </Grid>
+              <Button id="btn00" taborder="3" top="44" width="20" height="30" cssclass="btn_MF_More" right="60"/>
+            </Layout>
+            <Layout name="Layout0"/>
+            <Layout name="Layout1"/>
+          </Layouts>
+        </Div>
+        <Static id="sta01" taborder="3" text="고객의 가치에 &#13;&#10;&lt;fc v='#e15e22'&gt;최상의 서비스&lt;/fc&gt;를 &#13;&#10;더하겠습니다." left="77" top="57" width="453" height="206" cssclass="sta_MF_Slogan" usedecorate="true"/>
+        <Div id="Div02" taborder="4" top="140" width="610" height="100" background="url('theme://images/img_MF_Data.png') no-repeat center top transparent" text="" right="40">
+          <Layouts>
+            <Layout>
+              <Static id="sta00" taborder="0" text="캠퍼스 서비스 " left="32" top="10" width="108" height="18" cssclass="sta_MF_SubTitle" fittocontents="width" opacity="0.8"/>
+              <Static id="sta00_00" taborder="1" text="7,234" left="40" top="sta00:10" width="93" height="41" color="#ffffff" cssclass="sta_MF_Num" onclick="Div02_sta00_00_onclick" fittocontents="width"/>
+              <Static id="sta00_00_00" taborder="2" text="12,234" left="239" top="38" width="114" height="41" color="#ffffff" cssclass="sta_MF_Num" fittocontents="width"/>
+              <Static id="sta00_01" taborder="3" text="네트워크 통신 IT" left="235" top="10" width="122" height="18" cssclass="sta_MF_SubTitle" fittocontents="width" opacity="0.8"/>
+              <Static id="sta00_01_00" taborder="4" text="교육서비스" left="466" top="10" width="80" height="18" cssclass="sta_MF_SubTitle" fittocontents="width" opacity="0.8"/>
+              <Static id="sta00_00_00_00" taborder="5" text="3,234" left="460" top="38" width="93" height="41" color="#ffffff" cssclass="sta_MF_Num" fittocontents="width"/>
+              <Static id="sta02" taborder="6" text="sta02" left="188" top="15" width="1" height="60" border="1px dotted #ffffff" opacity="0.5"/>
+              <Static id="sta02_00" taborder="7" text="sta02" left="414" top="15" width="1" height="60" border="1px dotted #ffffff" opacity="0.5"/>
+            </Layout>
+            <Layout name="Layout0"/>
+            <Layout name="Layout1"/>
+          </Layouts>
+        </Div>
+      </Layout>
+      <Layout name="Layout0" width="850" height="2430" mobileorientation="portrait"/>
+      <Layout name="Layout1" width="450" height="2270" mobileorientation="portrait"/>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[]]></Script>
+    <Objects>
+      <Dataset id="ds00">
+        <ColumnInfo>
+          <Column id="no" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+          <Column id="date" type="STRING" size="256"/>
+          <Column id="img" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="data">물리치료실 근골격계건강정보가이드</Col>
+            <Col id="date">20240815</Col>
+            <Col id="no">url('theme://images/grd_MF_New.png')</Col>
+            <Col id="img">url('theme://images/grd_MF_All.png')</Col>
+          </Row>
+          <Row>
+            <Col id="data">2023년 4분기 산업안전보건위원회 결과 공지</Col>
+            <Col id="date">20240815</Col>
+            <Col id="no">url('theme://images/grd_MF_All.png')</Col>
+            <Col id="img">url('theme://images/grd_MF_All.png')</Col>
+          </Row>
+          <Row>
+            <Col id="data">안전유해화학물질 종사자교육 수료증 등록 변경 안내</Col>
+            <Col id="date">20240815</Col>
+            <Col id="no">url('theme://images/grd_MF_All.png')</Col>
+            <Col id="img">url('theme://images/grd_MF_All.png')</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

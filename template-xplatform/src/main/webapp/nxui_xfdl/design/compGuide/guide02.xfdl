@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="guide02" width="1280" height="720" titletext="Combo/ListBox/Spin/Calendar" cssclass="frm_GD_Bg">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Static id="Static03" taborder="2" left="2" top="80" height="300" cssclass="sta_GD_SubBg" right="0"/>
+        <Static id="Static00" taborder="0" text="Component Guide 02" left="0" top="0" height="80" cssclass="sta_GD_Title" right="0"/>
+        <Static id="Static01" taborder="1" text="Combo / MultiCombo / ListBox" left="0" top="80" height="80" cssclass="sta_GD_SubTitle" right="0"/>
+        <Static id="Static03_00_00" taborder="4" left="0" top="380" height="200" cssclass="sta_GD_SubBg" right="0"/>
+        <Static id="Static01_00_00" taborder="3" text="Spin" left="0" top="380" height="80" cssclass="sta_GD_SubTitle" right="0"/>
+        <Static id="Static04_01" taborder="5" text="Normal" left="30" top="465" width="120" height="26" cssclass="sta_GD_SubTitle02"/>
+        <Static id="Static04_00_00" taborder="6" text="Disabled" left="370" top="465" width="120" height="26" cssclass="sta_GD_SubTitle02"/>
+        <Static id="Static04_00_00_00" taborder="7" text="Readonly" left="710" top="465" width="120" height="26" cssclass="sta_GD_SubTitle02"/>
+        <Static id="Static03_00_00_00" taborder="8" left="0" top="Static03_00_00:0" height="300" cssclass="sta_GD_SubBg" right="0"/>
+        <Static id="Static01_00_00_00" taborder="9" text="Calendar" left="0" top="Static03_00_00:0" height="80" cssclass="sta_GD_SubTitle" right="0"/>
+        <Static id="Static04_01_00" taborder="10" text="Normal" left="30" top="665" width="120" height="26" cssclass="sta_GD_SubTitle02"/>
+        <Static id="Static04_00_00_01" taborder="11" text="Disabled" left="370" top="665" width="120" height="26" cssclass="sta_GD_SubTitle02"/>
+        <Static id="Static04_00_00_00_00" taborder="12" text="Readonly" left="710" top="665" width="120" height="26" cssclass="sta_GD_SubTitle02"/>
+        <Static id="Static04_00_02" taborder="13" text="Disabled" left="369" top="165" width="120" height="26" cssclass="sta_GD_SubTitle02"/>
+        <Static id="Static04_00_01_00" taborder="14" text="Readonly" left="709" top="165" width="120" height="26" cssclass="sta_GD_SubTitle02"/>
+        <Static id="Static04_02" taborder="15" text="Normal" left="29" top="165" width="120" height="26" cssclass="sta_GD_SubTitle02"/>
+        <Combo id="Combo00" taborder="16" text="선택" left="29" top="196" width="140" height="30" innerdataset="dsCmb" codecolumn="code" datacolumn="data" index="0" value="0"/>
+        <Combo id="Combo00_00" taborder="17" text="선택" left="368" top="195" width="140" height="30" enable="false" innerdataset="dsCmb" codecolumn="code" datacolumn="data" index="0" value="0"/>
+        <Combo id="Combo00_00_00" taborder="18" text="선택" left="709" top="195" width="140" height="30" readonly="true" innerdataset="dsCmb" codecolumn="code" datacolumn="data" index="0" value="0"/>
+        <ListBox id="ListBox00" taborder="19" left="29" top="232" width="140" height="100" innerdataset="dsCmb" codecolumn="code" datacolumn="data" index="0" text="선택" value="0"/>
+        <ListBox id="ListBox00_00" taborder="20" left="369" top="230" width="140" height="100" innerdataset="dsCmb" codecolumn="code" datacolumn="data" index="0" text="선택" value="0" enable="false"/>
+        <ListBox id="ListBox00_00_00" taborder="21" left="709" top="229" width="140" height="100" innerdataset="dsCmb" codecolumn="code" datacolumn="data" index="0" text="선택" value="0" readonly="true"/>
+        <Spin id="Spin00" taborder="22" left="30" top="496" width="140" height="30" value="100"/>
+        <Spin id="Spin00_00" taborder="23" left="370" top="495" width="140" height="30" value="100" enable="false"/>
+        <Spin id="Spin00_00_00" taborder="24" left="710" top="495" width="140" height="30" value="100" readonly="true"/>
+        <Calendar id="Calendar00" taborder="25" left="30" top="696" width="140" height="30" dateformat="yyyy-MM-dd" value="20240810"/>
+        <Calendar id="Calendar00_00" taborder="26" left="370" top="696" width="140" height="30" dateformat="yyyy-MM-dd" value="20240810" enable="false"/>
+        <Calendar id="Calendar00_00_00" taborder="27" left="710" top="696" width="140" height="30" dateformat="yyyy-MM-dd" value="20240810" readonly="true"/>
+        <MultiCombo id="mcbo_00" taborder="28" text="선택" left="200" top="193" width="140" height="30" innerdataset="dsCmb" datacolumn="data" codecolumn="code" index="0" value="0"/>
+        <Static id="Static04_02_00" taborder="29" text="MultiCombo" left="200" top="164" width="120" height="26" cssclass="sta_GD_SubTitle02"/>
+        <Calendar id="Calendar00_01" taborder="34" left="60" top="778" width="120" height="30" dateformat="yyyy-MM-dd" value="20240810"/>
+        <Button id="btn_03" taborder="31" left="30" top="778" height="30" cssclass="btn_WF_Prev" border="0px none" right="Calendar00_01:5" onclick="btn_03_onclick"/>
+        <Button id="btn_03_00_01_00" taborder="30" left="8" top="778" height="30" cssclass="btn_WF_Start" border="0px none" right="btn_03:2" onclick="btn_03_00_01_00_onclick"/>
+        <Button id="btn_03_00" taborder="32" left="Calendar00_01:5" top="778" width="20" height="30" cssclass="btn_WF_Next" border="0px none" onclick="btn_03_00_onclick"/>
+        <Button id="btn_03_00_01" taborder="33" left="btn_03_00:2" top="778" width="20" height="30" cssclass="btn_WF_End" border="0px none" onclick="btn_03_00_01_onclick"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="dsCmb">
+        <ColumnInfo>
+          <Column id="code" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="code">0</Col>
+            <Col id="data">선택</Col>
+          </Row>
+          <Row>
+            <Col id="code">1</Col>
+            <Col id="data">가나다라</Col>
+          </Row>
+          <Row>
+            <Col id="code">2</Col>
+            <Col id="data">가나다라마바</Col>
+          </Row>
+          <Row>
+            <Col id="code">3</Col>
+            <Col id="data">가나다라마바</Col>
+          </Row>
+          <Row>
+            <Col id="code">4</Col>
+            <Col id="data">가나다라마바</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.btn_03_00_01_00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	// 1년전
+	this.Calendar00_01.set_value(this.gfnAddYear(this.Calendar00_01.value, -1));
+};
+
+this.btn_03_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	// 1달전
+	this.Calendar00_01.set_value(this.gfnAddMonth(this.Calendar00_01.value, -1));
+};
+
+this.btn_03_00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	//1달후
+	this.Calendar00_01.set_value(this.gfnAddMonth(this.Calendar00_01.value, 1));	
+};
+
+this.btn_03_00_01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	// 1년후
+	this.Calendar00_01.set_value(this.gfnAddYear(this.Calendar00_01.value, 1));
+};]]></Script>
+  </Form>
+</FDL>

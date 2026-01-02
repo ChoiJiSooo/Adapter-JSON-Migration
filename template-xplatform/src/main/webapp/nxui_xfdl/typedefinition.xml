@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TypeDefinition version="3.0">
+  <Modules>
+    <Module url="CompBase.json"/>
+    <Module url="ComComp.json"/>
+    <Module url="Grid.json"/>
+    <Module url="DeviceAPI.json"/>
+    <Module url="Accessibility.json"/>
+    <Module url="Graphics.json"/>
+    <Module url="ListView.json"/>
+    <Module url="Push.json"/>
+    <Module url="extlib::extlibLoad.json"/>
+    <Module url="extlib::compositeModule.json"/>
+  </Modules>
+  <Components>
+    <Component type="JavaScript" id="Button" classname="nexacro.Button" prefixid="btn_"/>
+    <Component type="JavaScript" id="Combo" classname="nexacro.Combo" prefixid="cbo_"/>
+    <Component type="JavaScript" id="Edit" classname="nexacro.Edit" prefixid="edt_"/>
+    <Component type="JavaScript" id="MaskEdit" classname="nexacro.MaskEdit" prefixid="medt_"/>
+    <Component type="JavaScript" id="TextArea" classname="nexacro.TextArea" prefixid="txa_"/>
+    <Component type="JavaScript" id="Static" classname="nexacro.Static" prefixid="sta_"/>
+    <Component type="JavaScript" id="Div" classname="nexacro.Div" prefixid="div_"/>
+    <Component type="JavaScript" id="PopupDiv" classname="nexacro.PopupDiv" prefixid="pdiv_"/>
+    <Component type="JavaScript" id="Radio" classname="nexacro.Radio" prefixid="rad_"/>
+    <Component type="JavaScript" id="CheckBox" classname="nexacro.CheckBox" prefixid="chk_"/>
+    <Component type="JavaScript" id="ListBox" classname="nexacro.ListBox" prefixid="lbox_"/>
+    <Component type="JavaScript" id="Grid" classname="nexacro.Grid" prefixid="grd_"/>
+    <Component type="JavaScript" id="Spin" classname="nexacro.Spin" prefixid="spn_"/>
+    <Component type="JavaScript" id="Menu" classname="nexacro.Menu" prefixid="mnu_"/>
+    <Component type="JavaScript" id="PopupMenu" classname="nexacro.PopupMenu" prefixid="pmnu_"/>
+    <Component type="JavaScript" id="Tab" classname="nexacro.Tab" prefixid="tab_"/>
+    <Component type="JavaScript" id="GroupBox" classname="nexacro.GroupBox" prefixid="gbox_"/>
+    <Component type="JavaScript" id="Calendar" classname="nexacro.Calendar" prefixid="cal_"/>
+    <Component type="JavaScript" id="ImageViewer" classname="nexacro.ImageViewer" prefixid="imgv_"/>
+    <Component type="JavaScript" id="ProgressBar" classname="nexacro.ProgressBar" prefixid="pbar_"/>
+    <Component type="JavaScript" id="Plugin" classname="nexacro.Plugin" prefixid="plg_"/>
+    <Component type="JavaScript" id="Dataset" classname="nexacro.NormalDataset" prefixid="ds_"/>
+    <Component type="JavaScript" id="ListView" classname="nexacro.ListView" prefixid="lvew_"/>
+    <Component type="JavaScript" id="WebBrowser" classname="nexacro.WebBrowser" prefixid="web_"/>
+    <Component type="JavaScript" id="FileDialog" classname="nexacro.FileDialog" prefixid="fd_"/>
+    <Component type="JavaScript" id="FileDownload" classname="nexacro.FileDownload" prefixid="fdown_"/>
+    <Component type="JavaScript" id="FileUpload" classname="nexacro.FileUpload" prefixid="fup_"/>
+    <Component type="JavaScript" id="FileDownTransfer" classname="nexacro.FileDownTransfer" prefixid="fdowntr_"/>
+    <Component type="JavaScript" id="FileUpTransfer" classname="nexacro.FileUpTransfer" prefixid="fuptr_"/>
+    <Component type="JavaScript" id="VideoPlayer" classname="nexacro.VideoPlayer" prefixid="vpla_"/>
+    <Component type="JavaScript" id="commPaging" classname="nexacro.commPaging" prefixid="pag_"/>
+    <Component type="JavaScript" id="CheckBoxSet" classname="nexacro.CheckBoxSet" prefixid="chks_"/>
+    <Component type="JavaScript" id="MultiCombo" classname="nexacro.MultiCombo" prefixid="mcbo_"/>
+    <Component type="JavaScript" id="WebView" classname="nexacro.WebView"/>
+  </Components>
+  <Services>
+    <Service prefixid="theme" type="resource" url="./_resource_/_theme_/" cachelevel="session" include_subdir="true"/>
+    <Service prefixid="initvalue" type="resource" url="./_resource_/_initvalue_/" cachelevel="session" include_subdir="false"/>
+    <Service prefixid="xcssrc" type="resource" url="./_resource_/_xcss_/" cachelevel="session" include_subdir="false"/>
+    <Service prefixid="imagerc" type="resource" url="./_resource_/_images_/" cachelevel="session" include_subdir="true"/>
+    <Service prefixid="font" type="resource" url="./_resource_/_font_/" version="0" communicationversion="0" cachelevel="session" include_subdir="false"/>
+    <Service prefixid="svcurl" type="JSP" cachelevel="none" url="http://localhost:8080/xp/xplatform/" version="0" communicationversion="0" include_subdir="false"/>
+    <Service prefixid="xeni" type="JSP" cachelevel="none" url="http://14.63.225.189:9418/nps/" version="0" communicationversion="0" include_subdir="false"/>
+    <Service prefixid="npsLib" type="file" cachelevel="session" url="./_extlib_/npsLib/" include_subdir="true" version="0" communicationversion="0"/>
+    <Service prefixid="frame" type="form" url="./frame/" cachelevel="session" version="0" communicationversion="0" include_subdir="false"/>
+    <Service prefixid="comm" type="form" cachelevel="session" url="./comm/" version="0" communicationversion="0" include_subdir="false"/>
+    <Service prefixid="comp" type="form" cachelevel="session" url="./work/comp/" version="0" communicationversion="0" include_subdir="false"/>
+    <Service prefixid="design" type="form" url="./design/" version="0" cachelevel="session" include_subdir="true" communicationversion="0"/>
+    <Service prefixid="grid" type="form" url="./work/grid/" version="0" cachelevel="session" include_subdir="false" communicationversion="0"/>
+  </Services>
+  <Protocols/>
+  <Update>
+    <Os name="Windows" url="./" timeout="30" retry="3" autoupdate="auto" updatetype="server"/>
+  </Update>
+  <Deploy>
+    <Os name="Windows"/>
+  </Deploy>
+</TypeDefinition>

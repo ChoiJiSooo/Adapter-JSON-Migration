@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="commAlert" width="320" height="180" titletext="경고창, 확인창" background="transparent" onload="form_onload" onkeyup="ModuleAlert_onkeyup" cssclass="frm_POP_Bg">
+    <Layouts>
+      <Layout height="180" width="320">
+        <Div id="div_alert" taborder="0" left="0" top="0" cssclass="div_WF_alert" background="#ffffff" right="0" bottom="0">
+          <Layouts>
+            <Layout>
+              <Static id="sta_00" taborder="4" left="100" top="20" height="60" right="100" cssclass="sta_alert_Confirm"/>
+              <Button id="btn_ok" taborder="0" text="확인" height="24" cssclass="btn_WF_Point2" onclick="div_alert_btn_ok_onclick" right="61" width="48" bottom="10"/>
+              <Button id="btn_cancel" taborder="1" text="취소" height="24" onclick="div_alert_btn_cancel_onclick" right="6" width="48" bottom="10"/>
+              <Button id="btn_close" taborder="2" top="8" height="20" cssclass="btn_POP_X" right="10" width="20" onclick="div_alert_btn_close_onclick"/>
+              <Static id="sta_alert" taborder="3" text="시스템오류가 발생하였습니다.관리자에게 문의하시기 바랍니다." left="17" top="90" cssclass="sta_alert_Txt" wordWrap="char" usedecorate="true" right="19" bottom="60" onclick="div_alert_sta_alert_onclick"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="sta_09" taborder="1" cssclass="sta_GA_guidearea" visible="false" left="0" height="10" width="599" top="389"/>
+        <Static id="sta_06" taborder="2" top="0" width="10" cssclass="sta_GA_guidearea" visible="false" left="1" height="399"/>
+        <Static id="sta_00" taborder="3" top="37" cssclass="sta_GA_guidearea" visible="false" left="0" right="669" height="3"/>
+        <Div id="div_00" taborder="4" text="div_00" left="510" top="10" width="358" height="220" cssclass="div_GD_Tip" visible="false">
+          <Layouts>
+            <Layout>
+              <Static id="sta_00_00" taborder="0" left="10" top="18" height="60" cssclass="sta_alert_Confirm" width="100"/>
+              <Static id="sta_00_00_00" taborder="1" left="120" top="18" height="60" cssclass="sta_alert_Error" width="100" onclick="div_00_sta_00_00_00_onclick"/>
+              <Static id="sta_01" taborder="2" text="★class 교체해서 적용&#13;&#10;&#13;&#10;sta_alert_Confirm&#13;&#10;sta_alert_Error&#13;&#10;sta_alert_Warning&#13;&#10;" left="10" top="111" width="140" height="90"/>
+              <Static id="sta_00_00_00_00" taborder="3" left="230" top="18" height="60" cssclass="sta_alert_Warning" width="100" onclick="div_00_sta_00_00_00_onclick"/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[/**
+*  nps Project (2024)
+*  @FileName 	commAlert
+*  @Creator 	gamsin
+*  @CreateDate 	20124.08.21
+*  @Desction   		
+************** 소스 수정 이력 ***********************************************
+*  date          		Modifier                Description
+*******************************************************************************
+*  2024.08.21     		gamsin					최초 생성    
+*******************************************************************************
+*/
+
+
+/******************************************************************************************************************************************
+* 폼 전역변수선언 영역
+******************************************************************************************************************************************/
+this.fv_type 	 = this.gfnGetArgPopup(this, "type"); // alert, confirm
+this.fv_pThis    = this.gfnGetArgPopup(this, "pThis");		// 부모Form
+this.fv_callback = this.gfnGetArgPopup(this, "callback"); 	// 부모콜백
+this.fv_popId	 = this.gfnGetArgPopup(this, "popId");		// 팝업Id
+
+/******************************************************************************************************************************************
+* 화면 초기셋팅 영역
+******************************************************************************************************************************************/
+// 화면 초기 로드
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{	
+	// 화면 초기화 함수 호출
+	this.fn_init(obj);
+	
+};
+
+// 화면 초기화 함수 호출
+this.fn_init = function(obj)
+{
+	var msg = this.gfnGetArgPopup(this, "msg");
+
+		
+	this.div_alert.form.sta_alert.set_text(msg);
+
+	
+	// 확인 버튼만
+	if( this.fv_type == "alert" ) {
+		this.div_alert.form.btn_cancel.set_visible(false);
+		this.div_alert.form.btn_ok.setOffsetLeft( this.div_alert.getOffsetWidth() - this.div_alert.form.btn_ok.getOffsetWidth() - 6 );
+	}	
+	
+	this.div_alert.form.resetScroll();
+	this.div_alert.form.btn_ok.setFocus();
+};
+/******************************************************************************************************************************************
+* Transaction 함수
+******************************************************************************************************************************************/
+
+/******************************************************************************************************************************************
+* 콜백 함수
+******************************************************************************************************************************************/
+
+/******************************************************************************************************************************************
+* 사용자 정의 함수
+******************************************************************************************************************************************/
+
+/******************************************************************************************************************************************
+* Component 이벤트 함수 (버튼 포함)
+******************************************************************************************************************************************/
+// 화면 닫기
+this.div_alert_btn_close_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.close(false);
+};
+
+// 확인
+this.div_alert_btn_ok_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{	
+	this.close(true);
+};
+
+// 취소
+this.div_alert_btn_cancel_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.close(false);
+};
+
+
+// 키이벤트 - alert창인경우, ESC키 창닫기
+this.ModuleAlert_onkeyup = function(obj:nexacro.Form,e:nexacro.KeyEventInfo)
+{
+	if( this.fv_type == "alert" && e.keycode == 27 ){
+		this.close(false);
+	}
+};
+]]></Script>
+  </Form>
+</FDL>

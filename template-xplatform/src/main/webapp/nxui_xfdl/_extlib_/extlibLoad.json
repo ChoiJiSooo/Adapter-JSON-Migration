@@ -1,0 +1,18 @@
+﻿{
+	"name": "Nexacroload",
+	"version": "21.0.0.1700",
+	"description": "nexacro Unified Framework Library",
+	"license": "",
+	"scripts": [
+        "npsLib/Frame.js",
+		"npsLib/Util.js",
+		"npsLib/Const.js",
+		"npsLib/Grid.js",
+		"npsLib/Popup.js",
+		"npsLib/Transaction.js",
+		"npsLib/Excel.js",
+		"npsLib/Validate.js"
+	]
+
+}
+

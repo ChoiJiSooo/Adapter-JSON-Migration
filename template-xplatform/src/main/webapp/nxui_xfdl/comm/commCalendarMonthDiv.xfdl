@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="ModuleCalendarMonth" width="130" height="28" titletext="월달력" onload="form_onload" background="#ffffff" ontimer="ModuleCalendarMonth_ontimer">
+    <Layouts>
+      <Layout height="28" width="130">
+        <Calendar id="cal_month" taborder="0" left="0" top="0" dateformat="yyyy-MM" type="normal" buttonsize="0 0" bottom="0" editformat="yyyy-MM" right="0"/>
+        <Button id="Button00" taborder="1" top="1" onclick="btn_monthCal_onclick" cssclass="btn_WF_Cal" bottom="1" width="25" left="cal_month:-26"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+/************************************************************************************************
+ * 1. FORM 변수 선언 영역
+ ************************************************************************************************/
+
+/************************************************************************************************
+ * 2. FORM EVENT 영역(onload)
+ ************************************************************************************************/
+// onload 이벤트
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	
+};
+
+
+this.btn_monthCal_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.gfnCallMonthCalendar(this.cal_month);
+};
+
+]]></Script>
+    <Bind>
+      <BindItem id="item0" compid="cal_month" propid="value" datasetid="ds_FromTo" columnid="FROMDATE"/>
+    </Bind>
+  </Form>
+</FDL>

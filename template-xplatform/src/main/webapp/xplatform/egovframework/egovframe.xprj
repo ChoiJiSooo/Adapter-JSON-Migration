@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project active_adl="egovframe">
+<Project active_adl="egovframe" version="1.1">
   <TypeDefinition url="default_typedef.xml"/>
   <GlobalVariables url="globalvars.xml"/>
   <ADL id="egovframe" url="egovframe.xadl" useajax="false"/>

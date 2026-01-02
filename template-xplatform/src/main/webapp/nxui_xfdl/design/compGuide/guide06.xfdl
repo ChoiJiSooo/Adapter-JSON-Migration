@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="guide06" width="1280" height="720" titletext="Button" cssclass="frm_GD_Bg">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Static id="Static00" taborder="1" text="Component Guide 06" left="0" top="0" height="80" cssclass="sta_GD_Title" right="0"/>
+        <Static id="Static03_00_00" taborder="3" left="0" top="80" height="190" cssclass="sta_GD_SubBg" right="0"/>
+        <Static id="Static01_00_00" taborder="2" text="Button" left="0" top="80" height="80" cssclass="sta_GD_SubTitle" right="0"/>
+        <Static id="Static04_01" taborder="4" text="Normal" left="30" top="165" width="120" height="26" cssclass="sta_GD_SubTitle02"/>
+        <Static id="Static04_00_00" taborder="5" text="Disabled" left="650" top="165" width="120" height="26" cssclass="sta_GD_SubTitle02"/>
+        <Static id="Static03_00_00_00" taborder="6" left="0" top="270" height="340" cssclass="sta_GD_SubBg" right="0"/>
+        <Static id="Static01_00_00_00" taborder="7" text="Button" left="0" top="270" height="80" cssclass="sta_GD_SubTitle" right="0"/>
+        <Static id="Static04_01_00" taborder="8" text="Module Button" left="30" top="345" width="120" height="26" cssclass="sta_GD_SubTitle02"/>
+        <Static id="Static04_00_00_01" taborder="9" text="etc Button" left="650" top="345" width="120" height="26" cssclass="sta_GD_SubTitle02"/>
+        <Button id="Button00" taborder="10" text="Button" left="30" top="201" width="64" height="30" fittocontents="width"/>
+        <Static id="Static04_01_01" taborder="11" text="★★ fittocontents =width 적용" left="130" top="107" width="174" height="26" cssclass="sta_GD_SubTitle02"/>
+        <Button id="Button03_01" taborder="33" text="Point" left="156" top="201" width="52" height="30" cssclass="btn_WF_Point2"/>
+        <Button id="Button00_01_00" taborder="12" text="Button" left="Button03_01:5" top="201" width="64" height="30" fittocontents="width" cssclass="btn_WF_Color"/>
+        <Static id="Static03_00_00_00_00" taborder="13" left="0" top="610" height="320" cssclass="sta_GD_SubBg" right="0" onclick="Static03_00_00_00_00_onclick"/>
+        <Static id="Static04_01_00_00" taborder="14" text="팝업조회" left="30" top="694" width="120" height="26" cssclass="sta_GD_SubTitle02"/>
+        <Static id="Static01_00_00_00_00" taborder="15" text="Icon Button" left="0" top="610" height="80" cssclass="sta_GD_SubTitle" right="0"/>
+        <Edit id="Edit00" taborder="16" left="30" top="725" width="227" height="30" cssclass="edt_WF_SchPop" value="edt_WF_SchPop 클래스 적용" text="edt_WF_SchPop 클래스 적용"/>
+        <Button id="Button01" taborder="17" left="Edit00:-30" top="725" width="30" height="30" cssclass="btn_WF_EdtPop"/>
+        <Static id="Static04_00_00_01_00" taborder="18" text="Disabled" left="650" top="694" width="120" height="26" cssclass="sta_GD_SubTitle02"/>
+        <Edit id="Edit00_00" taborder="20" left="650" top="723" width="227" height="30" cssclass="edt_WF_SchPop" value="edt_WF_SchPop 클래스 적용" text="edt_WF_SchPop 클래스 적용" enable="false"/>
+        <Button id="Button01_00" taborder="19" left="Edit00_00:-30" top="723" width="30" height="30" cssclass="btn_WF_EdtPop" enable="false"/>
+        <Static id="Static03_00_00_00_00_00" taborder="21" left="0" top="930" height="200" cssclass="sta_GD_SubBg" right="0"/>
+        <Static id="Static01_00_00_00_00_00" taborder="22" text="Popup Button" left="0" top="930" height="80" cssclass="sta_GD_SubTitle" right="0"/>
+        <Static id="Static04_01_00_00_00" taborder="23" text="Normal" left="30" top="1014" width="120" height="26" cssclass="sta_GD_SubTitle02"/>
+        <Static id="Static04_00_00_01_00_00" taborder="24" text="Disabled" left="648" top="1014" width="120" height="26" cssclass="sta_GD_SubTitle02"/>
+        <Button id="Button03" taborder="25" text="Point" left="99" top="201" width="52" height="30" cssclass="btn_WF_Point"/>
+        <Static id="Static04_01_02" taborder="0" text="Point : 필요시 적용" left="156" top="164" width="120" height="26" cssclass="sta_GD_SubTitle02"/>
+        <Static id="Static04_01_00_00_01" taborder="26" text="조회버튼" left="29" top="780" width="120" height="26" cssclass="sta_GD_SubTitle02"/>
+        <Static id="Static04_00_00_01_00_01" taborder="27" text="Disabled" left="650" top="779" width="120" height="26" cssclass="sta_GD_SubTitle02"/>
+        <Button id="btn_00" taborder="34" left="30" top="817" width="30" height="30" cssclass="btn_WF_Reload"/>
+        <Button id="Button04" taborder="28" text="조회" left="btn_00:5" top="817" width="66" height="30" cssclass="btn_WF_Search"/>
+        <Button id="Button04_00" taborder="29" text="조회" left="650" top="814" width="66" height="30" cssclass="btn_WF_Search" enable="false"/>
+        <Button id="btnMenuToggle" taborder="30" top="121" width="14" height="60" onclick="btnMenuToggle_onclick" cssclass="btn_WF_menuClose" text="" right="103"/>
+        <Button id="Button00_00_00" taborder="31" top="181" width="14" height="60" cssclass="btn_WF_menuOpen" right="103"/>
+        <Button id="Button00_01_00_02" taborder="32" text="Button" left="Button00_01_00:5" top="201" width="64" height="30" fittocontents="width" cssclass="btn_WF_Custom"/>
+        <Static id="Static03_00_00_00_00_00_00" taborder="35" left="0" top="1130" height="200" cssclass="sta_GD_SubBg" right="0"/>
+        <Static id="Static01_00_00_00_00_00_00" taborder="36" text="Shuttle Button" left="0" top="1130" height="80" cssclass="sta_GD_SubTitle" right="0"/>
+        <Button id="Button00_01_00_00" taborder="38" text="Button" left="833" top="200" width="64" height="30" fittocontents="width" cssclass="btn_WF_Color" enable="false" onclick="Button00_01_00_00_onclick"/>
+        <Button id="Button00_01_00_02_01" taborder="37" text="Button" left="Button00_01_00_00:5" top="200" width="64" height="30" fittocontents="width" cssclass="btn_WF_Custom" enable="false"/>
+        <Button id="Button03_01_00" taborder="39" text="Point" left="776" top="200" width="52" height="30" cssclass="btn_WF_Point2" enable="false"/>
+        <Button id="Button03_00" taborder="40" text="Point" left="718" top="200" width="52" height="30" cssclass="btn_WF_Point" enable="false"/>
+        <Button id="Button00_00" taborder="41" text="Button" left="649" top="200" width="64" height="30" fittocontents="width" enable="false"/>
+        <Calendar id="cal_00" taborder="42" left="30" top="862" width="150" height="30" dateformat="yyyy-MM-dd" buttonsize="0 0"/>
+        <Button id="btn_01" taborder="43" left="cal_00:-30" top="863" width="30" height="28" cssclass="btn_WF_Cal" onclick="btn_01_onclick"/>
+        <Button id="btn_02" taborder="44" left="30" top="1228" width="34" height="34" cssclass="btn_WF_ShuttleL"/>
+        <Button id="btn_02_00" taborder="45" left="btn_02:5" top="1228" width="34" height="34" cssclass="btn_WF_ShuttleD"/>
+        <Button id="btn_02_00_00" taborder="46" left="btn_02_00:5" top="1228" width="34" height="34" cssclass="btn_WF_ShuttleU"/>
+        <Button id="btn_02_00_00_00" taborder="47" left="btn_02_00_00:5" top="1228" width="34" height="34" cssclass="btn_WF_ShuttleR" onclick="btn_02_00_00_00_onclick"/>
+        <Button id="btn_03_00_00" taborder="48" text="닫기" left="649" top="403" width="48" height="30" fittocontents="width" cssclass="btn_WF_Close"/>
+        <Button id="btn_03_00_00_00_00" taborder="49" text="취소" left="btn_03_00_00:5" top="403" width="48" height="30" fittocontents="width" cssclass="btn_WF_Cancel"/>
+        <Button id="btn_03_00_00_01" taborder="50" text="확인" left="btn_03_00_00_00_00:5" top="403" width="48" height="30" fittocontents="width" cssclass="btn_WF_Confirm"/>
+        <Static id="Static04_01_00_01" taborder="51" text="Grid Button" left="30" top="510" width="120" height="26" cssclass="sta_GD_SubTitle02"/>
+        <Div id="divGrdBtn" taborder="52" text="div_00" left="30" top="540" width="659" height="50" formscrollbartype="none none">
+          <Layouts>
+            <Layout type="horizontal" flexmainaxisalign="end" horizontalgap="5" spacing="15px 0px 5px 0px">
+              <Button id="btnAddRow" taborder="3" text="행추가" left="30" top="15" width="75" height="30" fittocontents="width" cssclass="btn_WF_AddRow"/>
+              <Button id="btnDelRow" taborder="2" text="행삭제" left="111" top="15" width="75" height="30" fittocontents="width" cssclass="btn_WF_DelRow"/>
+              <Button id="btnExcelDown" taborder="0" text="엑셀업로드" left="541" top="15" width="103" height="30" fittocontents="width" cssclass="btn_WF_ExcelDown"/>
+              <Button id="btnExcelUp" taborder="1" text="엑셀다운로드" left="419" top="15" width="116" height="30" fittocontents="width" cssclass="btn_WF_ExcelUp"/>
+              <Button id="btnCustom" taborder="5" text="커스텀버튼" left="588" top="25" width="87" height="30" cssclass="btn_WF_Custom" fittocontents="width"/>
+              <Button id="btnSave" taborder="4" text="저장" left="231" top="17" width="64" height="30" fittocontents="width" cssclass="btn_WF_GrdSave"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="divModuleBtn" taborder="53" text="div_00" left="34" top="391" width="300" height="50" formscrollbartype="none none">
+          <Layouts>
+            <Layout type="horizontal" spacing="15px 0px 5px 0px" horizontalgap="5" flexmainaxisalign="end">
+              <Button id="btn_03" taborder="0" text="신규" left="30" top="15" width="64" height="30" fittocontents="width" cssclass="btn_WF_New"/>
+              <Button id="btn_00" taborder="3" text="수정" left="219" top="15" width="64" height="30" cssclass="btn_WF_Modify" fittocontents="width"/>
+              <Button id="btn_03_00_00_00" taborder="2" text="삭제" left="136" top="15" width="64" height="30" fittocontents="width" cssclass="btn_WF_Del"/>
+              <Button id="btn_03_00" taborder="1" text="저장" left="83" top="15" width="64" height="30" fittocontents="width" cssclass="btn_WF_GrdSave"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="divPopBtn" taborder="54" text="div00" left="30" height="50" right="890" cssclass="div_POP_BtnBg" bottom="-385" formscrollbartype="none none">
+          <Layouts>
+            <Layout type="horizontal" flexcrossaxisalign="center" flexmainaxisalign="center" horizontalgap="10" spacing="0px 20px">
+              <Button id="btn00_00" taborder="1" text="확인" width="68" height="30" bottom="10" cssclass="btn_POP_Yes" right="20" fittocontents="width" onclick="btn_select_onclick"/>
+              <Button id="btn00" taborder="0" text="취소" width="68" height="30" bottom="10" cssclass="btn_POP_No" right="btn00_00:10" fittocontents="width" onclick="divPopBtn_btn00_onclick"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="divPopBtn00" taborder="55" text="div00" left="646" height="50" right="274" cssclass="div_POP_BtnBg" bottom="-385" enable="false" formscrollbartype="none none">
+          <Layouts>
+            <Layout type="horizontal" flexcrossaxisalign="center" flexmainaxisalign="center" horizontalgap="10" spacing="0px 20px">
+              <Button id="btn00_00" taborder="1" text="확인" width="68" height="30" bottom="10" cssclass="btn_POP_Yes" right="20" fittocontents="width" onclick="btn_select_onclick"/>
+              <Button id="btn00" taborder="0" text="취소" width="68" height="30" bottom="10" cssclass="btn_POP_No" right="btn00_00:10" fittocontents="width" onclick="divPopBtn_btn00_onclick"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Button id="btn_03" taborder="56" left="338" top="1224" width="30" height="30" cssclass="btn_WF_Prev"/>
+        <Button id="btn_03_00" taborder="57" left="378" top="1224" width="30" height="30" cssclass="btn_WF_Next"/>
+        <Button id="btn_03_00_01" taborder="58" left="418" top="1224" width="30" height="30" cssclass="btn_WF_End"/>
+        <Button id="btn_03_00_01_00" taborder="59" left="298" top="1224" width="30" height="30" cssclass="btn_WF_Start"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="dsCmb">
+        <ColumnInfo>
+          <Column id="code" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="code">0</Col>
+            <Col id="data">선택</Col>
+          </Row>
+          <Row>
+            <Col id="code">1</Col>
+            <Col id="data">가나다라</Col>
+          </Row>
+          <Row>
+            <Col id="code">2</Col>
+            <Col id="data">가나다라마바</Col>
+          </Row>
+          <Row>
+            <Col id="code">3</Col>
+            <Col id="data">가나다라마바</Col>
+          </Row>
+          <Row>
+            <Col id="code">4</Col>
+            <Col id="data">가나다라마바</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[]]></Script>
+  </Form>
+</FDL>

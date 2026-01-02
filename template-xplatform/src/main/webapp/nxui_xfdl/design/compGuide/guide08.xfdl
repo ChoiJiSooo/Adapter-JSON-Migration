@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="guide09" width="1280" height="720" titletext="Detail Area">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Static id="Static00" taborder="0" text="Component Guide 08" left="0" top="0" height="80" cssclass="sta_GD_Title" right="80"/>
+        <Static id="Static01_00_00" taborder="1" text="Detail Area" left="0" top="80" height="80" cssclass="sta_GD_SubTitle" right="0"/>
+        <Div id="Div00" taborder="2" text="Div00" top="161" width="495" formscrollbartype="none none" height="219" left="33">
+          <Layouts>
+            <Layout>
+              <Static id="Static04" taborder="7" cssclass="sta_WF_Labelbg" left="0" top="78" width="495" height="40"/>
+              <Static id="Static01" taborder="6" cssclass="sta_WF_Labelbg" left="0" top="39" width="495" height="40"/>
+              <Static id="Static15" taborder="5" cssclass="sta_WF_Labelbg" left="0" top="0" width="495" height="40"/>
+              <Static id="Static20" taborder="0" text="에디트" cssclass="sta_WF_Label" left="0" top="0" width="115" height="40"/>
+              <Edit id="Edit10" taborder="1" left="125" top="5" width="118" height="30"/>
+              <Static id="Static00" taborder="2" text="마스크에디트" cssclass="sta_WF_Label" left="252" top="0" width="107" height="40"/>
+              <Static id="Static03" taborder="3" text="체크박스" cssclass="sta_WF_Label" left="252" top="39" width="107" height="40"/>
+              <Static id="Static06" taborder="4" text="라디오버튼" cssclass="sta_WF_Label" left="252" top="78" width="107" height="40"/>
+              <Static id="Static13" taborder="8" cssclass="sta_WF_Labelbg" left="0" top="117" height="39" right="0"/>
+              <Spin id="Spin00" taborder="9" value="100" left="125" top="44" width="118" height="30"/>
+              <Combo id="Combo00" taborder="10" value="0" text="가나다" innerdataset="ds_cmb" codecolumn="lv" datacolumn="data" index="0" displayrowcount="5" left="125" top="83" width="118" height="30"/>
+              <MaskEdit id="MaskEdit00" taborder="11" value="100000" mask="###,###" left="367" top="5" width="118" height="30"/>
+              <CheckBox id="CheckBox02" taborder="12" text="남" value="true" left="369" top="44" width="42" height="30"/>
+              <CheckBox id="CheckBox00" taborder="13" text="여" left="428" top="44" width="42" height="30"/>
+              <Radio id="Radio00" taborder="14" index="0" innerdataset="ds_rdo" codecolumn="lv" datacolumn="data" value="0" onitemclick="Radio00_onitemclick" left="369" top="83" width="125" height="30" direction="vertical" columncount="-1" rowcount="-1" text="예"/>
+              <Static id="Static19" taborder="15" cssclass="sta_WF_Label_Top" left="0" top="0" height="2" right="0"/>
+              <Static id="Static28" taborder="16" cssclass="sta_WF_Label_Bottom" left="0" height="2" width="495" bottom="0"/>
+              <Static id="Static20_00" taborder="17" text="스핀" cssclass="sta_WF_Label" left="0" top="39" width="115" height="40"/>
+              <Static id="Static20_01" taborder="18" text="콤보" cssclass="sta_WF_Label" left="0" top="78" width="115" height="40"/>
+              <Static id="Static20_02" taborder="19" text="에디트" cssclass="sta_WF_Label" left="0" top="117" width="115" height="40"/>
+              <Edit id="Edit10_00" taborder="20" left="125" top="122" width="118" height="30"/>
+              <Static id="Static00_00" taborder="21" text="마스크에디트" cssclass="sta_WF_Label" left="252" top="117" width="107" height="40"/>
+              <MaskEdit id="MaskEdit00_00" taborder="22" value="100000" mask="###,###" left="367" top="122" width="118" height="30"/>
+              <Static id="Static13_00" taborder="23" cssclass="sta_WF_Labelbg" left="0" top="155" height="39" right="0"/>
+              <Static id="Static20_02_00" taborder="24" text="에디트" cssclass="sta_WF_Label" left="0" top="154" width="115" height="40"/>
+              <Edit id="Edit10_00_00" taborder="25" left="125" top="159" width="118" height="30"/>
+              <Static id="Static00_00_00" taborder="26" text="마스크에디트" cssclass="sta_WF_Label" left="252" top="154" width="107" height="40"/>
+              <MaskEdit id="MaskEdit00_00_00" taborder="27" value="100000" mask="###,###" left="367" top="159" width="118" height="30"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="Div00_00" taborder="3" text="Div00" left="40" top="393" height="297" width="1110">
+          <Layouts>
+            <Layout>
+              <Static id="Static07" taborder="258" cssclass="sta_WF_Labelbg" left="0" top="117" right="0" height="40"/>
+              <Static id="Static04" taborder="259" cssclass="sta_WF_Labelbg" left="0" top="78" right="0" height="40"/>
+              <Static id="Static01" taborder="260" cssclass="sta_WF_Labelbg" left="0" top="39" right="0" height="40"/>
+              <Static id="Static15" taborder="261" cssclass="sta_WF_Labelbg" left="0" top="0" right="0" height="40"/>
+              <Edit id="Edit10" taborder="262" left="125" top="5" width="122" height="30"/>
+              <Static id="Static00" taborder="263" text="마스크에디트" cssclass="sta_WF_Label" left="257" top="0" width="115" height="40"/>
+              <Static id="Static02" taborder="264" text="스핀" cssclass="sta_WF_Label" left="0" top="39" width="115" height="40"/>
+              <Static id="Static03" taborder="265" text="체크박스" cssclass="sta_WF_Label" left="257" top="39" width="115" height="40"/>
+              <Static id="Static05" taborder="266" text="콤보" cssclass="sta_WF_Label" left="0" top="78" width="115" height="40"/>
+              <Static id="Static06" taborder="267" text="라디오버튼" cssclass="sta_WF_Label" left="257" top="78" width="115" height="40"/>
+              <Static id="Static08" taborder="268" text="캘린더" cssclass="sta_WF_Label" left="0" top="117" width="115" height="40"/>
+              <Static id="Static13" taborder="269" cssclass="sta_WF_Labelbg" left="0" top="157" right="0" height="139"/>
+              <Static id="Static14" taborder="270" text="텍스트박스" cssclass="sta_WF_Label" left="0" top="157" width="115" height="138"/>
+              <Spin id="Spin00" taborder="271" value="100" left="125" top="44" width="122" height="30"/>
+              <Combo id="Combo00" taborder="272" value="0" text="가나다" innerdataset="ds_cmb" codecolumn="lv" datacolumn="data" index="0" displayrowcount="5" left="125" top="83" width="122" height="30"/>
+              <Calendar id="Calendar00" taborder="273" value="20160725" dateformat="yyyy-MM-dd" left="125" top="122" width="122" height="30"/>
+              <MaskEdit id="MaskEdit00" taborder="274" value="100000" mask="###,###" left="382" top="5" width="123" height="30"/>
+              <TextArea id="TextArea00" taborder="275" wordwrap="char" left="125" top="161" width="380" bottom="5"/>
+              <CheckBox id="CheckBox02" taborder="276" text="남" value="true" left="384" top="44" width="52" height="30"/>
+              <CheckBox id="CheckBox00" taborder="277" text="여" left="446" top="44" width="40" height="30"/>
+              <Radio id="Radio00" taborder="278" index="0" innerdataset="ds_rdo" codecolumn="lv" datacolumn="data" value="0" direction="vertical" onitemclick="Radio00_onitemclick" left="384" top="83" width="123" height="30" columncount="-1" rowcount="-1" text="예"/>
+              <Static id="Static19" taborder="279" text="검색" cssclass="sta_WF_Label" left="257" top="117" width="115" height="40"/>
+              <Edit id="Edit01" taborder="280" left="382" top="122" width="123" height="30" cssclass="edt_WF_SchPop"/>
+              <Static id="Static09" taborder="282" text="리드온니" cssclass="sta_WF_Label" left="515" top="0" width="115" height="40"/>
+              <Edit id="Edit00" taborder="283" left="640" top="5" width="122" height="30"/>
+              <Static id="Static10" taborder="284" text="필수" cssclass="sta_WF_Label_P" left="772" top="0" width="115" height="40"/>
+              <Static id="Static11" taborder="285" text="리드온니" cssclass="sta_WF_Label" left="515" top="39" width="115" height="40"/>
+              <Static id="Static12" taborder="286" text="필수" cssclass="sta_WF_Label_P" left="772" top="39" width="115" height="40"/>
+              <Static id="Static16" taborder="287" text="리드온니" cssclass="sta_WF_Label" left="515" top="78" width="115" height="40"/>
+              <Static id="Static17" taborder="288" text="필수" cssclass="sta_WF_Label_P" left="772" top="78" width="115" height="40"/>
+              <Static id="Static18" taborder="289" text="리드온니" cssclass="sta_WF_Label" left="515" top="117" width="115" height="40"/>
+              <Static id="Static21" taborder="290" text="리드온니" cssclass="sta_WF_Label" left="515" top="157" width="115" height="138"/>
+              <Spin id="Spin01" taborder="291" value="100" left="640" top="44" width="122" height="30"/>
+              <Combo id="Combo01" taborder="292" value="0" text="가나다" innerdataset="ds_cmb" codecolumn="lv" datacolumn="data" index="0" displayrowcount="5" left="640" top="83" width="122" height="30"/>
+              <Calendar id="Calendar01" taborder="293" value="20160725" dateformat="yyyy-MM-dd" left="640" top="122" width="122" height="30"/>
+              <MaskEdit id="MaskEdit01" taborder="294" value="100000" mask="###,###" left="897" top="5" width="136" height="30"/>
+              <TextArea id="TextArea01" taborder="295" wordwrap="char" left="640" top="161" height="131" right="5"/>
+              <CheckBox id="CheckBox01" taborder="296" text="남" value="true" left="899" top="44" width="40" height="30"/>
+              <CheckBox id="CheckBox03" taborder="297" text="여" left="958" top="44" width="40" height="30"/>
+              <Radio id="Radio01" taborder="298" index="0" innerdataset="ds_rdo" codecolumn="lv" datacolumn="data" value="0" direction="vertical" onitemclick="Radio00_onitemclick" left="899" top="83" width="125" height="30" columncount="-1" rowcount="-1" text="예"/>
+              <Static id="Static22" taborder="299" text="필수" cssclass="sta_WF_Label_P" left="772" top="117" width="115" height="40"/>
+              <Edit id="Edit02" taborder="300" left="897" top="122" width="136" height="30" cssclass="edt_WF_SchPop"/>
+              <Static id="Static20" taborder="302" text="에디트" cssclass="sta_WF_Label_P" left="0" top="0" width="115" height="40"/>
+              <Static id="Static23" taborder="303" cssclass="sta_WF_Label_Top" left="0" top="0" right="0" height="2"/>
+              <Static id="Static28" taborder="304" cssclass="sta_WF_Label_Bottom" left="0" right="0" bottom="0" height="2"/>
+              <Button id="Button91" taborder="281" cssclass="btn_WF_EdtPop" left="475" top="122" width="30" height="30"/>
+              <Button id="Button00" taborder="301" left="1003" top="122" width="30" height="30" cssclass="btn_WF_EdtPop"/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_rdo">
+        <ColumnInfo>
+          <Column id="lv" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="lv">0</Col>
+            <Col id="data">예</Col>
+          </Row>
+          <Row>
+            <Col id="lv">1</Col>
+            <Col id="data">아니오</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

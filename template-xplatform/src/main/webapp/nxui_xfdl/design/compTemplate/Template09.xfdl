@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="template" left="0" top="0" width="1200" height="600" titletext="그리드 셔틀">
+    <Layouts>
+      <Layout width="1200" height="600">
+        <Div id="div_search" taborder="0" text="Div00" left="0" top="0" height="91" cssclass="div_WF_SearchBg" right="25" formscrollbartype="none none">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="45" text="가나다라" cssclass="sta_WF_LabelSch_P" left="0" top="10" width="82" height="30"/>
+              <Edit id="edt_XXXX" taborder="46" left="87" top="10" width="140" height="30" tooltiptext="edit"/>
+              <Static id="Static01" taborder="47" text="가나다라" cssclass="sta_WF_LabelSch" left="232" top="10" width="82" height="30"/>
+              <Static id="Static02" taborder="49" text="가나다라" cssclass="sta_WF_LabelSch" left="466" top="10" width="82" height="30"/>
+              <Static id="Static03" taborder="51" text="가나다라" cssclass="sta_WF_LabelSch" left="0" top="50" width="82" height="30"/>
+              <Static id="Static04" taborder="53" text="가나다라" cssclass="sta_WF_LabelSch" left="232" top="50" width="82" height="30"/>
+              <Static id="Static05" taborder="55" text="가나다라" cssclass="sta_WF_LabelSch" left="466" top="50" width="82" height="30"/>
+              <Static id="Static06" taborder="57" text="가나다라" cssclass="sta_WF_LabelSch" left="678" top="10" width="82" height="30"/>
+              <Static id="Static07" taborder="59" text="가나다라" cssclass="sta_WF_LabelSch" left="678" top="50" width="82" height="30"/>
+              <Combo id="cbo_XXXX" taborder="61" text="Combo00" left="87" top="50" width="140" height="30"/>
+              <MaskEdit id="msk_XXXX" taborder="62" left="319" top="10" height="30" width="142"/>
+              <Calendar id="cal_XXXX" taborder="63" left="319" top="50" height="30" width="142"/>
+              <Radio id="rdo_XXXX" taborder="64" index="1" innerdataset="@ds_rdo" codecolumn="lv" datacolumn="data" value="1" onitemclick="Radio00_onitemclick" left="553" top="10" width="120" height="30" direction="vertical" columncount="-1" rowcount="-1"/>
+              <CheckBox id="chk_XXXX" taborder="65" text="14세 이상" left="553" top="50" height="30" width="120"/>
+              <Edit id="edt_XXXX00" taborder="67" left="765" top="50" width="140" height="30" tooltiptext="edit"/>
+              <Spin id="spn_XXXX" taborder="68" value="0" left="765" top="10" height="30" width="141"/>
+              <Button id="Button00" taborder="16" width="66" height="30" cssclass="btn_WF_Search" text="조회" right="20" fittocontents="width" bottom="10"/>
+              <Button id="btn_00" taborder="17" width="30" height="30" cssclass="btn_WF_Reload" right="Button00:5" bottom="10"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static54" taborder="1" text="h15" visible="false" top="91" width="300" height="15" background="rgba(251,123,123,0.47843137254901963)" right="0"/>
+        <Static id="Static00" taborder="2" text="w&#13;&#10;25" visible="false" top="0" width="25" right="0" background="rgba(251,123,123,0.47843137254901963)" bottom="0"/>
+        <Static id="Static54_00" taborder="3" text="h50" visible="false" top="90" width="160" height="50" background="rgba(251,123,123,0.47843137254901963)" right="840"/>
+        <Static id="Static03_00" taborder="5" text="그리드타이틀" cssclass="sta_WF_Subtitle" left="0" top="91" width="123" height="50"/>
+        <Div id="div_00" taborder="4" text="div_00" left="0" top="Static03_00:0" width="450" cssclass="div_WF_Border" bottom="0">
+          <Layouts>
+            <Layout>
+              <Static id="sta_03" taborder="1" text="필요한 설명글을 적어서 적용해 주시면 됩니다." left="20" top="10" height="28" cssclass="sta_WF_Des" right="20"/>
+              <Grid id="Grid01" taborder="0" useinputpanel="false" autofittype="col" left="30" top="sta_03:10" binddataset="ds_tree" treeinitstatus="expand,all" treeusecheckbox="false" treeuseimage="false" treeuseline="false" bottom="20" right="30" cssclass="grd_WF_Tree">
+                <Formats>
+                  <Format id="default">
+                    <Columns>
+                      <Column size="286"/>
+                    </Columns>
+                    <Rows>
+                      <Row size="35"/>
+                    </Rows>
+                    <Band id="body" style="cellline:0 none;">
+                      <Cell displaytype="treeitemcontrol" edittype="tree" text="bind:UserData" treelevel="bind:lev"/>
+                    </Band>
+                  </Format>
+                </Formats>
+              </Grid>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Button id="btn_00" taborder="7" left="div_00:20" top="335" width="34" height="34" cssclass="btn_WF_ShuttleL"/>
+        <Div id="div_00_00" taborder="6" text="div_00" left="btn_00:20" top="141" width="450" cssclass="div_WF_Border" bottom="0">
+          <Layouts>
+            <Layout>
+              <Grid id="Grid01" taborder="0" useinputpanel="false" autofittype="col" left="30" top="48" binddataset="ds_tree" treeinitstatus="expand,all" treeusecheckbox="false" treeuseimage="false" treeuseline="false" bottom="20" right="30" cssclass="grd_WF_Tree">
+                <Formats>
+                  <Format id="default">
+                    <Columns>
+                      <Column size="286"/>
+                    </Columns>
+                    <Rows>
+                      <Row size="35"/>
+                    </Rows>
+                    <Band id="body" style="cellline:0 none;">
+                      <Cell displaytype="treeitemcontrol" edittype="tree" text="bind:UserData" treelevel="bind:lev"/>
+                    </Band>
+                  </Format>
+                </Formats>
+              </Grid>
+              <Div id="divModuleBtn" taborder="1" text="div_00" width="300" right="30" height="50" formscrollbartype="none none" top="0">
+                <Layouts>
+                  <Layout type="horizontal" spacing="15px 0px 5px 0px" horizontalgap="5" flexmainaxisalign="end">
+                    <Button id="btn_03" taborder="0" text="신규" left="30" top="15" width="64" height="30" fittocontents="width" cssclass="btn_WF_New" visible="false"/>
+                    <Button id="btn_00" taborder="3" text="수정" left="219" top="15" width="64" height="30" cssclass="btn_WF_Modify" fittocontents="width"/>
+                    <Button id="btn_03_00_00_00" taborder="2" text="삭제" left="136" top="15" width="64" height="30" fittocontents="width" cssclass="btn_WF_Del" visible="false"/>
+                    <Button id="btn_03_00" taborder="1" text="저장" left="83" top="15" width="64" height="30" fittocontents="width" cssclass="btn_WF_GrdSave"/>
+                  </Layout>
+                </Layouts>
+              </Div>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Button id="btn_00_00" taborder="8" left="div_00:20" top="385" width="34" height="34" cssclass="btn_WF_ShuttleR" onclick="btn_00_00_onclick"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="da_grd" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column2" type="STRING" size="256"/>
+          <Column id="Column3" type="STRING" size="256"/>
+          <Column id="Column4" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">1000000000001</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">2</Col>
+            <Col id="Column1">1000000000002</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">3</Col>
+            <Col id="Column1">1000000000003</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">4</Col>
+            <Col id="Column1">1000000000004</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">5</Col>
+            <Col id="Column1">1000000000005</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">6</Col>
+            <Col id="Column1">1000000000006</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">7</Col>
+            <Col id="Column1">1000000000007</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">8</Col>
+            <Col id="Column1">1000000000008</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">9</Col>
+            <Col id="Column1">1000000000009</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">10</Col>
+            <Col id="Column1">1000000000010</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">11</Col>
+            <Col id="Column1">1000000000011</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_rdo" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false">
+        <ColumnInfo>
+          <Column id="lv" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="lv">0</Col>
+            <Col id="data">선택</Col>
+          </Row>
+          <Row>
+            <Col id="lv">1</Col>
+            <Col id="data">미선택</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_tree" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false">
+        <ColumnInfo>
+          <Column id="idx" type="STRING" size="256"/>
+          <Column id="lev" type="STRING" size="256"/>
+          <Column id="UserData" type="STRING" size="256"/>
+          <Column id="Caption" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="lev">0</Col>
+            <Col id="UserData">첫번째뎁스</Col>
+            <Col id="Caption">첫번째뎁스</Col>
+            <Col id="idx">1000</Col>
+          </Row>
+          <Row>
+            <Col id="UserData">두번째뎁스</Col>
+            <Col id="Caption">두번째뎁스</Col>
+            <Col id="lev">1</Col>
+            <Col id="idx">1001</Col>
+          </Row>
+          <Row>
+            <Col id="UserData">세번째뎁스</Col>
+            <Col id="Caption">세번째뎁스</Col>
+            <Col id="lev">2</Col>
+            <Col id="idx">1002</Col>
+          </Row>
+          <Row>
+            <Col id="UserData">두번째뎁스</Col>
+            <Col id="Caption">두번째뎁스</Col>
+            <Col id="lev">1</Col>
+            <Col id="idx">1003</Col>
+          </Row>
+          <Row>
+            <Col id="UserData">세번째뎁스</Col>
+            <Col id="Caption">세번째뎁스</Col>
+            <Col id="lev">2</Col>
+            <Col id="idx">1004</Col>
+          </Row>
+          <Row>
+            <Col id="UserData">두번째뎁스</Col>
+            <Col id="Caption">두번째뎁스</Col>
+            <Col id="lev">1</Col>
+            <Col id="idx">1005</Col>
+          </Row>
+          <Row>
+            <Col id="UserData">세번째뎁스</Col>
+            <Col id="Caption">세번째뎁스</Col>
+            <Col id="lev">2</Col>
+            <Col id="idx">1006</Col>
+          </Row>
+          <Row>
+            <Col id="UserData">두번째뎁스</Col>
+            <Col id="Caption">두번째뎁스</Col>
+            <Col id="lev">1</Col>
+            <Col id="idx">1007</Col>
+          </Row>
+          <Row>
+            <Col id="UserData">세번째뎁스</Col>
+            <Col id="Caption">세번째뎁스</Col>
+            <Col id="lev">2</Col>
+            <Col id="idx">1008</Col>
+          </Row>
+          <Row>
+            <Col id="UserData">세번째뎁스</Col>
+            <Col id="Caption">세번째뎁스</Col>
+            <Col id="lev">2</Col>
+            <Col id="idx">1009</Col>
+          </Row>
+          <Row>
+            <Col id="idx">1010</Col>
+            <Col id="lev">2</Col>
+            <Col id="UserData">세번째뎁스</Col>
+            <Col id="Caption">세번째뎁스</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[]]></Script>
+  </Form>
+</FDL>

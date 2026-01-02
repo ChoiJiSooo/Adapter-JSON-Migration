@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Work" width="1600" height="850" titletext="New Form" onload="form_onload" onsize="form_onsize" onactivate="Work_onactivate" onclose="Work_onclose" ontimer="Work_ontimer">
+    <Layouts>
+      <Layout height="850" mobileorientation="landscape" width="1600">
+        <Div id="divWork" taborder="2" left="23" top="55" right="0" bottom="15" text="" async="true" onvscroll="divWork_onvscroll" formscrollbardecbuttonsize="0" formscrollbarincbuttonsize="0">
+          <Layouts>
+            <Layout/>
+          </Layouts>
+        </Div>
+        <Button id="btnFavorite" taborder="0" top="11" height="30" cssclass="btn_WF_Btitle" defaultbutton="true" tabstop="false" width="40" onclick="divTitle_btnFavorite_onclick" left="13"/>
+        <Div id="divTitle" taborder="1" left="btnFavorite:-5" top="12" height="30" formscrollbartype="none none" formscrolltype="none" right="17">
+          <Layouts>
+            <Layout>
+              <Static id="staMenuTitle" taborder="0" left="0" top="0" cssclass="sta_WF_menuTitle" text="" height="30" onclick="divTitle_staMenuTitle_onclick" width="500"/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[/**
+*  nexacro nps
+*  @MenuPath    Frame > Work
+*  @FileName  Work.xfdl 
+*  @Creator  presales
+*  @CreateDate  2019.09.23
+*  @Desction    스크립트 표준 및 주석 표준 정의
+************** 소스 수정 이력 ***********************************************
+*  date            Modifier                Description
+*******************************************************************************
+*  2019.09.23      presales                  최초 생성 
+*******************************************************************************
+*/
+
+/************************************************************************************************
+ * FORM 변수 선언 영역
+ ************************************************************************************************/
+this.menuRow = -1; //열린화면의 MENU Row
+
+/************************************************************************************************
+ * FORM EVENT 영역(onload, onbeforeclose)
+ ************************************************************************************************/
+/**
+ * @description divWork에 해당화면을 Open해준다.
+*/
+this.form_onload = function(obj:nexacro.Form, e:nexacro.LoadEventInfo)
+{
+	this.divWork.set_url(this.getOwnerFrame().arguments["MENU_URL"]);
+	this.divTitle.form.staMenuTitle.set_text(this.getOwnerFrame().arguments["MENU_NM"]);
+	//즐겨찾기 표시
+	this.menuRow = nexacro.getApplication().gdsFavorite.findRow("MENU_ID",this.getOwnerFrame().arguments["MENU_ID"]);
+	
+	if(this.menuRow > -1)
+	{
+		this.btnFavorite.set_cssclass("btn_WF_BtitleOn");
+	}
+	else
+	{
+		this.btnFavorite.set_cssclass("btn_WF_Btitle");
+	}
+	this.resetScroll();
+
+};
+
+
+/**
+ * @description work화면이 종료될때 MDI탭 버튼도 삭제해준다.
+*/
+this.Work_onclose = function(obj:nexacro.Form,e:nexacro.CloseEventInfo)
+{
+	this.gfnCloseMenu(obj.getOwnerFrame().name);
+}
+
+/**
+ * @description 화면이 활성화되면 MDI탭  버튼에 포커스를 준다.
+*/
+this.Work_onactivate = function(obj:nexacro.Form,e:nexacro.ActivateEventInfo)
+{
+	nexacro.getApplication().mainframe.VFrameSet.HFrameSet.VFrameSet00.Tab.form.fnSetTabFocus("div" + this.getOwnerFrame().arguments["MENU_ID"]);
+};
+
+/************************************************************************************************
+ * 각 COMPONENT 별 EVENT 영역
+ ************************************************************************************************/
+/**
+ * @description 즐겨찾기 on/off
+*/
+this.divTitle_btnFavorite_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	switch(obj.cssclass)
+	{
+		case "btn_WF_BtitleOn"://즐겨찾기 제거
+			this.btnFavorite.set_cssclass("btn_WF_Btitle");
+			nexacro.getApplication().gdsFavorite.deleteRow(this.menuRow);
+			break;
+			
+		case "btn_WF_Btitle"://즐겨찾기 추가
+			this.btnFavorite.set_cssclass("btn_WF_BtitleOn");
+			this.menuRow = nexacro.getApplication().gdsFavorite.addRow();
+			nexacro.getApplication().gdsFavorite.copyRow(this.menuRow, nexacro.getApplication().gdsMenu,this.getOwnerFrame().arguments["MENU_ROW"]);
+			break;
+	}
+};
+
+]]></Script>
+  </Form>
+</FDL>

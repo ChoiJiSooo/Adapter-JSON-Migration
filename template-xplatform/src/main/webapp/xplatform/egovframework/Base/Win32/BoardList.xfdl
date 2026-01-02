@@ -1,50 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="1.0">
+<FDL version="1.5">
   <TypeDefinition url="..\..\default_typedef.xml"/>
   <Form id="BoardList" classname="BoardList" inheritanceid="" cachelevel="" position="absolute 0 0 800 600" version="" titletext="New Form" onload="BoardList_onload">
-    <Layout>
-      <Static id="Static00" text="  리스트 조회" position="absolute 0 0 799 46" style="background:slateblue;color:oldlace;margin:0 0 0 0;shadow:drop 0,0 0 gray;"/>
-      <Grid id="Grid0" taborder="1" position="absolute 9 86 789 350" binddataset="ds_list" oncelldblclick="Grid0_oncelldblclick">
-        <Formats>
-          <Format id="default">
-            <Columns>
-              <Column size="40"/>
-              <Column size="20"/>
-              <Column size="128"/>
-              <Column size="162"/>
-              <Column size="81"/>
-              <Column size="216"/>
-              <Column size="93"/>
-            </Columns>
-            <Rows>
-              <Row size="24" band="head"/>
-              <Row size="24"/>
-            </Rows>
-            <Band id="head">
-              <Cell text="No."/>
-              <Cell col="1"/>
-              <Cell col="2" text="카테고리 ID"/>
-              <Cell col="3" text="카테고리 명"/>
-              <Cell col="4" text="사용여부"/>
-              <Cell col="5" text="Description"/>
-              <Cell col="6" text="등록자"/>
-            </Band>
-            <Band id="body">
-              <Cell text="expr:currow+1"/>
-              <Cell col="1"/>
-              <Cell col="2" text="bind:id"/>
-              <Cell col="3" text="bind:name"/>
-              <Cell col="4" text="bind:useYn"/>
-              <Cell col="5" text="bind:description"/>
-              <Cell col="6" text="bind:regUser"/>
-            </Band>
-          </Format>
-        </Formats>
-      </Grid>
-      <Button id="btn_excel" taborder="2" text="Excel" position="absolute 620 358 697 384" onclick="btn_excel_onclick"/>
-      <Button id="btn_insert" taborder="3" text="등록" position="absolute 711 358 788 384" onclick="btn_insert_onclick"/>
-      <Button id="btn_search" taborder="4" text="조회" position="absolute 711 56 788 82" onclick="btn_search_onclick"/>
-    </Layout>
+    <Layouts>
+      <Layout>
+        <Static id="Static00" text="  리스트 조회" position="absolute 0 0 799 46" style="background:slateblue;color:oldlace;margin:0 0 0 0;shadow:drop 0,0 0 gray;"/>
+        <Grid id="Grid0" taborder="1" position="absolute 9 86 789 350" binddataset="ds_list" oncelldblclick="Grid0_oncelldblclick">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="40"/>
+                <Column size="20"/>
+                <Column size="128"/>
+                <Column size="162"/>
+                <Column size="81"/>
+                <Column size="216"/>
+                <Column size="93"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="No."/>
+                <Cell col="1"/>
+                <Cell col="2" text="카테고리 ID"/>
+                <Cell col="3" text="카테고리 명"/>
+                <Cell col="4" text="사용여부"/>
+                <Cell col="5" text="Description"/>
+                <Cell col="6" text="등록자"/>
+              </Band>
+              <Band id="body">
+                <Cell text="expr:currow+1"/>
+                <Cell col="1"/>
+                <Cell col="2" text="bind:id"/>
+                <Cell col="3" text="bind:name"/>
+                <Cell col="4" text="bind:useYn"/>
+                <Cell col="5" text="bind:description"/>
+                <Cell col="6" text="bind:regUser"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="btn_excel" taborder="2" text="Excel" position="absolute 620 358 697 384" onclick="btn_excel_onclick"/>
+        <Button id="btn_insert" taborder="3" text="등록" position="absolute 711 358 788 384" onclick="btn_insert_onclick"/>
+        <Button id="btn_search" taborder="4" text="조회" position="absolute 711 56 788 82" onclick="btn_search_onclick"/>
+      </Layout>
+    </Layouts>
     <Objects>
       <Dataset id="ds_list" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep">
         <ColumnInfo>

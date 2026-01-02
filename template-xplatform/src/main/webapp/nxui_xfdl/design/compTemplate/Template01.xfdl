@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="template" width="1200" height="600" titletext="조회+그리드">
+    <Layouts>
+      <Layout width="1200" height="600">
+        <Div id="div_search" taborder="0" text="Div00" left="0" top="0" height="91" cssclass="div_WF_SearchBg" right="25" formscrollbartype="none none">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="1" text="기간달력" cssclass="sta_WF_LabelSch_P" left="0" top="10" width="82" height="30"/>
+              <Static id="Static02" taborder="2" text="라디오" cssclass="sta_WF_LabelSch" left="466" top="10" width="82" height="30"/>
+              <Static id="Static03" taborder="3" text="달력" cssclass="sta_WF_LabelSch" left="0" top="50" width="82" height="30"/>
+              <Static id="Static06" taborder="6" text="콤보" cssclass="sta_WF_LabelSch" left="678" top="10" width="82" height="30"/>
+              <Combo id="cbo_XXXX" taborder="8" text="전체" left="Static06:5" top="10" width="140" height="30" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" index="0" value="0">
+                <Dataset id="innerdataset">
+                  <ColumnInfo>
+                    <Column id="codecolumn" size="256"/>
+                    <Column id="datacolumn" size="256"/>
+                  </ColumnInfo>
+                  <Rows>
+                    <Row>
+                      <Col id="codecolumn">0</Col>
+                      <Col id="datacolumn">전체</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">1</Col>
+                      <Col id="datacolumn">투비소프트</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">2</Col>
+                      <Col id="datacolumn">넥사크로</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">3</Col>
+                      <Col id="datacolumn">넥사크로N</Col>
+                    </Row>
+                  </Rows>
+                </Dataset>
+              </Combo>
+              <Static id="Static04" taborder="4" text="월달력" cssclass="sta_WF_LabelSch" left="232" top="50" width="82" height="30"/>
+              <Static id="Static05" taborder="5" text="체크박스" cssclass="sta_WF_LabelSch" left="466" top="50" width="82" height="30"/>
+              <Static id="Static07" taborder="7" text="에디트" cssclass="sta_WF_LabelSch" left="678" top="50" width="82" height="30"/>
+              <Radio id="rdo_XXXX" taborder="9" index="1" innerdataset="@ds_rdo" codecolumn="lv" datacolumn="data" value="1" onitemclick="Radio00_onitemclick" left="553" top="10" width="120" height="30" direction="vertical" columncount="-1" rowcount="-1"/>
+              <CheckBox id="chk_XXXX" taborder="10" text="14세 이상" left="553" top="50" height="30" width="120"/>
+              <Edit id="edt_XXXX00" taborder="11" left="765" top="50" width="140" height="30" tooltiptext="edit"/>
+              <Button id="Button00" taborder="0" width="66" height="30" cssclass="btn_WF_Search" text="조회" right="20" fittocontents="width" bottom="10" onclick="div_search_Button00_onclick"/>
+              <Div id="div_00" taborder="12" text="div_00" left="87" top="10" width="305" height="30" formscrollbartype="none none" formscrolltype="none" url="comm::commCalendarFromTo.xfdl"/>
+              <Div id="div_01" taborder="13" text="div_01" left="Static04:5" top="50" width="140" height="30" formscrollbartype="none none" formscrolltype="none" url="comm::commCalendarMonthDiv.xfdl"/>
+              <Calendar id="cal_00" taborder="14" left="Static03:5" top="50" width="140" height="30"/>
+              <Button id="btn_00" taborder="15" width="30" height="30" cssclass="btn_WF_Reload" right="Button00:5" bottom="10"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Grid id="Grid00" taborder="1" binddataset="da_grd" useinputpanel="false" autofittype="col" left="0" top="141" right="25" bottom="0">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="34"/>
+                <Column size="468"/>
+                <Column size="120"/>
+                <Column size="63"/>
+                <Column size="84"/>
+              </Columns>
+              <Rows>
+                <Row size="40" band="head"/>
+                <Row size="40"/>
+                <Row size="40" band="summ"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="No"/>
+                <Cell col="1" text="Normal"/>
+                <Cell col="2" text="Number" cssclass="essential"/>
+                <Cell col="3" text="Text" cssclass="essential"/>
+                <Cell col="4" text="Date"/>
+              </Band>
+              <Band id="body">
+                <Cell expr="currow+1" displaytype="text"/>
+                <Cell col="1" style="align: ;" text="bind:Column2"/>
+                <Cell col="2" displaytype="number" style="align: ;" text="bind:Column1"/>
+                <Cell col="3" displaytype="text" style="align: ;" text="bind:Column3"/>
+                <Cell col="4" displaytype="date" edittype="date" style="align: ;" text="bind:Column4"/>
+              </Band>
+              <Band id="summary">
+                <Cell colspan="2" text="합계"/>
+                <Cell col="2" colspan="3" style="align:right middle;" text="43,843,145"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static20" taborder="2" text="그리드타이틀" cssclass="sta_WF_Subtitle" left="0" top="91" width="128" height="50" fittocontents="width"/>
+        <Static id="Static00" taborder="3" text="w&#13;&#10;25" visible="false" top="0" width="25" right="0" background="rgba(251,123,123,0.47843137254901963)" bottom="0"/>
+        <Static id="Static54" taborder="4" text="h15" visible="false" top="91" width="300" height="15" background="rgba(251,123,123,0.47843137254901963)" right="0"/>
+        <Static id="Static54_00" taborder="5" text="h50" visible="false" top="90" width="160" height="50" background="rgba(251,123,123,0.47843137254901963)" right="840"/>
+        <Div id="divGrdBtn" taborder="6" text="div_00" top="div_search:0" height="50" right="25" width="600" formscrollbartype="none none">
+          <Layouts>
+            <Layout type="horizontal" flexcrossaxisalign="center" flexmainaxisalign="end" horizontalgap="5" spacing="15px 0px 5px 0px">
+              <Button id="btnAddRow" taborder="3" text="행추가" left="30" top="15" width="75" height="30" fittocontents="width" cssclass="btn_WF_AddRow"/>
+              <Button id="btnDelRow" taborder="2" text="행삭제" left="111" top="15" width="75" height="30" fittocontents="width" cssclass="btn_WF_DelRow"/>
+              <Button id="btnExcelDown" taborder="0" text="엑셀업로드" left="541" top="15" width="103" height="30" fittocontents="width" cssclass="btn_WF_ExcelDown"/>
+              <Button id="btnExcelUp" taborder="1" text="엑셀다운로드" left="419" top="15" width="116" height="30" fittocontents="width" cssclass="btn_WF_ExcelUp"/>
+              <Button id="btnCustom" taborder="5" text="커스텀버튼" left="588" top="25" width="87" height="30" cssclass="btn_WF_Custom" fittocontents="width"/>
+              <Button id="btnSave" taborder="4" text="저장" left="231" top="17" width="64" height="30" fittocontents="width" cssclass="btn_WF_GrdSave"/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="da_grd">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column2" type="STRING" size="256"/>
+          <Column id="Column3" type="STRING" size="256"/>
+          <Column id="Column4" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">1000000000001</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">2</Col>
+            <Col id="Column1">1000000000002</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">3</Col>
+            <Col id="Column1">1000000000003</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">4</Col>
+            <Col id="Column1">1000000000004</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">5</Col>
+            <Col id="Column1">1000000000005</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">6</Col>
+            <Col id="Column1">1000000000006</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">7</Col>
+            <Col id="Column1">1000000000007</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">8</Col>
+            <Col id="Column1">1000000000008</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">9</Col>
+            <Col id="Column1">1000000000009</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">10</Col>
+            <Col id="Column1">1000000000010</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">11</Col>
+            <Col id="Column1">1000000000011</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_rdo">
+        <ColumnInfo>
+          <Column id="lv" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="lv">0</Col>
+            <Col id="data">예</Col>
+          </Row>
+          <Row>
+            <Col id="lv">1</Col>
+            <Col id="data">아니오</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Main" width="1280" height="979" titletext="New Form" onload="Main_onload" onhscroll="Main_onhscroll" onvscroll="Main_onvscroll" ontimer="Main_ontimer" background="linear-gradient(to right,#343a40 0%,#2d1517 100%) rgb(45,21,23)">
+    <Layouts>
+      <Layout height="979" mobileorientation="landscape" width="1280">
+        <Static id="sta02" taborder="1" text="sta02" left="100" top="0" cssclass="sta_LOGIN_Pattern02" right="0" bottom="60" opacity="0.8" onclick="sta02_onclick"/>
+        <Static id="sta00" taborder="0" text="개인정보 처리방침 &#13;&#10;SK하이스텍㈜ 경기도 이천시 부발읍 경충대로 2091&#13;&#10;&#13;&#10; &#13;&#10;대표번호: 031-8094-7669&#13;&#10;&#13;&#10;COPYRIGHT © 2023 SK HYSTEC INC. ALL RIGHTS RESERVED." left="0" height="60" right="0" bottom="0"/>
+        <WebView id="wb_01" taborder="2" left="43" top="43" width="45.63%" height="44.23%" url="https://gamsin17.dothome.co.kr/nps/etc/a.html"/>
+        <WebView id="wb_02" taborder="3" left="wb_01:20" top="43" height="44.23%" url="https://gamsin17.dothome.co.kr/nps/etc/b.html" right="43"/>
+        <WebView id="wb_03" taborder="4" left="43" top="wb_01:20" width="45.63%" url="https://gamsin17.dothome.co.kr/nps/etc/c.html" bottom="43"/>
+        <WebView id="wb_04" taborder="5" left="wb_03:20" top="wb_02:20" url="https://gamsin17.dothome.co.kr/nps/etc/d.html" right="43" bottom="43"/>
+      </Layout>
+      <Layout name="Layout0" width="850" height="2430" mobileorientation="portrait"/>
+      <Layout name="Layout1" width="450" height="2270" mobileorientation="portrait"/>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[]]></Script>
+    <Objects>
+      <Dataset id="ds00">
+        <ColumnInfo>
+          <Column id="no" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+          <Column id="date" type="STRING" size="256"/>
+          <Column id="img" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="data">물리치료실 근골격계건강정보가이드</Col>
+            <Col id="date">20240815</Col>
+            <Col id="no">url('theme://images/grd_MF_New.png')</Col>
+            <Col id="img">url('theme://images/grd_MF_All.png')</Col>
+          </Row>
+          <Row>
+            <Col id="data">2023년 4분기 산업안전보건위원회 결과 공지</Col>
+            <Col id="date">20240815</Col>
+            <Col id="no">url('theme://images/grd_MF_All.png')</Col>
+            <Col id="img">url('theme://images/grd_MF_All.png')</Col>
+          </Row>
+          <Row>
+            <Col id="data">안전유해화학물질 종사자교육 수료증 등록 변경 안내</Col>
+            <Col id="date">20240815</Col>
+            <Col id="no">url('theme://images/grd_MF_All.png')</Col>
+            <Col id="img">url('theme://images/grd_MF_All.png')</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

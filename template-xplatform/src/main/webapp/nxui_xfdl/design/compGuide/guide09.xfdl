@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="etc" width="1269" height="1060" titletext="Static / etc">
+    <Layouts>
+      <Layout height="1060" mobileorientation="landscape" width="1269">
+        <Button id="btnFavorite" taborder="2" top="199" height="30" cssclass="btn_WF_Btitle" defaultbutton="true" tabstop="false" width="40" onclick="divTitle_btnFavorite_onclick" left="53"/>
+        <Static id="sta_00" taborder="0" text="화면타이틀" left="btnFavorite:0" top="200" width="90" height="30" cssclass="sta_WF_menuTitle" fittocontents="width"/>
+        <Button id="btn_00" taborder="1" left="sta_00:0" top="200" width="40" height="30" cssclass="btn_WF_Refresh"/>
+        <Div id="Div00" taborder="3" text="Div00" left="50" top="681" height="297" width="560">
+          <Layouts>
+            <Layout>
+              <Static id="Static07" taborder="0" cssclass="sta_WF_Labelbg" left="0" top="117" right="0" height="40"/>
+              <Static id="Static04" taborder="1" cssclass="sta_WF_Labelbg" left="0" top="78" right="0" height="40"/>
+              <Static id="Static01" taborder="2" cssclass="sta_WF_Labelbg" left="0" top="39" right="0" height="40"/>
+              <Static id="Static15" taborder="3" cssclass="sta_WF_Labelbg" left="0" top="0" right="0" height="40"/>
+              <Edit id="Edit10" taborder="4" left="125" top="5" width="122" height="30"/>
+              <Static id="Static00" taborder="5" text="마스크에디트" cssclass="sta_WF_Label" left="257" top="0" width="115" height="40"/>
+              <Static id="Static02" taborder="6" text="스핀" cssclass="sta_WF_Label" left="0" top="39" width="115" height="40"/>
+              <Static id="Static03" taborder="7" text="체크박스" cssclass="sta_WF_Label" left="257" top="39" width="115" height="40"/>
+              <Static id="Static05" taborder="8" text="콤보" cssclass="sta_WF_Label" left="0" top="78" width="115" height="40"/>
+              <Static id="Static06" taborder="9" text="라디오버튼" cssclass="sta_WF_Label" left="257" top="78" width="115" height="40"/>
+              <Static id="Static08" taborder="10" text="캘린더" cssclass="sta_WF_Label" left="0" top="117" width="115" height="40"/>
+              <Static id="Static13" taborder="11" cssclass="sta_WF_Labelbg" left="0" top="157" right="0" height="160"/>
+              <Static id="Static14" taborder="12" text="텍스트박스" cssclass="sta_WF_Label" left="0" top="157" width="115" height="160"/>
+              <Spin id="Spin00" taborder="13" value="100" left="125" top="44" width="122" height="30"/>
+              <Combo id="Combo00" taborder="14" value="0" text="가나다" innerdataset="ds_cmb" codecolumn="lv" datacolumn="data" index="0" displayrowcount="5" left="125" top="83" width="122" height="30"/>
+              <Calendar id="Calendar00" taborder="15" value="20160725" dateformat="yyyy-MM-dd" left="125" top="122" width="122" height="30"/>
+              <MaskEdit id="MaskEdit00" taborder="16" value="100000" mask="###,###" left="382" top="5" width="123" height="30"/>
+              <TextArea id="TextArea00" taborder="17" wordwrap="char" left="125" top="161" width="380" height="150"/>
+              <CheckBox id="CheckBox02" taborder="18" text="남" value="true" left="384" top="44" width="52" height="30"/>
+              <CheckBox id="CheckBox00" taborder="19" text="여" left="446" top="44" width="40" height="30"/>
+              <Radio id="Radio00" taborder="20" index="1" innerdataset="@ds_rdo" codecolumn="lv" datacolumn="data" value="1" direction="vertical" onitemclick="Radio00_onitemclick" left="384" top="83" width="123" height="30" columncount="-1" rowcount="-1"/>
+              <Static id="Static19" taborder="21" text="검색" cssclass="sta_WF_Label" left="257" top="117" width="115" height="40"/>
+              <Edit id="Edit01" taborder="22" left="382" top="122" width="123" height="30" cssclass="edt_WF_SchPop"/>
+              <Button id="Button91" taborder="23" cssclass="btn_WF_EdtPop" left="475" top="122" width="30" height="30"/>
+              <Static id="Static20" taborder="24" text="에디트" cssclass="sta_WF_Label_P" left="0" top="0" width="115" height="40"/>
+              <Static id="Static23" taborder="25" cssclass="sta_WF_Label_Top" left="0" top="0" right="0" height="2"/>
+              <Static id="Static28" taborder="26" cssclass="sta_WF_Label_Bottom" left="0" right="0" bottom="0" height="2"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="Div00_00" taborder="4" text="Div00" left="660" top="681" height="297" cssclass="div_WF_DetailBg" width="560">
+          <Layouts>
+            <Layout>
+              <Edit id="Edit10" taborder="0" left="125" top="5" width="122" height="30"/>
+              <Static id="Static00" taborder="1" text="마스크에디트" cssclass="sta_WF_Label" left="257" top="0" width="115" height="40"/>
+              <Static id="Static02" taborder="2" text="스핀" cssclass="sta_WF_Label" left="0" top="39" width="115" height="40"/>
+              <Static id="Static03" taborder="3" text="체크박스" cssclass="sta_WF_Label" left="257" top="39" width="115" height="40"/>
+              <Static id="Static05" taborder="4" text="콤보" cssclass="sta_WF_Label" left="0" top="78" width="115" height="40"/>
+              <Static id="Static06" taborder="5" text="라디오버튼" cssclass="sta_WF_Label" left="257" top="78" width="115" height="40"/>
+              <Static id="Static08" taborder="6" text="캘린더" cssclass="sta_WF_Label" left="0" top="117" width="115" height="40"/>
+              <Static id="Static13" taborder="7" cssclass="sta_WF_Labelbg" left="0" top="157" right="0" height="139"/>
+              <Static id="Static14" taborder="8" text="텍스트박스" cssclass="sta_WF_Label" left="0" top="157" width="115" height="138"/>
+              <Spin id="Spin00" taborder="9" value="100" left="125" top="44" width="122" height="30"/>
+              <Combo id="Combo00" taborder="10" value="0" text="가나다" innerdataset="ds_cmb" codecolumn="lv" datacolumn="data" index="0" displayrowcount="5" left="125" top="83" width="122" height="30"/>
+              <Calendar id="Calendar00" taborder="11" value="20160725" dateformat="yyyy-MM-dd" left="125" top="122" width="122" height="30"/>
+              <MaskEdit id="MaskEdit00" taborder="12" value="100000" mask="###,###" left="382" top="5" width="123" height="30"/>
+              <TextArea id="TextArea00" taborder="13" wordwrap="char" left="125" top="161" width="380" height="150"/>
+              <CheckBox id="CheckBox02" taborder="14" text="남" value="true" left="384" top="44" width="52" height="30"/>
+              <CheckBox id="CheckBox00" taborder="15" text="여" left="446" top="44" width="40" height="30"/>
+              <Radio id="Radio00" taborder="16" index="1" innerdataset="@ds_rdo" codecolumn="lv" datacolumn="data" value="1" direction="vertical" onitemclick="Radio00_onitemclick" left="384" top="83" width="123" height="30" columncount="-1" rowcount="-1"/>
+              <Static id="Static19" taborder="17" text="검색" cssclass="sta_WF_Label" left="257" top="117" width="115" height="40"/>
+              <Edit id="Edit01" taborder="18" left="382" top="122" width="123" height="30" cssclass="edt_WF_SchPop"/>
+              <Button id="Button91" taborder="19" cssclass="btn_WF_EdtPop" left="475" top="122" width="30" height="30"/>
+              <Static id="Static20" taborder="20" text="에디트" cssclass="sta_WF_Label_P" left="0" top="0" width="115" height="40"/>
+              <Static id="Static23" taborder="21" cssclass="sta_WF_Label_Top" left="0" top="0" right="0" height="2"/>
+              <Static id="Static28" taborder="22" cssclass="sta_WF_Label_Bottom" left="0" right="0" bottom="0" height="2"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="sta_01" taborder="5" text="div -static Bg" left="50" top="607" width="120" height="60"/>
+        <Static id="sta_01_00" taborder="6" text="div -이미지 Bg" left="660" top="606" width="120" height="60"/>
+        <Static id="sta_02" taborder="7" text="sta_WF_TxtRed" left="570" top="200" width="200" height="30" cssclass="sta_WF_TxtRed"/>
+        <Static id="sta_02_00" taborder="8" text="sta_WF_TxtBlue" left="570" top="250" width="200" height="30" cssclass="sta_WF_TxtBlue"/>
+        <Static id="sta_02_00_00" taborder="9" text="sta_WF_TxtGreen" left="570" top="300" width="200" height="30" cssclass="sta_WF_TxtGreen"/>
+        <Static id="sta_02_01" taborder="10" text="sta_WF_Txtbold14" left="900" top="200" width="200" height="30" cssclass="sta_WF_Txtbold14"/>
+        <Static id="sta_02_00_01" taborder="11" text="sta_WF_Txtbold16" left="900" top="249" width="200" height="30" cssclass="sta_WF_Txtbold16"/>
+        <Static id="sta_02_00_00_00" taborder="12" text="sta_WF_Txt24" left="900" top="300" width="200" height="30" cssclass="sta_WF_Txt24"/>
+        <Static id="Static00" taborder="13" text="Component Guide 09" left="0" top="0" height="80" cssclass="sta_GD_Title" right="0"/>
+        <Static id="Static01_00_00" taborder="14" text="Static  : 필요시 적용" left="0" top="80" height="80" cssclass="sta_GD_SubTitle" right="0"/>
+        <Static id="sta_02_00_00_01" taborder="15" text="sta_WF_TxtYellow" left="570" top="349" width="200" height="30" cssclass="sta_WF_TxtYellow"/>
+        <Static id="sta_02_00_00_01_00" taborder="16" text="sta_WF_TxtGray" left="570" top="394" width="200" height="30" cssclass="sta_WF_TxtGray"/>
+        <Static id="sta_02_00_00_01_01" taborder="17" text="sta_WF_TxtOrange" left="570" top="434" width="200" height="30" cssclass="sta_WF_TxtOrange"/>
+        <Static id="sta_00_00" taborder="18" text="화면타이틀" left="93" top="280" width="130" height="30" cssclass="sta_WF_Subtitle02" fittocontents="width"/>
+        <Static id="sta_00_00_00" taborder="19" text="화면타이틀" left="93" top="240" width="130" height="30" cssclass="sta_WF_Subtitle" fittocontents="width"/>
+        <Static id="sta_00_00_01" taborder="20" text="화면타이틀" left="92" top="320" width="130" height="30" cssclass="sta_WF_Subtitle03" fittocontents="width"/>
+        <Static id="sta_03" taborder="21" text="필요한 설명글을 적어서 적용해 주시면 됩니다.&#13;&#10;필요한 설명글을 적어서 적용해 주시면 됩니다." left="76" top="389" width="292" height="42" cssclass="sta_WF_Des"/>
+      </Layout>
+    </Layouts>
+  </Form>
+</FDL>

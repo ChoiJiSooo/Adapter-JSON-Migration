@@ -2,7 +2,7 @@
 <ADL version="1.0">
   <TypeDefinition url="default_typedef.xml"/>
   <GlobalVariables url="globalvars.xml"/>
-  <Application id="egovframe" codepage="utf-8" language="Korean" themeid="" loginformurl="" loginformstyle="" windowopeneffect="" windowcloseeffect="" version="" tracemode="" licenseurl="http://localhost:8080/xplatform/egovframework/XPLATFORM_Client_License.XML" engineurl="http://localhost:8080/xplatform/Engine" engineversion="9.1">
+  <Application id="egovframe" codepage="utf-8" language="Korean" themeid="default.xtheme" loginformurl="" loginformstyle="" windowopeneffect="" windowcloseeffect="" version="" tracemode="" licenseurl="http://localhost:8080/xplatform/egovframework/XPLATFORM_Client_License.XML" engineurl="http://localhost:8080/xplatform/Engine" engineversion="9.1">
     <Layout>
       <MainFrame id="mainframe" title="maintitle" defaultfont="" resizable="true" showtitlebar="true" showstatusbar="true" position="absolute 0 0 800 800">
         <ChildFrame id="childframe" formurl="Base::BoardList.xfdl" showtitlebar="false" showstatusbar="false" openeffect="" closeeffect=""/>

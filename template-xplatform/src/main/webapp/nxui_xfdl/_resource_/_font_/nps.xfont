@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XFONT version="1.0"><![CDATA[/********************************************************************
+@font-face {
+  font-family : 'NanumGothic';
+  font-style : normal;
+  font-weight : 400;
+  src : local("NanumGothic");
+  src : url(./_resource_/_font_/NanumGothic.eot);
+  src : url(./_resource_/_font_/NanumGothic.eot?#iefix) format('embedded-opentype'),
+    url(./_resource_/_font_/NanumGothic.woff2) format('woff2'),
+    url(./_resource_/_font_/NanumGothic.woff) format('woff'),
+    url(./_resource_/_font_/NanumGothic.ttf) format('truetype');
+}
+@font-face {
+  font-family : 'NanumGothicBold';
+  font-style : normal;
+  font-weight : 700;
+  src : local("NanumGothicBold");
+  src : url(./_resource_/_font_/NanumGothicBold.eot);
+  src : url(./_resource_/_font_/NanumGothicBold.eot?#iefix) format('embedded-opentype'),
+    url(./_resource_/_font_/NanumGothicBold.woff2) format('woff2'),
+    url(./_resource_/_font_/NanumGothicBold.woff) format('woff'),
+    url(./_resource_/_font_/NanumGothicBold.ttf) format('truetype');
+}
+********************************************************************/
+/*
+Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
+https://github.com/orioncactus/pretendard
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+*/
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url(./_resource_/_font_/Pretendard-Bold.subset.woff2) format('woff2'), url(./woff-subset/Pretendard-Bold.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(./_resource_/_font_/Pretendard-Regular.subset.woff2) format('woff2'), url(./woff-subset/Pretendard-Regular.subset.woff) format('woff');
+}
+]]></XFONT>

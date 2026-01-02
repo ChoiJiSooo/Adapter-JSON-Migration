@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="form" left="0" top="0" width="600" height="430" titletext="팝업" onload="form_onload">
+    <Layouts>
+      <Layout width="600" height="430">
+        <Div id="divPopBtn" taborder="0" text="div00" left="0" height="50" right="0" cssclass="div_POP_BtnBg" bottom="0" formscrollbartype="none none">
+          <Layouts>
+            <Layout type="horizontal" flexcrossaxisalign="center" flexmainaxisalign="center" horizontalgap="10" spacing="0px 20px 0px 20px">
+              <Button id="btnSave" taborder="0" text="저장" left="231" top="17" width="64" height="30" fittocontents="width" cssclass="btn_WF_GrdSave" visible="true" onclick="divPopBtn_btnSave_onclick"/>
+              <Button id="btnDelRow" taborder="1" text="행삭제" left="111" top="15" width="75" height="30" fittocontents="width" cssclass="btn_WF_DelRow" onclick="divPopBtn_btnDelRow_onclick"/>
+              <Button id="btnCustom" taborder="2" text="목록" left="588" top="25" width="87" height="30" cssclass="btn_WF_Custom" fittocontents="width" visible="true"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static00" taborder="1" text="w&#13;&#10;20" visible="false" top="0" width="20" right="0" background="rgba(251,123,123,0.47843137254901963)" bottom="0"/>
+        <Static id="Static00_00" taborder="2" text="w&#13;&#10;20" visible="false" top="0" width="20" background="rgba(251,123,123,0.47843137254901963)" bottom="0" left="0"/>
+        <Static id="Static54_00_00" taborder="3" text="h20" visible="false" top="0" height="20" background="rgba(251,123,123,0.47843137254901963)" left="0" right="0"/>
+        <Static id="Static54_00_00_00" taborder="4" text="h10" visible="false" height="10" background="rgba(251,123,123,0.47843137254901963)" right="0" bottom="0" width="300"/>
+        <Static id="Static54_00_01" taborder="5" text="h50" visible="false" top="450" width="160" height="50" background="rgba(251,123,123,0.47843137254901963)" right="351"/>
+        <Static id="Static20" taborder="6" text="내용수정" cssclass="sta_WF_Subtitle" left="20" top="12" width="128" height="50" fittocontents="width"/>
+        <Div id="Div00" taborder="7" text="Div00" top="61" width="535" right="35" formscrollbartype="none none" height="299">
+          <Layouts>
+            <Layout>
+              <Static id="Static04" taborder="4" cssclass="sta_WF_Labelbg" left="0" top="118" height="140" right="0"/>
+              <Static id="Static01" taborder="3" cssclass="sta_WF_Labelbg" left="0" top="79" height="40" right="0"/>
+              <Static id="Static15" taborder="2" cssclass="sta_WF_Labelbg" left="0" top="40" height="40" right="0"/>
+              <Static id="Static20" taborder="0" text="name" cssclass="sta_WF_Label" left="0" top="40" width="115" height="40"/>
+              <Edit id="Edit10" taborder="1" left="125" top="45" width="118" height="30"/>
+              <Static id="Static13" taborder="5" cssclass="sta_WF_Labelbg" left="0" top="257" height="39" right="0"/>
+              <Static id="Static19" taborder="6" cssclass="sta_WF_Label_Top" left="0" top="40" height="2" right="0"/>
+              <Static id="Static20_00" taborder="7" text="Use YN" cssclass="sta_WF_Label" left="0" top="79" width="115" height="40"/>
+              <Static id="Static20_01" taborder="8" text="Description" cssclass="sta_WF_Label" left="0" top="118" width="115" height="140"/>
+              <Static id="Static20_02" taborder="9" text="RegUser" cssclass="sta_WF_Label" left="0" top="257" width="115" height="40"/>
+              <Edit id="Edit10_00" taborder="10" left="125" top="262" width="118" height="30"/>
+              <Combo id="Combo00" taborder="11" value="0" text="가나다" innerdataset="ds_combo" codecolumn="code" datacolumn="data" index="0" displayrowcount="5" left="125" top="84" width="118" height="30"/>
+              <TextArea id="TextArea00" taborder="12" wordwrap="char" left="125" top="122" width="395" height="132"/>
+              <Static id="Static15_00" taborder="13" cssclass="sta_WF_Labelbg" left="0" top="1" height="40" right="0"/>
+              <Static id="Static20_03" taborder="14" text="ID" cssclass="sta_WF_Label" left="0" top="1" width="115" height="40"/>
+              <Edit id="ed_id" taborder="15" left="125" top="6" width="118" height="30" readonly="true"/>
+              <Static id="Static19_00" taborder="16" cssclass="sta_WF_Label_Top" left="0" top="1" height="2" right="0"/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_board">
+        <ColumnInfo>
+          <Column id="id" type="STRING" size="256"/>
+          <Column id="name" type="STRING" size="256"/>
+          <Column id="description" type="STRING" size="256"/>
+          <Column id="useYn" type="STRING" size="256"/>
+          <Column id="regUser" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+      <Dataset id="ds_combo">
+        <ColumnInfo>
+          <Column id="code" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="code">Y</Col>
+            <Col id="data">Y</Col>
+          </Row>
+          <Row>
+            <Col id="code">N</Col>
+            <Col id="data">N</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_voInfo">
+        <ColumnInfo>
+          <Column id="voClass" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="voClass">egovframework.rte.sample.service.SampleVO</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_param">
+        <ColumnInfo>
+          <Column id="id" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[/***************************************************************************
+ * Program ID    : ExamPopupSubM.xfdl
+ * Program Name  : 팝업 샘플페이지
+ * Author        : 양동주
+ * Created On    : 2019.07
+ * 개    요 	 :
+ *
+ * =========================================================================
+ * 변경일자     수정자    내    용
+ * =========================================================================
+
+ **************************************************************************/
+ /************************************************************************************************
+ * Form 변수 선언 영역
+ ************************************************************************************************/
+this.fv_pThis    = this.gfnGetArgPopup(this, "pThis");		// 부모Form
+this.fv_callback = this.gfnGetArgPopup(this, "callback"); 	// 부모콜백
+this.fv_popId	 = this.gfnGetArgPopup(this, "popupId");	// 팝업Id
+this.fv_popType	 = this.gfnGetArgPopup(this, "popupType");	// 팝업Id
+this.param ;
+
+
+/************************************************************************************************
+ * Form 관련 스크립트 영역
+ ************************************************************************************************/
+/**
+ * 화면 Load 시 Event
+ */
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.param = this.gfnGetArgPopup(this, "param"); // 전달값1
+
+
+	this.ds_param.clearData();
+	var row = this.ds_param.addRow();
+	this.ds_param.setColumn(row, "id", this.param);
+
+	let option = {};
+	option.svcId 	= "detail";
+	option.svcUrl 	= "egovSampleDetailDS.do";    		
+	option.inDs 	= "ds_voInfo=ds_voInfo ds_input=ds_param:U";
+	option.outDs 	= "ds_board=ds_output";
+	option.argument = "";
+	option.callback = "fn_callback";
+	this.gfnTransaction(this, option);
+
+};
+
+this.fnCallback = function (svcid, errcd, errmsg)
+{
+	if ( svcid == "update" )
+	{
+		alert(errmsg);
+		this.close();
+	} 
+	if ( svcid == "delete" )
+	{
+		alert(errmsg);	
+		this.close();
+	} 	
+}
+
+
+/************************************************************************************************
+* TRANSACTION 서비스 호출 처리
+************************************************************************************************/
+
+
+/************************************************************************************************
+ * 공통버튼 Function 영역
+ ************************************************************************************************/
+
+
+// 선택
+this.btn_select_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.fn_closePopup(this.ds_list.rowposition);
+};
+
+
+// 그리드 선택
+this.grd_list_oncelldblclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	this.fn_closePopup(e.row);
+};
+
+
+// 닫기
+this.btn_close_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.close(null);
+};
+ 
+
+// 선택닫기
+this.fn_closePopup = function (nRow)
+{
+	// 반환값
+	var oRet = {
+		  CD_ID	: this.ds_list.getColumn(nRow, "CD_ID")
+		, CD_NM	: this.ds_list.getColumn(nRow, "CD_NM")
+		};
+
+	if(this.fv_popType == "modeless") {
+		this.gfnCloseModalessPopup(this.fv_pThis, this.fv_popId, this.fv_callback, oRet);
+	} else {
+		this.close(JSON.stringify(oRet));
+	}
+}
+
+ 
+/************************************************************************************************
+ * 사용자 FUNCTION 영역
+ ************************************************************************************************/
+
+
+/************************************************************************************************
+ * 각 COMPONENT 별 EVENT 영역
+ ************************************************************************************************/
+ 
+
+this.divPopBtn_btn00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.close()
+};
+
+this.divPopBtn_btnSave_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	let option = {};
+	option.svcId 	= "update";
+	option.svcUrl 	= "egovSampleUpdate.do";    
+	option.inDs 	= "ds_voInfo=ds_voInfo ds_input=ds_board:U";
+	option.outDs 	= "";
+	option.argument = "";
+	option.callback = "fnCallback";
+	this.gfnTransaction(this, option);					
+};
+
+this.divPopBtn_btnDelRow_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	let option = {};
+	option.svcId 	= "delete";
+	option.svcUrl 	= "egovSampleDelete.do";    
+	option.inDs 	= "";
+	option.outDs 	= "";
+	option.argument = "selectedId=" + this.Div00.form.ed_id.value;
+	option.callback = "fnCallback";
+	this.gfnTransaction(this, option);		
+};
+]]></Script>
+    <Bind>
+      <BindItem id="item0" compid="Div00.form.Edit10" propid="value" datasetid="ds_board" columnid="name"/>
+      <BindItem id="item1" compid="Div00.form.Combo00" propid="value" datasetid="ds_board" columnid="useYn"/>
+      <BindItem id="item2" compid="Div00.form.TextArea00" propid="value" datasetid="ds_board" columnid="description"/>
+      <BindItem id="item3" compid="Div00.form.Edit10_00" propid="value" datasetid="ds_board" columnid="regUser"/>
+      <BindItem id="item4" compid="Div00.form.ed_id" propid="value" datasetid="ds_board" columnid="id"/>
+    </Bind>
+  </Form>
+</FDL>

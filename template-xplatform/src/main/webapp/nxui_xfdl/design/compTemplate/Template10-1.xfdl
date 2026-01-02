@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="template" left="0" top="0" width="500" height="600" titletext="팝업호출버튼" cssclass="frm_POP_Bg">
+    <Layouts>
+      <Layout width="500" height="600">
+        <Button id="btn00" taborder="1" text="팝업" left="132" top="72" width="196" height="70" onclick="btn00_onclick" cssclass="btn_POP_Yes"/>
+        <Button id="btn_00" taborder="1" text="test" left="132" top="172" width="178" height="52" onclick="btn_00_onclick"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="da_grd" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column2" type="STRING" size="256"/>
+          <Column id="Column3" type="STRING" size="256"/>
+          <Column id="Column4" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">1000000000001</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">2</Col>
+            <Col id="Column1">1000000000002</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">3</Col>
+            <Col id="Column1">1000000000003</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">4</Col>
+            <Col id="Column1">1000000000004</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">5</Col>
+            <Col id="Column1">1000000000005</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">6</Col>
+            <Col id="Column1">1000000000006</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">7</Col>
+            <Col id="Column1">1000000000007</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">8</Col>
+            <Col id="Column1">1000000000008</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">9</Col>
+            <Col id="Column1">1000000000009</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">10</Col>
+            <Col id="Column1">1000000000010</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">11</Col>
+            <Col id="Column1">1000000000011</Col>
+            <Col id="Column2">정확한 글자수제한은 시스템에 따라 달라질 수 있습니다.</Col>
+            <Col id="Column3">홍길동</Col>
+            <Col id="Column4">20160725</Col>
+          </Row>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_rdo" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false">
+        <ColumnInfo>
+          <Column id="lv" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="lv">0</Col>
+            <Col id="data">선택</Col>
+          </Row>
+          <Row>
+            <Col id="lv">1</Col>
+            <Col id="data">미선택</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.btn00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var objFrame = new ChildFrame();
+	objFrame.showModal(this.getOwnerFrame());
+	objFrame.set_formurl("design::compTemplate/Template10.xfdl");
+	objFrame.set_showtitlebar(true);
+	objFrame.set_titlebarheight(50);
+	objFrame.set_openalign("center middle");
+	objFrame.set_layered("true");
+	
+};
+
+]]></Script>
+  </Form>
+</FDL>

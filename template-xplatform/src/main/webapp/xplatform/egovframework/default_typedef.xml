@@ -37,7 +37,7 @@
   <Services>
     <Service prefixid="Base" type="form" url="./Base/Win32/" version="0" communicationversion="0"/>
     <Service prefixid="lib" type="js" url="./lib/" version="0" communicationversion="0"/>
-    <Service prefixid="svc" type="JSP" url="http://localhost:8080/xplatform/" version="0" communicationversion="0"/>
+    <Service prefixid="svc" type="JSP" url="http://localhost:8080/xp/xplatform/" version="0" communicationversion="0"/>
   </Services>
   <Update>
     <Item systemtype="win32" url="http://localhost:8080/xplatform/Engine"/>

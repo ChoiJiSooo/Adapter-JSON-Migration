@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ENV version="2.1">
+  <Environment themeid="theme::nps" filesecurelevel="all" scrollindicatorsize="5" userfontid="font::nps.xfont">
+    <ScreenDefinition>
+      <Screen id="desktop" type="desktop" themeid="theme::nps"/>
+    </ScreenDefinition>
+    <Variables/>
+    <Cookies/>
+    <httpheader/>
+  </Environment>
+</ENV>

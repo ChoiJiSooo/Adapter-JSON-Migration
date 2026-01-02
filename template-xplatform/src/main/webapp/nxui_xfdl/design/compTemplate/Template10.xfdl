@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="form" left="0" top="0" width="600" height="500" titletext="팝업" onload="form_onload">
+    <Layouts>
+      <Layout width="600" height="500">
+        <Div id="divPopBtn" taborder="1" text="div00" left="0" height="50" right="0" cssclass="div_POP_BtnBg" bottom="0" formscrollbartype="none none">
+          <Layouts>
+            <Layout type="horizontal" flexcrossaxisalign="center" flexmainaxisalign="center" horizontalgap="10" spacing="0px 20px 0px 20px">
+              <Button id="btn00_00" taborder="1" text="확인" width="68" height="30" bottom="10" cssclass="btn_POP_Yes" right="20" fittocontents="width" onclick="btn_select_onclick"/>
+              <Button id="btn00" taborder="0" text="취소" width="68" height="30" bottom="10" cssclass="btn_POP_No" right="btn00_00:10" fittocontents="width" onclick="divPopBtn_btn00_onclick"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="div_search" taborder="0" text="Div00" left="20" top="20" height="52" cssclass="div_WF_SearchBg" right="20" formscrollbartype="none none">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="1" text="가나다라" cssclass="sta_WF_LabelSch" left="0" top="10" width="82" height="30"/>
+              <Edit id="edt_XXXX" taborder="2" left="87" top="10" width="282" height="30" tooltiptext="edit"/>
+              <Button id="Button00" taborder="0" width="66" height="30" cssclass="btn_WF_Search" text="조회" right="20" fittocontents="width" bottom="10"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static20" taborder="3" text="그리드타이틀" cssclass="sta_WF_Subtitle" left="20" top="div_search:0" width="128" height="50" fittocontents="width"/>
+        <Grid id="Grid00" taborder="2" binddataset="ds_list" useinputpanel="false" autofittype="col" left="20" top="Static20:0" right="20" bottom="70" oncelldblclick="grd_list_oncelldblclick">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="56"/>
+                <Column size="139"/>
+                <Column size="278"/>
+              </Columns>
+              <Rows>
+                <Row size="37" band="head"/>
+                <Row size="45"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="번호"/>
+                <Cell col="1" text="코드"/>
+                <Cell col="2" text="명칭"/>
+              </Band>
+              <Band id="body">
+                <Cell textAlign="center" text="expr:currow+1"/>
+                <Cell col="1" text="bind:CD_ID" wordWrap="none" textAlign="center"/>
+                <Cell col="2" text="bind:CD_NM" wordWrap="english"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static00" taborder="4" text="w&#13;&#10;20" visible="false" top="0" width="20" right="0" background="rgba(251,123,123,0.47843137254901963)" bottom="0"/>
+        <Static id="Static54_00" taborder="5" text="h50" visible="false" top="73" width="160" height="50" background="rgba(251,123,123,0.47843137254901963)" right="250"/>
+        <Static id="Static00_00" taborder="6" text="w&#13;&#10;20" visible="false" top="0" width="20" background="rgba(251,123,123,0.47843137254901963)" bottom="0" left="0"/>
+        <Static id="Static54_00_00" taborder="7" text="h20" visible="false" top="0" height="20" background="rgba(251,123,123,0.47843137254901963)" left="0" right="0"/>
+        <Static id="Static54_00_00_00" taborder="8" text="h10" visible="false" height="10" background="rgba(251,123,123,0.47843137254901963)" right="0" bottom="0" width="300"/>
+        <Static id="Static54_00_01" taborder="9" text="h50" visible="false" top="450" width="160" height="50" background="rgba(251,123,123,0.47843137254901963)" right="351"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="grd">
+        <ColumnInfo>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column2" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column1">8812345678901</Col>
+            <Col id="Column2">고칼슘우유 200ml_국산, 우리아이냉장 123</Col>
+          </Row>
+          <Row>
+            <Col id="Column1">8812345678902</Col>
+            <Col id="Column2">고칼슘우유 200ml_국산, 우리아이냉장 456</Col>
+          </Row>
+          <Row>
+            <Col id="Column1">8812345678903</Col>
+            <Col id="Column2">고칼슘우유 200ml_국산, 우리아이냉장 789</Col>
+          </Row>
+          <Row>
+            <Col id="Column1">8812345678904</Col>
+            <Col id="Column2">고칼슘우유 200ml_국산, 우리아이냉장</Col>
+          </Row>
+          <Row>
+            <Col id="Column1">8812345678905</Col>
+            <Col id="Column2">고칼슘우유 200ml_국산, 우리아이냉장</Col>
+          </Row>
+          <Row>
+            <Col id="Column1">8812345678906</Col>
+            <Col id="Column2">고칼슘우유 200ml_국산, 우리아이냉장</Col>
+          </Row>
+          <Row>
+            <Col id="Column1">8812345678907</Col>
+            <Col id="Column2">고칼슘우유 200ml_국산, 우리아이냉장</Col>
+          </Row>
+          <Row>
+            <Col id="Column1">8812345678908</Col>
+            <Col id="Column2">고칼슘우유 200ml_국산, 우리아이냉장</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_list">
+        <ColumnInfo>
+          <Column id="CD_GRP_ID" type="string" size="20"/>
+          <Column id="CD_ID" type="string" size="20"/>
+          <Column id="CD_NM" type="string" size="100"/>
+          <Column id="CD_ID_NM" type="string" size="123"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CD_GRP_ID">1</Col>
+            <Col id="CD_ID">1001</Col>
+            <Col id="CD_ID_NM">a</Col>
+            <Col id="CD_NM">부산지점</Col>
+          </Row>
+          <Row>
+            <Col id="CD_GRP_ID">1</Col>
+            <Col id="CD_ID">6009</Col>
+            <Col id="CD_NM">서울북지점</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[/***************************************************************************
+ * Program ID    : ExamPopupSubM.xfdl
+ * Program Name  : 팝업 샘플페이지
+ * Author        : 양동주
+ * Created On    : 2019.07
+ * 개    요 	 :
+ *
+ * =========================================================================
+ * 변경일자     수정자    내    용
+ * =========================================================================
+
+ **************************************************************************/
+ /************************************************************************************************
+ * Form 변수 선언 영역
+ ************************************************************************************************/
+this.fv_pThis    = this.gfnGetArgPopup(this, "pThis");		// 부모Form
+this.fv_callback = this.gfnGetArgPopup(this, "callback"); 	// 부모콜백
+this.fv_popId	 = this.gfnGetArgPopup(this, "popupId");	// 팝업Id
+this.fv_popType	 = this.gfnGetArgPopup(this, "popupType");	// 팝업Id
+
+/************************************************************************************************
+ * Form 관련 스크립트 영역
+ ************************************************************************************************/
+/**
+ * 화면 Load 시 Event
+ */
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	var arg1 = this.gfnGetArgPopup(this, "arg1"); // 전달값1
+	var arg2 = this.gfnGetArgPopup(this, "arg2"); // 전달값2
+	var arg3 = this.gfnGetArgPopup(this, "arg3"); // 전달값3
+	
+	trace("넘겨받은 파라미터 arg1 : " + arg1);
+	trace("넘겨받은 파라미터 arg2 : " + arg2);
+	trace("넘겨받은 파라미터 arg3 : " + arg3.saveXML());
+	
+};
+
+
+
+/************************************************************************************************
+* TRANSACTION 서비스 호출 처리
+************************************************************************************************/
+
+
+/************************************************************************************************
+ * 공통버튼 Function 영역
+ ************************************************************************************************/
+
+
+// 선택
+this.btn_select_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.fn_closePopup(this.ds_list.rowposition);
+};
+
+
+// 그리드 선택
+this.grd_list_oncelldblclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	this.fn_closePopup(e.row);
+};
+
+
+// 닫기
+this.btn_close_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.close(null);
+};
+ 
+
+// 선택닫기
+this.fn_closePopup = function (nRow)
+{
+	// 반환값
+	var oRet = {
+		  CD_ID	: this.ds_list.getColumn(nRow, "CD_ID")
+		, CD_NM	: this.ds_list.getColumn(nRow, "CD_NM")
+		};
+
+	if(this.fv_popType == "modeless") {
+		this.gfnCloseModalessPopup(this.fv_pThis, this.fv_popId, this.fv_callback, oRet);
+	} else {
+		this.close(JSON.stringify(oRet));
+	}
+}
+
+ 
+/************************************************************************************************
+ * 사용자 FUNCTION 영역
+ ************************************************************************************************/
+
+
+/************************************************************************************************
+ * 각 COMPONENT 별 EVENT 영역
+ ************************************************************************************************/
+ 
+
+this.divPopBtn_btn00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.close()
+};
+]]></Script>
+  </Form>
+</FDL>
