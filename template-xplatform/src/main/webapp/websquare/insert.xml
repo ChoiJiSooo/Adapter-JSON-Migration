@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:w2="http://www.inswave.com/websquare" xmlns:xf="http://www.w3.org/2002/xforms">
+	<head meta_screenId="BM004P01" meta_screenName="메뉴별 프로그램 조회 팝업" meta_screenDesc="메뉴별 프로그램 조회 팝업" meta_author="Inswave Systems" meta_date="2021.02.25">
+		<w2:type>COMPONENT</w2:type>
+		<w2:buildDate />
+		<xf:model>
+			<xf:instance>
+				<data xmlns="" />
+			</xf:instance>
+			<w2:dataCollection baseNode="map">
+				<w2:dataMap baseNode="map" id="dma_search">
+					<w2:keyInfo>
+						<w2:key id="PROGRAM_GROUP_CD" name="프로그램구분" dataType="text"></w2:key>
+						<w2:key id="PROGRAM" name="프로그램" dataType="text"></w2:key>
+						<w2:key id="IS_USE" name="사용여부" dataType="text"></w2:key>
+					</w2:keyInfo>
+				</w2:dataMap>
+				<w2:dataList baseNode="list" repeatNode="map" id="ds_voInfo" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column id="voClass" name="voClass" dataType="text"></w2:column>
+					</w2:columnInfo>
+				</w2:dataList>
+				<w2:dataList baseNode="list" repeatNode="map" id="ds_input" saveRemovedData="true">
+					<w2:columnInfo>
+						<w2:column id="id" name="id" dataType="text" defaultValue=""></w2:column>
+						<w2:column id="name" name="name" dataType="text"></w2:column>
+						<w2:column id="description" name="description" dataType="text"></w2:column>
+						<w2:column id="useYn" name="useYn" dataType="text"></w2:column>
+						<w2:column id="regUser" name="regUser" dataType="text"></w2:column>
+					</w2:columnInfo>
+					<w2:data use="false">
+					</w2:data>
+				</w2:dataList>
+			</w2:dataCollection>
+			<w2:workflowCollection>
+			</w2:workflowCollection>
+			<xf:submission id="sbm_program" ref='data:json,["ds_voInfo","ds_input"]' target=''
+				action="/xp/xplatform/egovSampleInsert.do" method="post" mediatype="application/json" encoding="UTF-8" instance="" replace="" errorHandler=""
+				customHandler="" mode="asynchronous" processMsg="" ev:submit="" ev:submitdone="" ev:submiterror="" abortTrigger="">
+			</xf:submission>			
+		</xf:model>
+		<w2:layoutInfo></w2:layoutInfo>
+		<w2:publicInfo method=""></w2:publicInfo>
+
+		<script type="text/javascript" lazy="false"><![CDATA[
+/**
+ * @event
+ * @name onpageload
+ * @description 초기 스크립트 수행 함수 정의
+ */
+scwin.onpageload = function () {
+    ds_input.insertRow(0);
+    ds_input.setRowPosition(0);
+
+    ds_voInfo.insertRow(0);
+    ds_voInfo.setCellData(0, "voClass", "egovframework.rte.sample.service.SampleVO");
+};
+
+/**
+ * @event
+ * @name btn_search_onclick
+ * @description 프로그램 목록을 조회한다.
+ */
+scwin.btn_search_onclick = function () {
+    $c.sbm.execute(sbm_program);
+};
+
+/**
+ * @event
+ * @name btn_confirm_onclick
+ * @description 선택된 프로그램을 반환한다.
+ */
+scwin.btn_confirm_onclick = function () {
+    $c.sbm.execute(sbm_program);
+    $c.win.closePopup();
+};
+
+/**
+ * @event
+ * @name grd_program_oncelldblclick
+ * @description 더블 클릭한 Row의 프로그램을 반환한다.
+ */
+scwin.grd_program_oncelldblclick = function (row, col, colId) {
+    $c.win.closePopup(grd_program.getRowJSON(row));
+};
+
+/**
+ * @event
+ * @name btn_cancel_onclick
+ * @description 프로그램 선택을 취소한다.
+ */
+scwin.btn_cancel_onclick = function () {
+    $c.win.closePopup();
+};
+
+scwin.textbox1_onclick = function (e) {
+    alert(ds_input.getRowPosition());
+
+    
+
+};
+]]></script>
+	</head>
+	<body ev:onpageload="scwin.onpageload">
+		<xf:group id="" class="pop_contents flex_cont">
+			<xf:group adaptiveThreshold="" class="gvwbox grp_flex" id="" style="">
+				<xf:group adaptive="layout" adaptiveThreshold="1024" class="w2tb tbl" id="" style="" tabIndex="" tagname="table">
+					<w2:attributes>
+						<w2:summary></w2:summary>
+					</w2:attributes>
+					<xf:group tagname="colgroup">
+						<xf:group style="width:150px;" tagname="col"></xf:group>
+						<xf:group style="" tagname="col"></xf:group>
+					</xf:group>
+					<xf:group id="group1" style="" tagname="tr">
+						<xf:group class="w2tb_th" style="" tagname="th">
+							<w2:attributes>
+								<w2:colspan>1</w2:colspan>
+								<w2:rowspan>1</w2:rowspan>
+							</w2:attributes>
+							<w2:textbox id="textbox1" label="Name" ref="" style="" userData2="" ev:onclick="scwin.textbox1_onclick"></w2:textbox>
+						</xf:group>
+						<xf:group class="w2tb_td" style="" tagname="td">
+							<w2:attributes>
+								<w2:colspan>1</w2:colspan>
+								<w2:rowspan>1</w2:rowspan>
+							</w2:attributes>
+							<xf:input class="" disabled="false" id="ipt_name" placeholder="" ref="data:ds_input.name" style=""></xf:input>
+						</xf:group>
+					</xf:group>
+					<xf:group style="" tagname="tr">
+						<xf:group class="w2tb_th" style="" tagname="th">
+							<w2:attributes>
+								<w2:colspan>1</w2:colspan>
+								<w2:rowspan>1</w2:rowspan>
+							</w2:attributes>
+							<w2:textbox id="" label="Use YN" ref="" style="" userData2=""></w2:textbox>
+						</xf:group>
+						<xf:group class="w2tb_td" id="group2" style="" tagname="td">
+						</xf:group>
+					</xf:group>
+					<xf:group id="group3" tagname="tr" style="height:200px;">
+						<xf:group class="w2tb_th" tagname="th">
+							<w2:attributes>
+								<w2:scope>row</w2:scope>
+							</w2:attributes>
+							<w2:textbox id="" label="Description" ref="" style="" userData2=""></w2:textbox>
+						</xf:group>
+						<xf:group class="w2tb_td" tagname="td">
+							<w2:attributes></w2:attributes>
+							<xf:select1 id="sbx_useyn" chooseOption="" style="position:absolute; width:210px; height:30px; top:50px; left:159px; "
+								submenuSize="auto" allOption="" disabled="false" direction="auto" appearance="minimal" disabledClass="w2selectbox_disabled"
+								ref="data:ds_input.useYn">
+								<xf:choices>
+									<xf:item>
+										<xf:label><![CDATA[Y]]></xf:label>
+										<xf:value><![CDATA[Y]]></xf:value>
+									</xf:item>
+									<xf:item>
+										<xf:label><![CDATA[N]]></xf:label>
+										<xf:value><![CDATA[N]]></xf:value>
+									</xf:item>
+								</xf:choices>
+							</xf:select1>
+							<xf:textarea id="txa_description" style="position:absolute;width:655px;height:184px;left:157px;top:96px;" ref="data:ds_input.description"></xf:textarea>
+						</xf:group>
+					</xf:group>
+					<xf:group class="w2tb_th" tagname="th" style="">
+						<w2:attributes>
+							<w2:scope>row</w2:scope>
+						</w2:attributes>
+						<w2:textbox id="" label="RegUser" ref="" style="" userData2=""></w2:textbox>
+					</xf:group>
+					<xf:group class="w2tb_td" tagname="td" style="">
+						<w2:attributes></w2:attributes>
+						<xf:input class="" disabled="false" id="ipt_requser" placeholder="" ref="data:ds_input.regUser" style=""></xf:input>
+					</xf:group>
+				</xf:group>
+			</xf:group>
+			<xf:group class="btnbox" id="" style="">
+				<xf:group class="rt" id="">
+					<xf:trigger class="btn_cm pt" id="btn_confirm" style="" type="button" nextTabID=""
+						ev:onclick="scwin.btn_confirm_onclick">
+						<xf:label><![CDATA[저장]]></xf:label>
+					</xf:trigger>
+					<xf:trigger class="btn_cm" id="btn_cancel" style="" type="button" ev:onclick="scwin.btn_cancel_onclick">
+						<xf:label><![CDATA[취소]]></xf:label>
+					</xf:trigger>
+				</xf:group>
+			</xf:group>
+		</xf:group>
+	</body>
+</html>
