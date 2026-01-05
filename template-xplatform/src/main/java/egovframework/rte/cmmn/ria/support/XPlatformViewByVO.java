@@ -13,12 +13,12 @@ import org.springframework.web.servlet.view.AbstractView;
 
 import com.inswave.websqaure.uix.HttpWebsquareConvRequest;
 import com.inswave.websqaure.uix.HttpWebsquareConvResponse;
-import com.tobesoft.xplatform.data.DataSet;
-import com.tobesoft.xplatform.data.DataSetList;
-import com.tobesoft.xplatform.data.DataTypes;
-import com.tobesoft.xplatform.data.PlatformData;
-import com.tobesoft.xplatform.data.VariableList;
-import com.tobesoft.xplatform.tx.PlatformType;
+import com.tobesoft.platform.PlatformConstants;
+import com.tobesoft.platform.data.ColumnInfo;
+import com.tobesoft.platform.data.Dataset;
+import com.tobesoft.platform.data.DatasetList;
+import com.tobesoft.platform.data.PlatformData;
+import com.tobesoft.platform.data.VariableList;
 
 /**
  * X-Platform View 구현 클래스
@@ -48,7 +48,7 @@ public class XPlatformViewByVO extends AbstractView {
             throws Exception {
 
         VariableList miVariableList = new VariableList();
-        DataSetList miDatasetList = new DataSetList();
+        DatasetList miDatasetList = new DatasetList();
 
         PlatformData platformData = new PlatformData();
 
@@ -68,15 +68,15 @@ public class XPlatformViewByVO extends AbstractView {
             Class cls = vo.getClass();
             Field[] field = cls.getDeclaredFields();
 
-            DataSet dataset = new DataSet("ds_output");
+            Dataset dataset = new Dataset("ds_output");
 
             for ( int i = 0; i < field.length; i ++ )
             {
                 if ( !"serialVersionUID".equals(field[i].getName()) )
-                    dataset.addColumn(field[i].getName(), DataTypes.STRING, (short) 255);
+                    dataset.addColumn(field[i].getName(), ColumnInfo.COLUMN_TYPE_STRING, (short) 255);
             }
 
-            int row = dataset.newRow();
+            int row = dataset.appendRow();
             for ( int i = 0; i < field.length; i ++ )
             {
                 if ( !"serialVersionUID".equals(field[i].getName()) )
@@ -86,7 +86,7 @@ public class XPlatformViewByVO extends AbstractView {
                     Method m = cls.getMethod(methodeName, null);
                     String ret = (String)m.invoke(vo, null);
 
-                    dataset.set(row, memberName, ret);
+                    dataset.setColumn(row, memberName, ret);
                 }
             }
 
@@ -107,14 +107,13 @@ public class XPlatformViewByVO extends AbstractView {
 
         try {
 
-            platformData.setDataSetList(miDatasetList);
+            platformData.setDatasetList(miDatasetList);
             platformData.setVariableList(miVariableList);
 
             HttpWebsquareConvRequest wsReq = new HttpWebsquareConvRequest(request);
             HttpWebsquareConvResponse wsRes = new HttpWebsquareConvResponse(response, wsReq);
-            wsRes.setCharset(PlatformType.DEFAULT_CHAR_SET);
-            wsRes.setData(platformData);
-            wsRes.sendData();
+            wsRes.setCharset(PlatformConstants.CHARSET_UTF8);
+            wsRes.sendData(platformData);
 
         } catch (Exception ex) {
             if (log.isErrorEnabled()) {

@@ -42,7 +42,7 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry exported="true" kind="lib" path="src/main/webapp/WEB-INF/lib/xplatform-xapi-1.0.jar"/>
-	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/adaptorX2W-Lib-0.9.1.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/miplatform-3.2.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/adaptorM2W-Lib-0.9.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
