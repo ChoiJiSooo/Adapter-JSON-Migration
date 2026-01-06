@@ -60,8 +60,9 @@
 				</format>
 			</contents>
 		</Grid>
-		<Button Height="21" Id="Button1" Left="688" OnClick="Button1_OnClick" TabOrder="3" Text="저장" Top="520" Width="104"></Button>
+		<Button Height="21" Id="Button1" Left="688" OnClick="Button1_OnClick" TabOrder="3" Text="저장" Top="519" Width="104"></Button>
 		<Static BKColor="coral" Height="21" Id="Static0" Left="16" TabOrder="4" Text="*&#32;Quick&#32;View로&#32;확인해야&#32;합니다." Top="19" Width="648"></Static>
+		<Button Height="21" Id="Button2" Left="574" OnClick="Button2_OnClick" TabOrder="5" Text="삭제" Top="519" Width="104"></Button>
 	</Form>
 	<Script><![CDATA[
 function Button0_OnClick(obj)
@@ -72,12 +73,21 @@ function Button0_OnClick(obj)
 
 function fn_callback (sId, sCode, sMsg) 
 {
-	alert(sMsg);
+	if(sId == "updateTest" || sId == "deleteTest" )
+	{
+		Button0_OnClick();
+	}
+
 }
 
 function Button1_OnClick(obj)
 {
-	Transaction("serchTest", "http://localhost:8080/xp/xplatform/egovSampleUpdate.do", "ds_voInfo=ds_voInfo ds_input=ds_list:U", "", "", "fn_callback" );
+	Transaction("updateTest", "http://localhost:8080/xp/xplatform/egovSampleUpdate.do", "ds_voInfo=ds_voInfo ds_input=ds_list:U", "", "", "fn_callback" );
+}
+
+function Button2_OnClick(obj)
+{
+	Transaction("deleteTest", "http://localhost:8080/xp/xplatform/egovSampleDelete.do", "", "", "selectedId=" + ds_list.GetColumn(ds_list.rowposition, "id"), "fn_callback" );
 }
 ]]></Script>
 </Window>
