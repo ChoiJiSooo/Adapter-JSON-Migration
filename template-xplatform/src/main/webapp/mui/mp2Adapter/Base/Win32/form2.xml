@@ -33,7 +33,7 @@
 			</Dataset>
 		</Datasets>
 		<Button Height="21" Id="Button0" Left="678" OnClick="Button0_OnClick" TabOrder="1" Text="조회" Top="19" Width="104"></Button>
-		<Grid AutoFit="TRUE" BindDataset="ds_list" BoldHead="true" Bottom="512" Enable="true" EndLineColor="default" Height="456" Id="Grid0" InputPanel="FALSE" Left="16" LineColor="default" MinWidth="100" Right="784" TabOrder="2" TabStop="true" Top="56" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="768">
+		<Grid AutoFit="TRUE" BindDataset="ds_list" BkColor2="default" BoldHead="true" Bottom="512" Enable="true" EndLineColor="default" Height="456" Id="Grid0" InputPanel="FALSE" Left="16" LineColor="default" MinWidth="100" Right="784" TabOrder="2" TabStop="true" Top="56" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="768">
 			<contents>
 				<format id="Default">
 					<columns>
@@ -60,8 +60,9 @@
 				</format>
 			</contents>
 		</Grid>
-		<Button Height="21" Id="Button1" Left="688" OnClick="Button1_OnClick" TabOrder="3" Text="저장" Top="520" Width="104"></Button>
+		<Button Height="21" Id="Button1" Left="688" OnClick="Button1_OnClick" TabOrder="3" Text="저장" Top="519" Width="104"></Button>
 		<Static BKColor="coral" Height="21" Id="Static0" Left="16" TabOrder="4" Text="*&#32;Quick&#32;View로&#32;확인해야&#32;합니다." Top="19" Width="648"></Static>
+		<Button Height="21" Id="Button2" Left="563" OnClick="Button2_OnClick" TabOrder="5" Text="삭제" Top="519" Width="104"></Button>
 	</Form>
 	<Script><![CDATA[
 function Button0_OnClick(obj)
@@ -78,6 +79,11 @@ function fn_callback (sId, sCode, sMsg)
 function Button1_OnClick(obj)
 {
 	Transaction("serchTest", "http://localhost:8080/xp/xplatform/egovSampleUpdate.do", "ds_voInfo=ds_voInfo ds_input=ds_board:U", "", "", "fn_callback" );
+}
+
+function Button2_OnClick(obj)
+{
+	Transaction("deleteTest", "http://localhost:8080/xp/xplatform/egovSampleDelete.do", "", "", "selectedId=" + ds_list.GetColumn(ds_list.rowposition, "id"), "fn_callback" );
 }
 ]]></Script>
 </Window>
