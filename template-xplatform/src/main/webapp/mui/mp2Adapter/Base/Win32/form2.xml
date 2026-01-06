@@ -88,6 +88,8 @@ function Button1_OnClick(obj)
 function Button2_OnClick(obj)
 {
 	Transaction("deleteTest", "http://localhost:8080/xp/xplatform/egovSampleDelete.do", "", "", "selectedId=" + ds_list.GetColumn(ds_list.rowposition, "id"), "fn_callback" );
+	
+	
 }
 ]]></Script>
 </Window>
