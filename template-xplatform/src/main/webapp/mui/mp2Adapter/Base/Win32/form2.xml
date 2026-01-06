@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="543" Id="form" Left="8" PidAttrib="7" Title="New&#32;Form" Top="8" Ver="1.0" Width="800" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_param">
+				<Contents>
+					<colinfo id="searchUseYn" size="256" summ="default" type="STRING"/>
+					<colinfo id="searchCondition" size="256" summ="default" type="STRING"/>
+					<colinfo id="searchKeyword" size="256" summ="default" type="STRING"/>
+					<record>
+						<searchCondition></searchCondition>
+						<searchKeyword></searchKeyword>
+						<searchUseYn></searchUseYn>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_list">
+				<Contents>
+					<colinfo id="id" size="256" summ="default" type="STRING"/>
+					<colinfo id="name" size="256" summ="default" type="STRING"/>
+					<colinfo id="description" size="256" summ="default" type="STRING"/>
+					<colinfo id="useYn" size="256" summ="default" type="STRING"/>
+					<colinfo id="regUser" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_voInfo">
+				<Contents>
+					<colinfo id="voClass" size="256" summ="default" type="STRING"/>
+					<record>
+						<voClass>egovframework.rte.sample.service.SampleVO</voClass>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Button Height="21" Id="Button0" Left="678" OnClick="Button0_OnClick" TabOrder="1" Text="조회" Top="19" Width="104"></Button>
+		<Grid AutoFit="TRUE" BindDataset="ds_list" BoldHead="true" Bottom="512" Enable="true" EndLineColor="default" Height="456" Id="Grid0" InputPanel="FALSE" Left="16" LineColor="default" MinWidth="100" Right="784" TabOrder="2" TabStop="true" Top="56" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="768">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+						<col width="100"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="id"/>
+						<cell col="1" display="text" text="name"/>
+						<cell col="2" display="text" text="description"/>
+						<cell col="3" display="text" text="useYn"/>
+						<cell col="4" display="text" text="regUser"/>
+					</head>
+					<body>
+						<cell col="0" colid="id" display="text"/>
+						<cell col="1" colid="name" display="text"/>
+						<cell bkcolor="LIGHT3D" col="2" colid="description" display="text" edit="normal"/>
+						<cell col="3" colid="useYn" display="text"/>
+						<cell col="4" colid="regUser" display="text"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Button Height="21" Id="Button1" Left="688" OnClick="Button1_OnClick" TabOrder="3" Text="저장" Top="520" Width="104"></Button>
+		<Static BKColor="coral" Height="21" Id="Static0" Left="16" TabOrder="4" Text="*&#32;Quick&#32;View로&#32;확인해야&#32;합니다." Top="19" Width="648"></Static>
+	</Form>
+	<Script><![CDATA[
+function Button0_OnClick(obj)
+{
+	Transaction("serchTest", "http://localhost:8080/xp/xplatform/egovSampleList.do", "ds_input=ds_param", "ds_list=ds_output", "", "fn_callback" );
+}
+
+
+function fn_callback (sId, sCode, sMsg) 
+{
+	//trace(ds_list.rowcount);
+}
+
+function Button1_OnClick(obj)
+{
+	Transaction("serchTest", "http://localhost:8080/xp/xplatform/egovSampleUpdate.do", "ds_voInfo=ds_voInfo ds_input=ds_board:U", "", "", "fn_callback" );
+}
+]]></Script>
+</Window>
