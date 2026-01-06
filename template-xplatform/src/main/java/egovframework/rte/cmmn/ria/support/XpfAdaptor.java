@@ -6,6 +6,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import com.inswave.websqaure.uix.HttpWebsquareConvRequest;
+import com.tobesoft.platform.PlatformRequest;
 
 /**
  * X-Platform MiAdaptor 클래스

@@ -6,9 +6,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.nexacro.xapi.data.DataSet;
-import com.nexacro.xapi.data.DataSetList;
-import com.nexacro.xapi.data.VariableList;
+import com.tobesoft.platform.data.Dataset;
+import com.tobesoft.platform.data.DatasetList;
+import com.tobesoft.platform.data.VariableList;
 
 /**
  * X-Platform UdDTO 클래스
@@ -64,34 +64,34 @@ public class UdDTO implements Serializable {
         variableList = new HashMap<String, String>();
 
         for ( int i = 0; i < vList.size(); i ++ ) {
-            variableList.put(vList.get(i).getName(), vList.get(i).getString());
+            variableList.put(vList.get(i).getId(), vList.get(i).getValue().getString());
         }
 
     }
-    public void setDataSetListToMap(DataSetList dataSetList) {
+    public void setDataSetListToMap(DatasetList dataSetList) {
 
         List list = new ArrayList<Object>();
 
         java.util.Map<String, String> hm = new HashMap<String, String>();
 
-        DataSet ds_input = dataSetList.get("ds_input");
+        Dataset ds_input = dataSetList.get("ds_input");
         // insert, update처리
         for ( int i = 0; i < ds_input.getRowCount(); i ++ )
         {
-            if ( DataSet.ROW_TYPE_UPDATED == ds_input.getRowType(i) )
+            if ( Dataset.ROWTYPE_UPDATE == ds_input.getRowType(i) )
             {
                 hm = new HashMap<String, String>();
                 for ( int j = 0; j < ds_input.getColumnCount(); j ++ )
                 {
-                    hm.put(ds_input.getColumn(j).getName(), ds_input.getString(i, j));
+                    hm.put(ds_input.getColumnId(j), ds_input.getColumnAsString(i, j));
                 }
 
-            } else if ( DataSet.ROW_TYPE_INSERTED == ds_input.getRowType(i) )
+            } else if ( Dataset.ROWTYPE_INSERT == ds_input.getRowType(i) )
             {
                 hm = new HashMap<String, String>();
                 for ( int j = 0; j < ds_input.getColumnCount(); j ++ )
                 {
-                    hm.put(ds_input.getColumn(j).getName(), ds_input.getString(i, j));
+                    hm.put(ds_input.getColumnId(j), ds_input.getColumnAsString(i, j));
                 }
             }
             list.add(hm);

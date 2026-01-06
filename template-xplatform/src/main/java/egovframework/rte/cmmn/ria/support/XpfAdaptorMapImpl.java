@@ -3,7 +3,6 @@ package egovframework.rte.cmmn.ria.support;
 import javax.servlet.http.HttpServletRequest;
 
 import com.inswave.websqaure.uix.HttpWebsquareConvRequest;
-import com.nexacro.xapi.data.PlatformData;
 
 /**
  * X-Platform MiAdaptor 구현 클래스
@@ -31,8 +30,7 @@ public class XpfAdaptorMapImpl extends XpfAdaptor {
          */
         UdDTO dto = new UdDTO();
 
-        PlatformData pfd = httpPlatformRequest.getData();
-        dto.setVariableListToMap(pfd.getVariableList());
+        dto.setVariableListToMap(httpPlatformRequest.getVariableList());
 
         return dto;
     }
