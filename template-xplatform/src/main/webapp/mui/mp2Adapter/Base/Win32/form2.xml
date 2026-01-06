@@ -33,7 +33,7 @@
 			</Dataset>
 		</Datasets>
 		<Button Height="21" Id="Button0" Left="678" OnClick="Button0_OnClick" TabOrder="1" Text="조회" Top="19" Width="104"></Button>
-		<Grid AutoFit="TRUE" BindDataset="ds_list" BoldHead="true" Bottom="512" Enable="true" EndLineColor="default" Height="456" Id="Grid0" InputPanel="FALSE" Left="16" LineColor="default" MinWidth="100" Right="784" TabOrder="2" TabStop="true" Top="56" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="768">
+		<Grid AutoFit="TRUE" BindDataset="ds_list" BoldHead="true" Bottom="512" Editable="TRUE" Enable="true" EndLineColor="default" Height="456" Id="Grid0" InputPanel="FALSE" Left="16" LineColor="default" MinWidth="100" Right="784" TabOrder="2" TabStop="true" Top="56" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="768">
 			<contents>
 				<format id="Default">
 					<columns>
@@ -72,12 +72,12 @@ function Button0_OnClick(obj)
 
 function fn_callback (sId, sCode, sMsg) 
 {
-	//trace(ds_list.rowcount);
+	alert(sMsg);
 }
 
 function Button1_OnClick(obj)
 {
-	Transaction("serchTest", "http://localhost:8080/xp/xplatform/egovSampleUpdate.do", "ds_voInfo=ds_voInfo ds_input=ds_board:U", "", "", "fn_callback" );
+	Transaction("serchTest", "http://localhost:8080/xp/xplatform/egovSampleUpdate.do", "ds_voInfo=ds_voInfo ds_input=ds_list:U", "", "", "fn_callback" );
 }
 ]]></Script>
 </Window>
