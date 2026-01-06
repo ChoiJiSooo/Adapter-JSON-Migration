@@ -36,8 +36,8 @@
 		<protocol id="https" name="cyHttpAdp" version="1000"/>
 	</protocols>
 	<AppGroups>
-		<AppGroup CodePage="utf-8" Prefix="Base" Type="Form" version="1.0">
-			<script Baseurl="C:\Users\gamsi\git\Adapter-JSON-Migration\template-xplatform\src\main\webapp\mui\mp2Adapter\Base\Win32\" cachelevel="none" ext="xml" ScriptUrl="C:\Users\gamsi\git\Adapter-JSON-Migration\template-xplatform\src\main\webapp\mui\mp2Adapter\Base\Script\"/>
+		<AppGroup CodePage="utf-8" Language="0" Prefix="Base" Type="Form" Version="1.0">
+			<script Baseurl="Base\Win32\" CacheLevel="none" Ext="xml" ScriptUrl="Base\Script\"/>
 		</AppGroup>
 	</AppGroups>
 </ConnectGroup>
